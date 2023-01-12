@@ -53,7 +53,16 @@ Console.WriteLine(Seconds + " seconds is " + Hours + " hours");
 Console.WriteLine(Seconds + " seconds is " + Days + " days");
 Console.WriteLine(Seconds + " seconds is " + Years + " years");
 
+// Programm Six
+
+TimeSpan time = TimeSpan.FromSeconds(Seconds);
+string displayTime = $"{time.Hours}:{time.Minutes}:{time.Seconds}";
+Console.WriteLine(time);
+
+//TODO: fix the programm to return correct values
+
+
+// Programm Seven
+
+
 Console.ReadLine();
-
-
-
