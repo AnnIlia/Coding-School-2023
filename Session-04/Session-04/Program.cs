@@ -1,6 +1,7 @@
 ﻿// Programm One
 
 using System;
+using System.Globalization;
 
 string hello = "Hello";
 string name = "Anna";
@@ -55,13 +56,18 @@ Console.WriteLine(Seconds + " seconds is " + Hours + " hours");
 Console.WriteLine(Seconds + " seconds is " + Days + " days");
 Console.WriteLine(Seconds + " seconds is " + Years + " years");
 
+
 // Programm Six
 
-TimeSpan time = TimeSpan.FromSeconds(Seconds);
-string displayTime = $"{time.Hours}:{time.Minutes}:{time.Seconds}";
+TimeSpan t = TimeSpan.FromSeconds(45678);
+string time = string.Format(
+      CultureInfo.CurrentCulture,
+      "{0} minutes \n{1} hours \n{2} days \n{3} years",
+      t.TotalMinutes,
+      t.TotalHours,
+      t.TotalDays,
+      t.TotalDays / 365  )    ;
 Console.WriteLine(time);
-
-//TODO: fix the programm to return correct values
 
 
 // Programm Seven
