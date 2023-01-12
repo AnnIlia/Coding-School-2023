@@ -1,5 +1,7 @@
 ﻿// Programm One
 
+using System;
+
 string hello = "Hello";
 string name = "Anna";
 
@@ -63,6 +65,14 @@ Console.WriteLine(time);
 
 
 // Programm Seven
+
+int Celsius = 38;
+
+float Kelvin = Celsius + (float)273.15;
+float Fahrenheit = Celsius * (float)1.8 + 32;
+
+Console.WriteLine(Celsius + " celsius is " +  Kelvin + " kelvin");
+Console.WriteLine(Celsius + " celsius is " + Fahrenheit + " fahrenheit");
 
 
 Console.ReadLine();
