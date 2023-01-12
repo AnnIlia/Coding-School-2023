@@ -47,8 +47,8 @@ int Seconds = 45678;
 
 int Minutes = Seconds / 60;
 int Hours = Seconds / 3600;
-float Days = Seconds / 86400;
-int Years = Seconds / 31536000;
+float Days = Seconds / (float)86400;
+float Years = Seconds / (float)31536000;
 
 Console.WriteLine(Seconds + " seconds is " + Minutes + " minutes");
 Console.WriteLine(Seconds + " seconds is " + Hours + " hours");
