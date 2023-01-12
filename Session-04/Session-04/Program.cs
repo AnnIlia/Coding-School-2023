@@ -13,5 +13,23 @@ int numberB = 3;
 int Sum = numberA + numberB;
 int Division = numberA / numberB;
 
-Console.WriteLine( Sum + "     " + Division);
+Console.WriteLine("Sum = " + Sum + "     " + "Division = " + Division);
+
+
+// Programm Three
+
+int OneBoulet = -1 + 5 * 6;
+int TwoBoulet = 38 + (5 % 7);
+int ThreeBoulet = 14 + ((-3 * 6) / 7);
+int FourBoulet = (int)(2 + (13 / 6) * 6 + Math.Sqrt(7));
+int FiveBoulet = (int)((((Math.Pow( 6, 4)) + (Math.Pow( 5, 7))) / (9 % 4)));
+
+Console.WriteLine("The 1st result is: " + OneBoulet);
+Console.WriteLine("The 2nd result is: " + TwoBoulet);
+Console.WriteLine("The 3rd result is: " + ThreeBoulet);
+Console.WriteLine("The 4th result is: " + FourBoulet);
+Console.WriteLine("The 5th result is: " + FiveBoulet);
+
 Console.ReadLine();
+
+
