@@ -36,7 +36,24 @@ Console.WriteLine("The 5th result is: " + FiveBoulet);
 ushort Age = 24;
 string Gender = "female";
 
-Console.WriteLine("You are " + Gender + " and look younger than " + Age);   
+Console.WriteLine("You are " + Gender + " and look younger than " + Age);
+
+
+// Programm Five 
+
+int Seconds = 45678;
+
+int Minutes = Seconds / 60;
+int Hours = Seconds / 3600;
+float Days = Seconds / 86400;
+int Years = Seconds / 31536000;
+
+Console.WriteLine(Seconds + " seconds is " + Minutes + " minutes");
+Console.WriteLine(Seconds + " seconds is " + Hours + " hours");
+Console.WriteLine(Seconds + " seconds is " + Days + " days");
+Console.WriteLine(Seconds + " seconds is " + Years + " years");
 
 Console.ReadLine();
+
+
 
