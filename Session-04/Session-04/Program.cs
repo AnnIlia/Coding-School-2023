@@ -30,6 +30,13 @@ Console.WriteLine("The 3rd result is: " + ThreeBoulet);
 Console.WriteLine("The 4th result is: " + FourBoulet);
 Console.WriteLine("The 5th result is: " + FiveBoulet);
 
-Console.ReadLine();
 
+// Programm Four
+
+ushort Age = 24;
+string Gender = "female";
+
+Console.WriteLine("You are " + Gender + " and look younger than " + Age);   
+
+Console.ReadLine();
 
