@@ -4,27 +4,23 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ProgramOne
+namespace ProgramTwo
 {
     class SumProduct
-    {
-        static void Main(int[] args)
+    { 
+        public static void Main(string[] args)
         {
-            
-            Console.WriteLine("Enter a number");
-
-            string givenNumber = Console.ReadLine();
-            // string reverse = "";
-            int number = Convert.ToInt32(givenNumber);
-
-            
-
-            
-            
-
-            Console.WriteLine($"Your revesed name is {number}");
-            Console.ReadLine();
+            Console.Write("Input a number");
+            int n = Convert.ToInt32(Console.ReadLine());
+            int sum = 0;
+            while (n != 0)
+            {
+                sum += n % 10;
+                n /= 10;
+            }
+            Console.WriteLine("Sum of the digits of the said integer: " + sum);
         }
     }
+
 }
-}
+    
