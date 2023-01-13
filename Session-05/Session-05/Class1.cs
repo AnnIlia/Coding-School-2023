@@ -4,22 +4,36 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Session_05
+namespace reverseString
 {
-    internal class ProgrammOne
+    class ProgramOne
     {
-        public  Name()
+        static void Main(string[] args)
         {
-            Console.WriteLine("Enter name");
-            string givenName = Console.ReadLine();
-            return givenName;
+            string str = "";
+            string reverse = "";
+            int Length = 0;
+            Console.WriteLine("Enter your name");
+            
+            str = Console.ReadLine();
+            //TODO: check the given word. Accept ONLY letters.
+            
+            Length = str.Length - 1;
+            while (Length >= 0)
+            {
+                reverse = reverse + str[Length];
+                Length--;
+            }
+           
+            Console.WriteLine("Your revesed name is {0}", reverse);
+            Console.ReadLine();
         }
     }
-    }
-
-
-        
+}
 
 
 
-  
+
+
+
+
