@@ -7,7 +7,19 @@ using System.Threading.Tasks;
 namespace Session_05
 {
     internal class ProgrammOne
-
     {
+        public  Name()
+        {
+            Console.WriteLine("Enter name");
+            string givenName = Console.ReadLine();
+            return givenName;
+        }
     }
-}
+    }
+
+
+        
+
+
+
+  
