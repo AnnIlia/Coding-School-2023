@@ -10,22 +10,22 @@ namespace reverseString
     {
         static void Main(string[] args)
         {
-            string str = "";
+            string name = "";
             string reverse = "";
             int Length = 0;
             Console.WriteLine("Enter your name");
             
-            str = Console.ReadLine();
+            name = Console.ReadLine();
             //TODO: check the given word. Accept ONLY letters.
             
-            Length = str.Length - 1;
+            Length = name.Length - 1;
             while (Length >= 0)
             {
-                reverse = reverse + str[Length];
+                reverse = reverse + name[Length];
                 Length--;
             }
            
-            Console.WriteLine("Your revesed name is {0}", reverse);
+            Console.WriteLine($"Your revesed name is {reverse}");
             Console.ReadLine();
         }
     }
