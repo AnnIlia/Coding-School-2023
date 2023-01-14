@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
-namespace ProgramTwo
+//CHANGE STARTUP: Session-05 > Properties: Application:  (select each app - .cs file)  
+namespace Session_05
 {
-    class SumProduct
+    class ProgrammTwo
     { 
         public static void Main(string[] args)
         {
