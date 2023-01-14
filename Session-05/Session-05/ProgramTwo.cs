@@ -10,13 +10,23 @@ namespace Session_05
     { 
         public static void Main(string[] args)
         {
-            Console.Write("Input a number");
-            int n = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Input a number: ");
+            int number = Convert.ToInt32(Console.ReadLine());
             int sum = 0;
-            while (n != 0)
+            //int product = 0;
+            
+            Console.Write("Select Operation: Press 1 for Summarize or 2 for Product ");
+            int operation = Convert.ToInt32(Console.ReadLine());
+            if (operation == 1) {Console.WriteLine("SUM") }
+            { if (operation == 2) { Console.WriteLine("PRODUCT")} { Console.WriteLine("Oops..Select between 1 or 2, please") } };
+
+
+            Console.WriteLine("Sum of the digits of the said integer: " + sum);
+
+            while (number != 0)
             {
-                sum += n % 10;
-                n /= 10;
+                sum += number % 10;
+                number /= 10;
             }
             Console.WriteLine("Sum of the digits of the said integer: " + sum);
         }

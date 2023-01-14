@@ -13,7 +13,7 @@ namespace Session_05
             string name = "";
             string reverse = "";
             int Length = 0;
-            Console.WriteLine("Enter your name");
+            Console.WriteLine("Enter your name: ");
             
             name = Console.ReadLine();
             //TODO: check the given word. Accept ONLY letters.
