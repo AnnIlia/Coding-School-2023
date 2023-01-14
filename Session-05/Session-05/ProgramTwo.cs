@@ -22,7 +22,7 @@ namespace Session_05
             int numberB = Convert.ToInt32(Console.ReadLine());
             
             int sum = numberA + numberB;
-            int product
+            int product = numberA 
 
             resultSum = "$Summary of two numbers is: {0}", sum;
 
