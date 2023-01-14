@@ -11,22 +11,32 @@ namespace Session_05
         public static void Main(string[] args)
         {
             Console.Write("Input a number: ");
-            int number = Convert.ToInt32(Console.ReadLine());
-            int sum = 0;
-            //int product = 0;
+            int numberA = Convert.ToInt32(Console.ReadLine());
             
-            Console.Write("Select Operation: Press 1 for Summarize or 2 for Product ");
+            
+           
+            Console.Write("Select Operation: s\nPress 1 for Summarize or 2 for Product");
             int operation = Convert.ToInt32(Console.ReadLine());
-            if (operation == 1) {Console.WriteLine("SUM") }
-            { if (operation == 2) { Console.WriteLine("PRODUCT")} { Console.WriteLine("Oops..Select between 1 or 2, please") } };
 
+            Console.Write("Input a number to perform the operation you selected");
+            int numberB = Convert.ToInt32(Console.ReadLine());
+            
+            int sum = numberA + numberB;
+            int product
 
+            resultSum = "$Summary of two numbers is: {0}", sum;
+
+            if (operation == 1) {sum} else if (operation == 2) {product }
+           // else if (operation == 2) { Console.WriteLine("PRODUCT")} 
+           // else { Console.WriteLine("Oops..Select between 1 or 2, please") } ;
+
+            
             Console.WriteLine("Sum of the digits of the said integer: " + sum);
 
-            while (number != 0)
+            while (numberA != 0)
             {
-                sum += number % 10;
-                number /= 10;
+                sum += numberA % 10;
+                numberA /= 10;
             }
             Console.WriteLine("Sum of the digits of the said integer: " + sum);
         }
