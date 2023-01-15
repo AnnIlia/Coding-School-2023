@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-//CHANGE STARTUP: Session-05 > Properties: Application:  (select each app - .cs file)  
+//I may not have understood the point correctly about the operation of Product
+
+//CHANGE STARTUP: Session-05 > Properties: Application: (select each app - .cs file)  
 namespace Session_05
 {
     class ProgrammTwo
