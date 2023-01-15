@@ -12,33 +12,45 @@ namespace Session_05
         {
             Console.Write("Input a number: ");
             int numberA = Convert.ToInt32(Console.ReadLine());
-            
-            
-           
-            Console.Write("Select Operation: s\nPress 1 for Summarize or 2 for Product");
+                     
+            Console.Write("Select Operation: Press 1 for Summarize or 2 for Product\n");
             int operation = Convert.ToInt32(Console.ReadLine());
 
-            Console.Write("Input a number to perform the operation you selected");
-            int numberB = Convert.ToInt32(Console.ReadLine());
-            
-            int sum = numberA + numberB;
-            int product = numberA 
+            int result = 0;
+            int counter = 0;
 
-            resultSum = "$Summary of two numbers is: {0}", sum;
 
-            if (operation == 1) {sum} else if (operation == 2) {product }
-           // else if (operation == 2) { Console.WriteLine("PRODUCT")} 
-           // else { Console.WriteLine("Oops..Select between 1 or 2, please") } ;
-
-            
-            Console.WriteLine("Sum of the digits of the said integer: " + sum);
-
-            while (numberA != 0)
-            {
-                sum += numberA % 10;
-                numberA /= 10;
+            /* select the operation */
+            if (operation == 1) {
+                //do the sum
+                counter = 0;
+                while (counter < numberA) {
+                    result = result + counter;
+                    counter++;
+                    Console.Write("result: " + result + "\n");
+                }
+                Console.Write("Selected Operation: Sum\n");
             }
-            Console.WriteLine("Sum of the digits of the said integer: " + sum);
+            else if (operation == 2) {
+                //do the product
+                counter = 1;
+                result = 1;
+                while (counter < numberA+1)
+                {
+                    result = result * counter;
+                    counter++;
+                    Console.Write("result: " + result + "\n");
+                }
+                Console.Write("Selected Operation: product\n");
+            }
+            else {
+                //wrong input print error message
+                Console.Write("Wrong input, programm exit");
+            }
+
+            //print the result
+            Console.Write("result: " + result);
+
         }
     }
 
