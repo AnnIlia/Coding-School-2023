@@ -16,8 +16,8 @@ namespace Session_05
             Console.WriteLine("Enter your name: ");
             
             name = Console.ReadLine();
-            //TODO: check the given word. Accept ONLY letters.
-            
+            //TODO: suggestion - check the given word. Accept ONLY letters.
+
             Length = name.Length - 1;
             while (Length >= 0)
             {
