@@ -7,17 +7,20 @@ namespace Session_06
     {
         // properties
 
-      
-        public string? Rank { get; set; }
+        
+
+        public string[]? Rank { get; set; }
+
+       
         public Course[] ?courses { get; set; }
 
-        /*TODO: add rank of {'full', 'associate', 'assistant'}*/
-
+        /*
+         TODO: add rank of {'full', 'associate', 'assistant'}
+         maybe with:
         string[] Rank = new string[] { "ful", "associate", "assistant" };
+         */
 
-
-
-
+       
         // methods
         public void Teach(string Course, DateTime dateTime)
         {
