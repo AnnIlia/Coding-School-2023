@@ -9,7 +9,6 @@ namespace Session_06
         public Guid ID { get; set; }
         public Guid CourseID { get; set; }
         public Guid ProfessorID { get; set; }
-
         public DateTime Callendar { get; set; }
 
     }
