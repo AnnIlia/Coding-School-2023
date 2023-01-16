@@ -1,8 +1,17 @@
 ﻿using System;
 
-public class Class1
+namespace Session_06
 {
-	public Class1()
-	{
-	}
+
+    public class Person
+    {
+        // properties
+        public Guid ID { get; set; }
+        public string? Name { get; set; }
+        public int Age { get; set; }
+
+        // methods
+
+
+    }
 }
