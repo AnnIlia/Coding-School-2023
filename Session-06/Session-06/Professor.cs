@@ -6,11 +6,9 @@ namespace Session_06
     public class Professor : Person
     {
         // properties
+        public [] ?Rank { get; set; }
 
-        
-
-        public string[]? Rank { get; set; }
-        string[] Rank = new string[] { "ful", "associate", "assistant" };
+        string [] Rank = new string[] { "ful", "associate", "assistant" };
 
         public Course[] ?courses { get; set; }
 
