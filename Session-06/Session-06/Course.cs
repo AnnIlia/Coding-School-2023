@@ -1,8 +1,13 @@
 ﻿using System;
 
-public class Class1
-{
-	public Class1()
-	{
-	}
+namespace Session_06 { 
+
+public class Course
+    { 
+        // properties
+        public Guid ID { get; set; }
+        public string? Code { get; set; }
+        public int Subject { get; set; }
+
+    }
 }
