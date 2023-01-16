@@ -1,8 +1,16 @@
 ﻿using System;
 
-public class Class1
+namespace Session_06
 {
-	public Class1()
-	{
-	}
+
+    public class Schedule
+    {
+        // properties
+        public Guid ID { get; set; }
+        public Guid CourseID { get; set; }
+        public Guid ProfessorID { get; set; }
+
+        public DateTime Callendar { get; set; }
+
+    }
 }
