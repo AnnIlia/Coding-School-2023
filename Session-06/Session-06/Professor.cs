@@ -10,17 +10,11 @@ namespace Session_06
         
 
         public string[]? Rank { get; set; }
+        string[] Rank = new string[] { "ful", "associate", "assistant" };
 
-       
         public Course[] ?courses { get; set; }
 
-        /*
-         TODO: add rank of {'full', 'associate', 'assistant'}
-         maybe with:
-        string[] Rank = new string[] { "ful", "associate", "assistant" };
-         */
-
-       
+               
         // methods
         public void Teach(string Course, DateTime dateTime)
         {
