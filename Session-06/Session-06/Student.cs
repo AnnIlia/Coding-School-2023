@@ -3,7 +3,7 @@
 namespace Session_06
 {
 
-    public class Student
+    public class Student  
     {
         // properties
         public int RegistrationNumber { get; set; }
