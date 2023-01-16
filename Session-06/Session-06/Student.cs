@@ -3,13 +3,13 @@
 namespace Session_06
 {
 
-    public class Student : Session_06.Person  
+    public class Student
     {
         // properties
         public int RegistrationNumber { get; set; }
-        public Course[]? courses { get; set; }
+        public string? Course[]? courses { get; set; }
 
-
+        
 
         // methods
         public void Attend(string Course, DateTime dateTime)
@@ -21,6 +21,6 @@ namespace Session_06
         {
 
         }
-
+           
     }
 }
