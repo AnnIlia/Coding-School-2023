@@ -13,6 +13,11 @@ namespace Session_06
 
         /*TODO: add rank of {'full', 'associate', 'assistant'}*/
 
+        string[] Rank = new string[] { "ful", "associate", "assistant" };
+
+
+
+
         // methods
         public void Teach(string Course, DateTime dateTime)
         {
