@@ -6,10 +6,12 @@ namespace Session_06
     public class Professor : Person
     {
         // properties
-        public int RegistrationNumber { get; set; }
+
+      
+        public string? Rank { get; set; }
         public Course[] ?courses { get; set; }
 
-
+        /*TODO: add rank of {'full', 'associate', 'assistant'}*/
 
         // methods
         public void Teach(string Course, DateTime dateTime)
