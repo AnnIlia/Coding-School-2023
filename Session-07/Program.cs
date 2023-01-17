@@ -20,24 +20,28 @@ namespace Session_07
         //no method
     }
 
-    public class MessageLogger
+    public class MessageLogger : Message
     {
         // properties
         public Message[] Messages { get; set; }
+       
+        Message[] Messages = new Message[1000]
+
+
         // methods
         public ReadAll()
         {
-            
+            //do
         }
        
         public ClearAll()
         {
-         
+            //do
         }
         
         public Write(Message)
         {
-         
+            //do
         }
 
     }
