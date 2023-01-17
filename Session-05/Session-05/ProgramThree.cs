@@ -9,7 +9,7 @@ namespace Session_05
 {
     internal class ProgramThree
     {
-        public int Prime()
+        public void Prime()
         {
             Console.Write("Input a number: ");
             int n = Convert.ToInt32(Console.ReadLine());
@@ -27,26 +27,27 @@ namespace Session_05
                         count++;
                         break;
                     }
-                    else {
+                    else
+                    {
                         //Console.Write("else\n");
                     }
-                    
+
                 }
-                
+
                 if (count == 0 && num != 1)
                 {
-                    Console.Write(num + " \n" );
+                    Console.Write(num + " \n");
                 }
-                 
-                public int Prime()
-                {
-                    return 0;
-                }
+
 
             }
 
-        }
 
-        }
+
+            void Prime()
+            {
+            }
     }
+}
 
+        

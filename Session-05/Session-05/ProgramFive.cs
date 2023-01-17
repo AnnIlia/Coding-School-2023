@@ -9,7 +9,8 @@ namespace Session_05
 {
     internal class ProgramFive
     {
-        public int Sort
+        
+        public Array[] Sort()
         {
 
             int[] array1 = new int[] { 0, -2, 1, 20, -31, 50, -4, 17, 89, 100 };
@@ -39,10 +40,9 @@ namespace Session_05
             }
         }
 
-            public int Sort()
-             {
-                 return 0;
-             }
-
+        public Array[] Sort()
+        {
+            return;
+        }
     }
 }

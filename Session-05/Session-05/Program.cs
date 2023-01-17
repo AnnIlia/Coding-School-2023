@@ -11,6 +11,8 @@ p2.ChooseBetween;
 ProgramThree p3 = new ProgramThree();
 p3.Prime;
 
-ProgrammTwo p2 = new ProgrammTwo();
-p2.ChooseBetween;
+ProgramFour p4 = new ProgramFour();
+p4.Arrays;
 
+ProgramFive p5 = new ProgramFive();
+p5.Sort;
