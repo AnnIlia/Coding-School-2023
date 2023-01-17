@@ -76,7 +76,7 @@ namespace Session_07
     {
 
         // properties
-        public MessageLogger Logger { get; set; }
+       // public MessageLogger Logger { get; set; }
 
         // Constructor
         public ActionResolver(Guid requestId)
