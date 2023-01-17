@@ -36,8 +36,12 @@ namespace Session_07
 
     public class ActionResponse
     {
-
+        // properties
+        public Guid RequestID { get; set; }
+        public Guid ResponsetID { get; set;
+        public string Output { get; set; }
     }
+}
 
     public class ActionResolver
     {
