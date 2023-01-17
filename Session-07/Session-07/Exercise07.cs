@@ -96,30 +96,53 @@ namespace Session_07
             }
 
 
-            public double SurfaceCircle(double radius)
+            public double Conver(string input, string output, string result)
             {
 
-                double surface = 0;
+                Console.Write("Input a Number : ");
+                string input = "";
+                string output = ""; 
 
-                surface = radius * (double)2 * Math.PI;
+                string input = Console.ReadLine();
 
-                return surface;
+                if (Decimal.TryParse(input, // ---- //      //convert      )
+
+                else Console.Write(" Error Converter");
+
+
+                return output;
             }
 
-            public double SurfaceSquare(double side)
+            public double Uppercasae ()
             {
-                double surface = 0;
 
-                surface = side * side;
+                Console.Write("Input word of queue of words");
+                string input =  Console.ReadLine();
 
-                return surface;
+
+                
+                return output;
             }
 
-            public double SurfaceTriangle(double side)
+            public double Reverse(string input, string output)
             {
-                double surface = 0;
 
-                surface = (side * side) / 2;
+                Console.WriteLine("Enter a string");
+                string text = Console.ReadLine();
+                int Length = 0;
+                reverse = 
+                Length = text.Length - 1;
+                while (Length >= 0)
+                {
+                    reverse = reverse + name[Length];
+                    Length--;
+                }
+
+                Console.WriteLine($"Your revesed name is {reverse}");
+                Console.ReadLine();
+
+            }
+             
 
                 return surface;
             }
@@ -134,17 +157,7 @@ namespace Session_07
         public double Action(ActionEnum Convert, string Input, string result)
         {
 
-            Console.Write("Input a Number : ");
-            string input = Console.ReadLine();
-
-            if (Decimal.TryParse(input, // ---- //
-
-                //convert
-                return Convert;
-                )
-
-                else Console.Write(" Error Converter");
-
+         
 
 
 
