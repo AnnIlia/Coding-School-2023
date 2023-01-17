@@ -6,7 +6,7 @@
     <RootNamespace>Session_05</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <StartupObject>Session_05.ProgramFive</StartupObject>
+    <StartupObject></StartupObject>
   </PropertyGroup>
 
 </Project>

@@ -2,17 +2,23 @@
 
 using Session_05;
 
-ProgrammOne p1 = new ProgrammOne();
-p1.ReverseString;
+internal class Program
+{
+    private static void Main(string[] args)
+    {
+        ProgrammOne p1 = new ProgrammOne();
+        p1.ReverseString();
 
-ProgrammTwo p2 = new ProgrammTwo();
-p2.ChooseBetween;
+        ProgrammTwo p2 = new ProgrammTwo();
+        p2.ChooseBetween();
 
-ProgramThree p3 = new ProgramThree();
-p3.Prime;
+        ProgramThree p3 = new ProgramThree();
+        p3.Prime();
 
-ProgramFour p4 = new ProgramFour();
-p4.Arrays;
+        ProgramFour p4 = new ProgramFour();
+        p4.Arrays();
 
-ProgramFive p5 = new ProgramFive();
-p5.Sort;
+        ProgramFive p5 = new ProgramFive();
+        p5.Sort();
+    }
+}
