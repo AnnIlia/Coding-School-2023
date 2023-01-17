@@ -17,13 +17,29 @@ namespace Session_07
         public Guid RequestID { get; set; }
         public DateTime TimeStamp { get; set; }
         public String Message  { get; set; }
+        //no method
     }
 
     public class MessageLogger
     {
         // properties
-        public Message[] Messages { get; set; } 
+        public Message[] Messages { get; set; }
+        // methods
+        public ReadAll()
+        {
+            
+        }
+       
+        public ClearAll()
+        {
+         
+        }
         
+        public Write(Message)
+        {
+         
+        }
+
     }
 
     public class ActionRequest
