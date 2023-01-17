@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Session_07;
+using System;
 
 namespace Session_07
 {
@@ -63,16 +64,16 @@ namespace Session_07
     }
 }
 
-    public class ActionResolver
+    public class ActionResolver : ActionRequest
     {
 
         // PROPERTIES
         public MessageLogger Logger { get; set; }
 
         // CTOR
-        public ActionResolver()
+        public ActionResolver(Guid requestId)
         {
-
+        RequestID guid = requestId;
         }
 
         // METHODS
