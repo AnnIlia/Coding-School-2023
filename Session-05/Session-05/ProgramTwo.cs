@@ -10,7 +10,7 @@ namespace Session_05
 {
     class ProgrammTwo
     { 
-        public int ChooseBetween()
+        public void ChooseBetween()
         {
             Console.Write("Input a number: ");
             int numberA = Convert.ToInt32(Console.ReadLine());
@@ -53,15 +53,15 @@ namespace Session_05
             //print the result
             Console.Write("result: " + result);
 
-      
-     
+
+             int ChooseBetween()
+            {
+                return 0;
+            }
         }
 
 
-        public int ChooseBetween()
-        {
-            return 0;
-        }
+       
     }
 
 }
