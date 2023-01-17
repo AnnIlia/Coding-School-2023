@@ -25,8 +25,8 @@ namespace Session_07
     {
         // properties
         public Message[] Messages { get; set; }
-       
-        Message[] Messages = new Message[1000]
+
+        Message[] Messages = new Message[1000];
 
 
         // methods
@@ -40,7 +40,7 @@ namespace Session_07
             //do
         }
         
-        public Write(Message)
+        public Write (string Message) 
         {
             //do
         }
