@@ -100,17 +100,17 @@ namespace Session_07
             {
 
                 Console.Write("Input a Number : ");
-                string input = "";
-                string output = ""; 
+                string convertinput = "";
+               
 
-                string input = Console.ReadLine();
+                convertinput = Console.ReadLine();
 
                 if (Decimal.TryParse(input, // ---- //      //convert      )
 
                 else Console.Write(" Error Converter");
 
 
-                return output;
+                return convertoutput;
             }
 
             public double Uppercasae ()
@@ -119,26 +119,27 @@ namespace Session_07
                 Console.Write("Input word of queue of words");
                 string input =  Console.ReadLine();
 
-
+                // 1. check IF is a word or queue of words. 
+                // 2. Uppercase
                 
                 return output;
             }
 
-            public double Reverse(string input, string output)
+            public double Reverse()
             {
 
                 Console.WriteLine("Enter a string");
                 string text = Console.ReadLine();
                 int Length = 0;
-                reverse = 
+                string rev = 0;
                 Length = text.Length - 1;
                 while (Length >= 0)
                 {
-                    reverse = reverse + name[Length];
+                    rev = rev + text[Length];
                     Length--;
                 }
 
-                Console.WriteLine($"Your revesed name is {reverse}");
+                Console.WriteLine($"Your revesed name is {rev}");
                 Console.ReadLine();
 
             }
@@ -153,26 +154,6 @@ namespace Session_07
 
 
 
-
-        public double Action(ActionEnum Convert, string Input, string result)
-        {
-
-         
-
-
-
-
-
-
-
-
-
-                    
-
-
-
-}
-    }
 
 
 
