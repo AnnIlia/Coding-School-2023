@@ -10,7 +10,7 @@ namespace Session_05
 {
     class ProgrammTwo
     { 
-        public static void Main(string[] args)
+        public int ChooseBetween()
         {
             Console.Write("Input a number: ");
             int numberA = Convert.ToInt32(Console.ReadLine());
@@ -52,6 +52,11 @@ namespace Session_05
 
             //print the result
             Console.Write("result: " + result);
+
+            public int ChooseBetween()
+            {
+                return 0;
+            }
 
         }
     }

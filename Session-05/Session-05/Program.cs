@@ -2,5 +2,11 @@
 
 using Session_05;
 
-//ProgrammTwo session = new ProgrammTwo();
-//Console.WriteLine();
+ProgrammOne p1 = new ProgrammOne();
+p1.ReverseString;
+
+ProgrammTwo p2 = new ProgrammTwo();
+p2.ChooseBetween;
+
+
+

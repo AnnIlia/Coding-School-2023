@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -8,7 +9,7 @@ namespace Session_05
 {
     class ProgrammOne
     {
-        static void Main(string[] args)
+        static void ReverseString()
         {
             string name = "";
             string reverse = "";
@@ -27,6 +28,13 @@ namespace Session_05
            
             Console.WriteLine($"Your revesed name is {reverse}");
             Console.ReadLine();
+
+            public int ReverseString()
+            {
+                return 0;
+            }
+
+
         }
     }
 }
