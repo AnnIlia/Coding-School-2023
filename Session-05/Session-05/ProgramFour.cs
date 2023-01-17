@@ -19,16 +19,16 @@ namespace Session_05
             {
                 for (int j = 0; j < 4; j++)
                 {
-                    array3[i,j] = array1[i] * array2[j];
-                    Console.WriteLine(array3[i,j]); 
+                    array3[i, j] = array1[i] * array2[j];
+                    Console.WriteLine(array3[i, j]);
                 }
             }
-        }
 
-        //public void Arrays()
-        //{
-         
-        //}
+             void Arrays()
+            {
+             
+            }
+        }
 
 
     }

@@ -10,7 +10,7 @@ namespace Session_05
     internal class ProgramFive
     {
         
-        public Array[] Sort()
+        public void Sort()
         {
 
             int[] array1 = new int[] { 0, -2, 1, 20, -31, 50, -4, 17, 89, 100 };
@@ -38,11 +38,12 @@ namespace Session_05
             {
                 Console.WriteLine(array1[i]);   
             }
+            void Sort()
+            {
+                return;
+            }
         }
 
-        public Array[] Sort()
-        {
-            return;
-        }
+        
     }
 }
