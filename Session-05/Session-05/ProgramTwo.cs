@@ -53,11 +53,14 @@ namespace Session_05
             //print the result
             Console.Write("result: " + result);
 
-            public int ChooseBetween()
-            {
-                return 0;
-            }
+      
+     
+        }
 
+
+        public int ChooseBetween()
+        {
+            return 0;
         }
     }
 
