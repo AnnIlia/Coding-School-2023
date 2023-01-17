@@ -9,7 +9,7 @@ namespace Session_05
 {
     class ProgrammOne
     {
-        static void ReverseString()
+        public void ReverseString()
         {
             string name = "";
             string reverse = "";
@@ -29,15 +29,19 @@ namespace Session_05
             Console.WriteLine($"Your revesed name is {reverse}");
             Console.ReadLine();
 
-            public int ReverseString()
+            void ReverseString(string name )
             {
-                return 0;
+                /*while (name.Length > 0)*/
+                            
             }
+            
+           
+}
 
 
         }
     }
-}
+
 
 
 
