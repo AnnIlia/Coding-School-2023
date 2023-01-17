@@ -3,8 +3,8 @@ using System;
 
 namespace Session_07
 {
- //define class diagram
-   
+    //define class diagram
+
     public enum ActionEnum
     {
         Convert,
@@ -12,12 +12,12 @@ namespace Session_07
         Reverse
     }
 
-    public class Message 
+    public class Message
     {
         // properties
         public Guid RequestID { get; set; }
         public DateTime TimeStamp { get; set; }
-        public String Message  { get; set; }
+       // public String Message { get; set; }
         //no method
     }
 
@@ -30,19 +30,22 @@ namespace Session_07
 
 
         // methods
-        public ReadAll()
+        public int ReadAll()
         {
             //do
+            return 1;
         }
-       
-        public ClearAll()
+
+        public int ClearAll()
         {
             //do
+            return 1;
         }
-        
-        public Write (string Message) 
+
+        public int Write(string Message)
         {
             //do
+            return 1;
         }
 
     }
@@ -52,7 +55,7 @@ namespace Session_07
         // properties
         public Guid RequestID { get; set; }
         public string Input { get; set; }
-        public ActionEnum Action { get; set; }
+      //  public ActionEnum Action { get; set; }
 
         // methods (request4 from exercise)
 
@@ -65,7 +68,7 @@ namespace Session_07
     {
         // properties
         public Guid RequestID { get; set; }
-        public Guid ResponsetID { get; set;
+        public Guid ResponsetID { get; set; }
         public string Output { get; set; }
     }
 
@@ -88,26 +91,6 @@ namespace Session_07
 
             return null;
         }
-    
-
-   
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    }
 }
 

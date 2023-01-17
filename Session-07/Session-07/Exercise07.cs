@@ -19,7 +19,7 @@ namespace Session_07
         // properties
         public Guid? RequestID { get; set; }
         public DateTime TimeStamp { get; set; }
-        public String Message { get; set; }
+       // public String Message { get; set; }
         //no method
     }
 
@@ -32,24 +32,24 @@ namespace Session_07
 
 
         // methods
-        public ReadAll()
+        public int ReadAll()
         {
             //do
-            return
+            return 1;
         }
 
-        public ClearAll()
+        public int ClearAll()
         {
             //do
-            return
+            return 1;
         }
-
+        /*
         public Write(Message)
         {
             //do
-            return 
+            return;
         }
-
+        */
     }
 
     public class ActionRequest
@@ -104,13 +104,13 @@ namespace Session_07
                
 
                 convertinput = Console.ReadLine();
+                /*
+                                if (Decimal.TryParse(input/* // ---- //      //convert      )
 
-                if (Decimal.TryParse(input, // ---- //      //convert      )
+                                else Console.Write(" Error Converter");
+                */
 
-                else Console.Write(" Error Converter");
-
-
-                return convertoutput;
+                return;//convertoutput;
             }
 
             public double Uppercasae ()
@@ -122,7 +122,7 @@ namespace Session_07
                 // 1. check IF is a word or queue of words. 
                 // 2. Uppercase
                 
-                return output;
+                return 1;
             }
 
             public double Reverse()
@@ -131,7 +131,7 @@ namespace Session_07
                 Console.WriteLine("Enter a string");
                 string text = Console.ReadLine();
                 int Length = 0;
-                string rev = 0;
+                string rev = "0";
                 Length = text.Length - 1;
                 while (Length >= 0)
                 {
