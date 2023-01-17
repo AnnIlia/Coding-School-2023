@@ -1,5 +1,6 @@
 ﻿using Session_07;
 using System;
+using System.Reflection.Metadata.Ecma335;
 using System.Xml.Linq;
 
 namespace Session_07
@@ -60,10 +61,38 @@ namespace Session_07
 
         // methods (request4 from exercise)
 
-        public double implementation(ShapeType shapeType, double radius, double side)
+        public double Implementation(ActionEnum Convert, string Input, string result)
         {
 
-            double surface = 0;
+            Console.Write("Input a Number : ");
+            string input = Console.ReadLine();
+
+            if (Decimal.TryParse(input, // ---- //
+
+                //convert
+                return Convert;
+                )
+
+                else Console.Write(" Error Converter");
+
+
+
+
+
+
+
+
+                    
+
+
+
+}
+    }
+
+
+
+
+    double surface = 0;
 
             switch (shapeType)
             {
