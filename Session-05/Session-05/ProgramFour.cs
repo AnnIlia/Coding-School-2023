@@ -9,7 +9,7 @@ namespace Session_05
 {
     internal class ProgramFour
     {
-        public int Arrays()
+        public void Arrays()
         {
             int[] array1 = new int[] { 2, 4, 9, 12 };
             int[] array2 = new int[] { 1, 3, 7, 10 };
@@ -25,10 +25,10 @@ namespace Session_05
             }
         }
 
-        public int Arrays()
-        {
-            return 0;
-        }
+        //public void Arrays()
+        //{
+         
+        //}
 
 
     }
