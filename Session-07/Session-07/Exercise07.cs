@@ -61,7 +61,77 @@ namespace Session_07
 
         // methods (request4 from exercise)
 
-        public double Implementation(ActionEnum Convert, string Input, string result)
+        public class Shape
+        {
+
+            public double Move(ActionEnum Action, string? input, string? output)
+            {
+
+                double result = 0;
+
+                switch (Action)
+                {
+                    case Action.Convert:
+
+                        result = Action(output);
+                        break;
+
+                    case Action.Uppercase:
+
+                        result = Action(output);
+                        break;
+
+                    case Action.Reverse:
+
+                        result = Action(output);
+                        break;
+
+                    default:
+                        Console.WriteLine("Error Message");
+                        break;
+                }
+
+                return Action;
+
+            }
+
+
+            public double SurfaceCircle(double radius)
+            {
+
+                double surface = 0;
+
+                surface = radius * (double)2 * Math.PI;
+
+                return surface;
+            }
+
+            public double SurfaceSquare(double side)
+            {
+                double surface = 0;
+
+                surface = side * side;
+
+                return surface;
+            }
+
+            public double SurfaceTriangle(double side)
+            {
+                double surface = 0;
+
+                surface = (side * side) / 2;
+
+                return surface;
+            }
+
+
+        }
+
+
+
+
+
+        public double Action(ActionEnum Convert, string Input, string result)
         {
 
             Console.Write("Input a Number : ");
@@ -82,6 +152,8 @@ namespace Session_07
 
 
 
+
+
                     
 
 
@@ -92,30 +164,7 @@ namespace Session_07
 
 
 
-    double surface = 0;
 
-            switch (shapeType)
-            {
-                case ShapeType.Circle:
-                    surface = SurfaceCircle(radius);
-                    break;
-
-                case ShapeType.Square:
-                    surface = SurfaceSquare(side);
-                    break;
-
-                case ShapeType.Triangle:
-                    surface = SurfaceTriangle(side);
-                    break;
-
-                default:
-                    Console.WriteLine("please select another type");
-                    break;
-            }
-
-            return surface;
-
-        }
 
 
 
