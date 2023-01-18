@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Data;
 using System.Linq;
 using System.Runtime.InteropServices;
@@ -29,7 +30,12 @@ namespace MySession_07
         {
             ID = Guid.NewGuid();        
         }
-
+        public Message(string text)
+        {
+            ID= Guid.NewGuid();
+            TimeStamp= DateTime.Now;
+            MessageText = text;
+        }
     }
 
     public class MessageLogger
@@ -108,14 +114,12 @@ namespace MySession_07
                 response.ResponseID = Guid.NewGuid(); 
                 response.RequestID = request.RequestID;
                 
-                MessageLogger logger= new MessageLogger();  
-                Message message= new Message();
-                message.MessageText = "execution start";
-                message.TimeStamp = DataTime.Now;
-
-                Logger.Messages[0] = message;
-
+                MessageLogger logger= new MessageLogger();
+                Message message = new Message();
                 
+
+                logger.Messages[0] = message;
+
 
                 try
                 {
@@ -138,7 +142,21 @@ namespace MySession_07
                 }
                 catch (Exception ex)
                 {
-                    throw;
+
+                    Message message2 = new Message();
+                    message2.MessageText = "execution message";
+                    message2.TimeStamp = DateTime.Now;
+
+                    logger.Messages[0] = message2;
+                                     
+                }
+                finally
+                {
+                    Message message3 = new Message();
+                    message3.MessageText = "execution end";
+                    message3.TimeStamp = DateTime.Now;
+
+                    logger.Messages[0] = message;
                 }
 
                 return null;
