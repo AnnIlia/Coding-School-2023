@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
@@ -107,7 +108,12 @@ namespace MySession_07
                 response.ResponseID = Guid.NewGuid(); 
                 response.RequestID = request.RequestID;
                 
+                MessageLogger logger= new MessageLogger();  
+                Message message= new Message();
+                message.MessageText = "execution start";
+                message.TimeStamp = DataTime.Now;
 
+                Logger.Messages[0] = message;
 
                 
 
