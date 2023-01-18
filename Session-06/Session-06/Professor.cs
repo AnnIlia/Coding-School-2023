@@ -21,12 +21,12 @@ namespace Session_06
 
         public void SetGrade(Guid studentID, Guid courseID, int grade)
         {
-
+            //evaluate srudent
         }
         public void GetName(string name)
         {
-            
+            //Dr + name(person)
         }
-        //TODO: add "Dr" to GetName
+        
     }
 }
