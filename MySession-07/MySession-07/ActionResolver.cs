@@ -17,29 +17,6 @@ namespace MySession_07
         Reverse
     }
 
-   
-
-   
-
-        public class ActionResponse
-        {
-            //properties
-            public Guid RequestID { set; get; }
-            public Guid ResponseID { set; get; }
-            public string Output { get; set; }
-
-            //constructor
-            public ActionResponse()
-            {
-                ResponseID = Guid.NewGuid();
-            }
-
-        }
-
-      
-
-       
-
         public class ActionResolver
         {
             //properties
