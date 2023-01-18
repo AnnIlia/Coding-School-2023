@@ -40,6 +40,10 @@ public class Message
         //Message renamed as MessageText
         public string MessageText { get; set; }
 
+      
+
+
+
     }
 
  public class MessageLogger 
@@ -48,8 +52,14 @@ public class Message
     public Message[] Messages { get; set; }
 
     }
+        //constructor
+    public MessageLogger()
+    {
 
-public class ActionRequest
+    }
+
+
+    public class ActionRequest
     {
         //properties
         public Guid RequestID { get; set; }
