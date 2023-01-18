@@ -115,7 +115,7 @@ namespace MySession_07
                 response.RequestID = request.RequestID;
                 
                 MessageLogger logger= new MessageLogger();
-                Message message = new Message();
+                Message message = new Message('execution start');
                 
 
                 logger.Messages[0] = message;
@@ -138,24 +138,18 @@ namespace MySession_07
                             //TODO: error message
                             break;
                     }
-                    response.Output = output;
+                   
                 }
                 catch (Exception ex)
                 {
 
-                    Message message2 = new Message();
-                    message2.MessageText = "execution message";
-                    message2.TimeStamp = DateTime.Now;
-
-                    logger.Messages[0] = message2;
+                    Message message2 = new Message(ex.Message);
+                    logger.Messages[1] = message2;
                                      
                 }
                 finally
                 {
-                    Message message3 = new Message();
-                    message3.MessageText = "execution end";
-                    message3.TimeStamp = DateTime.Now;
-
+                    Message message3 = new Message("execution end");
                     logger.Messages[0] = message;
                 }
 
