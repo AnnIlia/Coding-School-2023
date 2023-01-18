@@ -22,13 +22,8 @@ namespace MySession_07
         //properties
         public Guid ID { get; set; }
         public DateTime TimeStamp { get; set; }
-        //Message renamed as MessageText
+        //Message renamed as MessageText > cannot be the same as class name
         public string MessageText { get; set; }
-
-
-
-
-
     }
 
     public class MessageLogger
