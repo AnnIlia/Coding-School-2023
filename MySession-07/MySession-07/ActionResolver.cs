@@ -79,21 +79,7 @@ namespace MySession_07
 
         }
 
-        public class ActionRequest
-        {
-            //properties
-            public Guid RequestID { get; set; }
-            public string Input { get; set; }
-            public ActionEnum Action { get; set; }
-
-            //constructor
-            public ActionRequest()
-            {
-                ResponseID= Guid.NewGuid();
-            }
-
-
-        }
+      
 
        
 
@@ -115,7 +101,7 @@ namespace MySession_07
                 response.RequestID = request.RequestID;
                 
                 MessageLogger logger= new MessageLogger();
-                Message message = new Message('execution start');
+                Message message = new Message("execution start");
                 
 
                 logger.Messages[0] = message;
