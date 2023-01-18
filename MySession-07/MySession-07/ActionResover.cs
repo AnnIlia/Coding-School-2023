@@ -10,12 +10,10 @@ namespace MySession_07
 
     public enum ActionEnum
     {
-        Convert,
+        Convert, 
         Uppercase,
         Reverse
     }
-
-   
 
     public class Message
     {
@@ -42,7 +40,7 @@ namespace MySession_07
         {
 
         }
-         
+
         public void Clear()
         {
 
@@ -97,7 +95,7 @@ namespace MySession_07
                         break;
                     case ActionEnum.Reverse:
                         Reverse();
-                        break; 
+                        break;
                     default:
                         //TODO: error message
                         break;
@@ -125,7 +123,7 @@ namespace MySession_07
 
 
 
-   
+
 
 
 
