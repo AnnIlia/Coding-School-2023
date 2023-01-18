@@ -83,30 +83,48 @@ namespace MySession_07
             //methods
             public ActionResponse Execute(ActionRequest request)
             {
-
-
-                switch (request.Action)
+                try
                 {
-                    case ActionEnum.Convert:
-                        Convert();
-                        break;
-                    case ActionEnum.Uppercase:
-                        Uppercase();
-                        break;
-                    case ActionEnum.Reverse:
-                        Reverse();
-                        break;
-                    default:
-                        //TODO: error message
-                        break;
-
+                    switch (request.Action)
+                    {
+                        case ActionEnum.Convert:
+                            output = Convert(request.Input);
+                            break;
+                        case ActionEnum.Uppercase:
+                            output = Uppercase(request.Input);
+                            break;
+                        case ActionEnum.Reverse:
+                            output = Reverse(request.Input);
+                            break;
+                        default:
+                            //TODO: error message
+                            break;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    throw;
                 }
 
-
-
                 return null;
+
             }
 
+            private string Convert(string input)
+            {
+                //do comvert as requested
+                return string.Empty;
+            }
+            private string Uppercase(string input)
+            {
+                //do uppercase as requested
+                return string.Empty;
+            }
+            private string Reverse(string input) 
+            {
+                //do reverse as requested
+                return string.Empty;
+            }
 
         }
 
