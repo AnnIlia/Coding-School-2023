@@ -16,16 +16,16 @@ namespace Session_06
     }
 
 
-        // methods
-        public void Attend(string Course, DateTime dateTime)
-        {
+    // methods
+    public void Attend(string Course, DateTime dateTime)
+    {
 
-        }
-
-        public void WriteExam(string Course, DateTime dateTime)
-        {
-
-        }
-           
     }
+
+    public void WriteExam(string Course, DateTime dateTime)
+    {
+
+    }
+
+}
 }
