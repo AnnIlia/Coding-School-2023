@@ -22,6 +22,13 @@ namespace MySession_07
         public DateTime TimeStamp { get; set; }
         //Message renamed as MessageText > cannot be the same as class name
         public string MessageText { get; set; }
+
+        //constructor
+        public Message()
+        {
+            ID = Guid.NewGuid();        
+        }
+
     }
 
     public class MessageLogger
@@ -29,11 +36,10 @@ namespace MySession_07
         //properties
         public Message[] Messages { get; set; }
 
-
         //constructor
         public MessageLogger()
         {
-
+            Messages= new Message[1000];
         }
         //methods 
         public void ReadAll()
@@ -51,16 +57,6 @@ namespace MySession_07
 
         }
 
-
-
-        public class ActionRequest
-        {
-            //properties
-            public Guid RequestID { get; set; }
-            public Guid ResponseID { get; set; }
-            public string Output { get; set; }
-        }
-
         public class ActionResponse
         {
             //properties
@@ -68,7 +64,31 @@ namespace MySession_07
             public Guid ResponseID { set; get; }
             public string Output { get; set; }
 
+            //constructor
+            public ActionResponse()
+            {
+                ResponseID = Guid.NewGuid();
+            }
+
         }
+
+        public class ActionRequest
+        {
+            //properties
+            public Guid RequestID { get; set; }
+            public string Input { get; set; }
+            public ActionEnum Action { get; set; }
+
+            //constructor
+            public ActionRequest()
+            {
+                ResponseID= Guid.NewGuid();
+            }
+
+
+        }
+
+       
 
         public class ActionResolver
         {
@@ -83,23 +103,32 @@ namespace MySession_07
             //methods
             public ActionResponse Execute(ActionRequest request)
             {
+                ActionResponse response = new ActionResponse();
+                response.ResponseID = Guid.NewGuid(); 
+                response.RequestID = request.RequestID;
+                
+
+
+                
+
                 try
                 {
                     switch (request.Action)
                     {
                         case ActionEnum.Convert:
-                            output = Convert(request.Input);
+                            response.Output = Convert(request.Input);
                             break;
                         case ActionEnum.Uppercase:
-                            output = Uppercase(request.Input);
+                            response.Output = Uppercase(request.Input);
                             break;
                         case ActionEnum.Reverse:
-                            output = Reverse(request.Input);
+                            response.Output = Reverse(request.Input);
                             break;
                         default:
                             //TODO: error message
                             break;
                     }
+                    response.Output = output;
                 }
                 catch (Exception ex)
                 {
