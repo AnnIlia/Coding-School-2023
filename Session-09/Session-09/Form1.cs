@@ -347,7 +347,7 @@ namespace Session_09
         private void CtrlSquareRoot_Click(object sender, EventArgs e)
         {
             ctrlDisplay.Text += " (char)0x221A ";
-            // _calcOperation = CalcOperation.SquareRoot;
+           // _calcOperation = CalcOperation.SquareRoot;
         }
     }
 }
