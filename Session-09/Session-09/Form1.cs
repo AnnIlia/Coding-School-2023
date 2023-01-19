@@ -313,7 +313,14 @@ namespace Session_09
                     Division division = new Division();
                     _result = division.Do(_value1, _value2);
                     break;
-
+                /*
+                case CalcOperation.RaiseToPower();
+                    _result = raisetopower.Do(_value1, _value2);
+                    break;
+                case CalcOperation.squareroot();
+                    _result = SquareRoot.Do(_value1, _value2);
+                    break; 
+                    */
 
                 default:
                     break;

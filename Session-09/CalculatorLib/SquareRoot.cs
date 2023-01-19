@@ -9,9 +9,11 @@
         {
 
             decimal ret = 0;
+           
 
-            decimal Sqrt(decimal x, decimal? guess = null)
-
+            /*
+             
+                decimal Sqrt(decimal x, decimal? guess = null)
 
             {
                 var ourGuess = guess.GetValueOrDefault(x / 2m);
@@ -24,7 +26,7 @@
                     return Sqrt(x, average);
             }
 
-
+            */
               return ret;
         }
 
