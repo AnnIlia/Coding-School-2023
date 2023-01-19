@@ -2,7 +2,7 @@
 {
 
 
-    public class Divition
+    public class Division
     {
 
         public decimal Do(decimal? x, decimal? y)

@@ -305,6 +305,7 @@ namespace Session_09
                     Miltiplication multiplication = new Miltiplication();
                     _result = multiplication.Do(_value1, _value2);
                     break;
+
                 case CalcOperation.Division:
                     Division division = new Division();
                     _result = division.Do(_value1, _value2);
@@ -334,13 +335,13 @@ namespace Session_09
         private void CtrlMultiplication_Click(object sender, EventArgs e)
         {
             ctrlDisplay.Text += " * ";
-            // _calcOperation = CalcOperation.Multiplication;
+            _calcOperation = CalcOperation.Multiplication;
         }
 
         private void CtrlDivition_Click(object sender, EventArgs e)
         {
             ctrlDisplay.Text += " / ";
-            // _calcOperation = CalcOperation.Division;
+            _calcOperation = CalcOperation.Division;
         }
 
         private void CtrlSquareRoot_Click(object sender, EventArgs e)
