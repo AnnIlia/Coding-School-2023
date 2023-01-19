@@ -17,7 +17,7 @@ namespace Session_09
             Subtraction,
             Multiplication,
             Division,
-           // RaiseToPower,
+            //RaiseToPower,
            // SquareRoot
         }
 
@@ -82,7 +82,7 @@ namespace Session_09
         private void button17_Click(object sender, EventArgs e)
         {
             ctrlDisplay.Text += " ^ ";
-            // _calcOperation = CalcOperation.RaiseToPower;
+            //_calcOperation = CalcOperation.RaiseToPower;
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
