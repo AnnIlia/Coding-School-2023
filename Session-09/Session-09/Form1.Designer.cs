@@ -45,6 +45,7 @@
             this.button16 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button17 = new System.Windows.Forms.Button();
+            this.ctrlDisplay = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // button2
@@ -203,11 +204,20 @@
             this.button17.UseVisualStyleBackColor = true;
             this.button17.Click += new System.EventHandler(this.button17_Click);
             // 
+            // ctrlDisplay
+            // 
+            this.ctrlDisplay.Location = new System.Drawing.Point(8, 82);
+            this.ctrlDisplay.Name = "ctrlDisplay";
+            this.ctrlDisplay.Size = new System.Drawing.Size(324, 27);
+            this.ctrlDisplay.TabIndex = 18;
+            this.ctrlDisplay.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(348, 384);
+            this.Controls.Add(this.ctrlDisplay);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.button17);
             this.Controls.Add(this.button13);
@@ -228,6 +238,7 @@
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -250,5 +261,6 @@
         private Button button16;
         private Button button1;
         private Button button17;
+        private TextBox ctrlDisplay;
     }
 }
