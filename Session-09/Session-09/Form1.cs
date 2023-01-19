@@ -296,7 +296,7 @@ namespace Session_09
 
                 case CalcOperation.Subtraction:
 
-                    Addition subtraction = new Addition();
+                    Addition subtraction = new Subtraction();
                     _result = subtraction.Do(_value1, _value2);
 
                     break;
