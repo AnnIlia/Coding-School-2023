@@ -294,6 +294,13 @@ namespace Session_09
 
                     break;
 
+                case CalcOperation.Subtraction:
+
+                    Addition subtraction = new Addition();
+                    _result = subtraction.Do(_value1, _value2);
+
+                    break;
+
                 default:
                     break;
             }
@@ -312,7 +319,7 @@ namespace Session_09
         private void CtrlSubstraction_Click(object sender, EventArgs e)
         {
             ctrlDisplay.Text += " - ";
-           // _calcOperation = CalcOperation.Subtractions;
+            _calcOperation = CalcOperation.Subtraction;
         }
 
         private void CtrlMultiplication_Click(object sender, EventArgs e)
@@ -329,7 +336,7 @@ namespace Session_09
 
         private void CtrlSquareRoot_Click(object sender, EventArgs e)
         {
-            ctrlDisplay.Text += " ? ";
+            ctrlDisplay.Text += " (char)0x221A ";
             // _calcOperation = CalcOperation.SquareRoot;
         }
     }
