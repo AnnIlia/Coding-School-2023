@@ -34,17 +34,17 @@
             this.btnEight = new System.Windows.Forms.Button();
             this.btnFive = new System.Windows.Forms.Button();
             this.btnTwo = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
+            this.CtrlEqual = new System.Windows.Forms.Button();
             this.btnSeven = new System.Windows.Forms.Button();
             this.btnFour = new System.Windows.Forms.Button();
             this.btnOne = new System.Windows.Forms.Button();
             this.btnZero = new System.Windows.Forms.Button();
-            this.button13 = new System.Windows.Forms.Button();
-            this.button14 = new System.Windows.Forms.Button();
-            this.button15 = new System.Windows.Forms.Button();
-            this.button16 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button17 = new System.Windows.Forms.Button();
+            this.CtrlDivition = new System.Windows.Forms.Button();
+            this.CtrlMultiplication = new System.Windows.Forms.Button();
+            this.CtrlSubstraction = new System.Windows.Forms.Button();
+            this.CtrlAddition = new System.Windows.Forms.Button();
+            this.CtrlSquareRoot = new System.Windows.Forms.Button();
+            this.CtrlRaiseToPower = new System.Windows.Forms.Button();
             this.ctrlDisplay = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
@@ -103,14 +103,14 @@
             this.btnTwo.Text = "2";
             this.btnTwo.UseVisualStyleBackColor = true;
             // 
-            // button8
+            // CtrlEqual
             // 
-            this.button8.Location = new System.Drawing.Point(88, 335);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(150, 40);
-            this.button8.TabIndex = 4;
-            this.button8.Text = "=";
-            this.button8.UseVisualStyleBackColor = true;
+            this.CtrlEqual.Location = new System.Drawing.Point(88, 335);
+            this.CtrlEqual.Name = "CtrlEqual";
+            this.CtrlEqual.Size = new System.Drawing.Size(150, 40);
+            this.CtrlEqual.TabIndex = 4;
+            this.CtrlEqual.Text = "=";
+            this.CtrlEqual.UseVisualStyleBackColor = true;
             // 
             // btnSeven
             // 
@@ -150,60 +150,60 @@
             this.btnZero.UseVisualStyleBackColor = true;
             this.btnZero.Click += new System.EventHandler(this.btnZero_Click);
             // 
-            // button13
+            // CtrlDivition
             // 
-            this.button13.Location = new System.Drawing.Point(260, 197);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(72, 40);
-            this.button13.TabIndex = 15;
-            this.button13.Text = "/";
-            this.button13.UseVisualStyleBackColor = true;
+            this.CtrlDivition.Location = new System.Drawing.Point(260, 197);
+            this.CtrlDivition.Name = "CtrlDivition";
+            this.CtrlDivition.Size = new System.Drawing.Size(72, 40);
+            this.CtrlDivition.TabIndex = 15;
+            this.CtrlDivition.Text = "/";
+            this.CtrlDivition.UseVisualStyleBackColor = true;
             // 
-            // button14
+            // CtrlMultiplication
             // 
-            this.button14.Location = new System.Drawing.Point(260, 243);
-            this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(72, 40);
-            this.button14.TabIndex = 14;
-            this.button14.Text = "x";
-            this.button14.UseVisualStyleBackColor = true;
+            this.CtrlMultiplication.Location = new System.Drawing.Point(260, 243);
+            this.CtrlMultiplication.Name = "CtrlMultiplication";
+            this.CtrlMultiplication.Size = new System.Drawing.Size(72, 40);
+            this.CtrlMultiplication.TabIndex = 14;
+            this.CtrlMultiplication.Text = "x";
+            this.CtrlMultiplication.UseVisualStyleBackColor = true;
             // 
-            // button15
+            // CtrlSubstraction
             // 
-            this.button15.Location = new System.Drawing.Point(260, 289);
-            this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(72, 40);
-            this.button15.TabIndex = 13;
-            this.button15.Text = "-";
-            this.button15.UseVisualStyleBackColor = true;
+            this.CtrlSubstraction.Location = new System.Drawing.Point(260, 289);
+            this.CtrlSubstraction.Name = "CtrlSubstraction";
+            this.CtrlSubstraction.Size = new System.Drawing.Size(72, 40);
+            this.CtrlSubstraction.TabIndex = 13;
+            this.CtrlSubstraction.Text = "-";
+            this.CtrlSubstraction.UseVisualStyleBackColor = true;
             // 
-            // button16
+            // CtrlAddition
             // 
-            this.button16.Location = new System.Drawing.Point(260, 335);
-            this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(72, 40);
-            this.button16.TabIndex = 12;
-            this.button16.Text = "+";
-            this.button16.UseVisualStyleBackColor = true;
+            this.CtrlAddition.Location = new System.Drawing.Point(260, 335);
+            this.CtrlAddition.Name = "CtrlAddition";
+            this.CtrlAddition.Size = new System.Drawing.Size(72, 40);
+            this.CtrlAddition.TabIndex = 12;
+            this.CtrlAddition.Text = "+";
+            this.CtrlAddition.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // CtrlSquareRoot
             // 
-            this.button1.Location = new System.Drawing.Point(8, 140);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(159, 40);
-            this.button1.TabIndex = 17;
-            this.button1.Text = "√";
-            this.button1.UseVisualStyleBackColor = true;
+            this.CtrlSquareRoot.Location = new System.Drawing.Point(8, 140);
+            this.CtrlSquareRoot.Name = "CtrlSquareRoot";
+            this.CtrlSquareRoot.Size = new System.Drawing.Size(159, 40);
+            this.CtrlSquareRoot.TabIndex = 17;
+            this.CtrlSquareRoot.Text = "√";
+            this.CtrlSquareRoot.UseVisualStyleBackColor = true;
             // 
-            // button17
+            // CtrlRaiseToPower
             // 
-            this.button17.Location = new System.Drawing.Point(173, 140);
-            this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(159, 40);
-            this.button17.TabIndex = 16;
-            this.button17.Text = "x^y";
-            this.button17.UseVisualStyleBackColor = true;
-            this.button17.Click += new System.EventHandler(this.button17_Click);
+            this.CtrlRaiseToPower.Location = new System.Drawing.Point(173, 140);
+            this.CtrlRaiseToPower.Name = "CtrlRaiseToPower";
+            this.CtrlRaiseToPower.Size = new System.Drawing.Size(159, 40);
+            this.CtrlRaiseToPower.TabIndex = 16;
+            this.CtrlRaiseToPower.Text = "x^y";
+            this.CtrlRaiseToPower.UseVisualStyleBackColor = true;
+            this.CtrlRaiseToPower.Click += new System.EventHandler(this.button17_Click);
             // 
             // ctrlDisplay
             // 
@@ -219,12 +219,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(348, 384);
             this.Controls.Add(this.ctrlDisplay);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.button17);
-            this.Controls.Add(this.button13);
-            this.Controls.Add(this.button14);
-            this.Controls.Add(this.button15);
-            this.Controls.Add(this.button16);
+            this.Controls.Add(this.CtrlSquareRoot);
+            this.Controls.Add(this.CtrlRaiseToPower);
+            this.Controls.Add(this.CtrlDivition);
+            this.Controls.Add(this.CtrlMultiplication);
+            this.Controls.Add(this.CtrlSubstraction);
+            this.Controls.Add(this.CtrlAddition);
             this.Controls.Add(this.btnSeven);
             this.Controls.Add(this.btnFour);
             this.Controls.Add(this.btnOne);
@@ -232,7 +232,7 @@
             this.Controls.Add(this.btnEight);
             this.Controls.Add(this.btnFive);
             this.Controls.Add(this.btnTwo);
-            this.Controls.Add(this.button8);
+            this.Controls.Add(this.CtrlEqual);
             this.Controls.Add(this.btnNine);
             this.Controls.Add(this.btnSix);
             this.Controls.Add(this.btnThree);
@@ -251,17 +251,17 @@
         private Button btnEight;
         private Button btnFive;
         private Button btnTwo;
-        private Button button8;
+        private Button CtrlEqual;
         private Button btnSeven;
         private Button btnFour;
         private Button btnOne;
         private Button btnZero;
-        private Button button13;
-        private Button button14;
-        private Button button15;
-        private Button button16;
-        private Button button1;
-        private Button button17;
+        private Button CtrlDivition;
+        private Button CtrlMultiplication;
+        private Button CtrlSubstraction;
+        private Button CtrlAddition;
+        private Button CtrlSquareRoot;
+        private Button CtrlRaiseToPower;
         private TextBox ctrlDisplay;
     }
 }
