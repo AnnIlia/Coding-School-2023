@@ -117,6 +117,7 @@
             this.CtrlEqual.TabIndex = 4;
             this.CtrlEqual.Text = "=";
             this.CtrlEqual.UseVisualStyleBackColor = true;
+            this.CtrlEqual.Click += new System.EventHandler(this.CtrlEqual_Click);
             // 
             // btnSeven
             // 
@@ -193,6 +194,7 @@
             this.CtrlAddition.TabIndex = 12;
             this.CtrlAddition.Text = "+";
             this.CtrlAddition.UseVisualStyleBackColor = true;
+            this.CtrlAddition.Click += new System.EventHandler(this.CtrlAddition_Click);
             // 
             // CtrlSquareRoot
             // 
