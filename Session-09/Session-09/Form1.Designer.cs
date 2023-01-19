@@ -121,6 +121,7 @@
             this.btnSeven.TabIndex = 11;
             this.btnSeven.Text = "7";
             this.btnSeven.UseVisualStyleBackColor = true;
+            this.btnSeven.Click += new System.EventHandler(this.btnSeven_Click);
             // 
             // btnFour
             // 
