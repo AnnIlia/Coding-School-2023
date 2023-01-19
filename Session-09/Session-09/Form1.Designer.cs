@@ -67,6 +67,7 @@
             this.btnSix.TabIndex = 2;
             this.btnSix.Text = "6";
             this.btnSix.UseVisualStyleBackColor = true;
+            this.btnSix.Click += new System.EventHandler(this.btnSix_Click);
             // 
             // btnNine
             // 
@@ -76,6 +77,7 @@
             this.btnNine.TabIndex = 3;
             this.btnNine.Text = "9";
             this.btnNine.UseVisualStyleBackColor = true;
+            this.btnNine.Click += new System.EventHandler(this.btnNine_Click);
             // 
             // btnEight
             // 
@@ -85,6 +87,7 @@
             this.btnEight.TabIndex = 7;
             this.btnEight.Text = "8";
             this.btnEight.UseVisualStyleBackColor = true;
+            this.btnEight.Click += new System.EventHandler(this.btnEight_Click);
             // 
             // btnFive
             // 
@@ -94,6 +97,7 @@
             this.btnFive.TabIndex = 6;
             this.btnFive.Text = "5";
             this.btnFive.UseVisualStyleBackColor = true;
+            this.btnFive.Click += new System.EventHandler(this.btnFive_Click);
             // 
             // btnTwo
             // 
@@ -103,6 +107,7 @@
             this.btnTwo.TabIndex = 5;
             this.btnTwo.Text = "2";
             this.btnTwo.UseVisualStyleBackColor = true;
+            this.btnTwo.Click += new System.EventHandler(this.btnTwo_Click);
             // 
             // CtrlEqual
             // 
@@ -141,6 +146,7 @@
             this.btnOne.TabIndex = 9;
             this.btnOne.Text = "1";
             this.btnOne.UseVisualStyleBackColor = true;
+            this.btnOne.Click += new System.EventHandler(this.btnOne_Click);
             // 
             // btnZero
             // 
