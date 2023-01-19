@@ -1,5 +1,8 @@
 using CalculatorLib;
 
+
+// sorry for multiple corry paste in code. I didn't finish raise to power and square root, cause my computer is not cooperating and I'm running late.
+
 namespace Session_09
 {
     public partial class Form1 : Form
