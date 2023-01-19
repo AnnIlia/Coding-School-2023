@@ -185,6 +185,7 @@
             this.CtrlSubstraction.TabIndex = 13;
             this.CtrlSubstraction.Text = "-";
             this.CtrlSubstraction.UseVisualStyleBackColor = true;
+            this.CtrlSubstraction.Click += new System.EventHandler(this.CtrlSubstraction_Click);
             // 
             // CtrlAddition
             // 

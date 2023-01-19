@@ -275,7 +275,7 @@ namespace Session_09
             }
         }
 
-        private void CtrlEqual_Click(object sender, EventArgs e)
+        private void CtrlEqual_Click(object sender, EventArgs e) //TODO: EVALUATION ALL OPERATION'S SYMBOLS
         {
             ctrlDisplay.Text += " = ";
 
@@ -301,6 +301,12 @@ namespace Session_09
                 ctrlDisplay.Text += " + ";
                 _calcOperation = CalcOperation.Addition;
             }
+        }
+
+        private void CtrlSubstraction_Click(object sender, EventArgs e)
+        {
+            ctrlDisplay.Text += " - ";
+           // _calcOperation = CalcOperation.Subtractions;
         }
     }
 }
