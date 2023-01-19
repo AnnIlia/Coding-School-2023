@@ -5,16 +5,14 @@
     public class SquareRoot
     {
 
-        public decimal Do(decimal? x, decimal? 2)
+        public decimal Do(decimal? x, decimal? y)
         {
-
 
             decimal ret = 0;
 
-            if (x != null && 2 != null)
+            if (x != null && y != null)
             {
-                ret = Math.Sqrt(decimal x.Value);
-
+                //    double ret = do square root;
             }
 
             return ret;
