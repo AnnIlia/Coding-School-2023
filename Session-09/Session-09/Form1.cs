@@ -16,9 +16,9 @@ namespace Session_09
             Addition,
             Subtraction,
             Multiplication,
-            Division,
-            RaiseToPower,
-            SquareRoot
+           // Division,
+           // RaiseToPower,
+           // SquareRoot
         }
 
 
@@ -48,11 +48,11 @@ namespace Session_09
 
             if (_value1 == null)
             {
-                _value1 = 1;
+                _value1 = 3;
             }
             else
             {
-                _value2 = 1;
+                _value2 = 3;
             }
         }
 
@@ -71,11 +71,11 @@ namespace Session_09
 
             if (_value1 == null)
             {
-                _value1 = 1;
+                _value1 = 4;
             }
             else
             {
-                _value2 = 1;
+                _value2 = 4;
             }
         }
 
@@ -105,11 +105,11 @@ namespace Session_09
 
             if (_value1 == null)
             {
-                _value1 = 1;
+                _value1 = 0;
             }
             else
             {
-                _value2 = 1;
+                _value2 = 0;
             }
         }
 
@@ -133,11 +133,11 @@ namespace Session_09
 
             if (_value1 == null)
             {
-                _value1 = 1;
+                _value1 = 7;
             }
             else
             {
-                _value2 = 1;
+                _value2 = 7;
             }
         }
 
@@ -181,11 +181,11 @@ namespace Session_09
 
             if (_value1 == null)
             {
-                _value1 = 1;
+                _value1 = 2;
             }
             else
             {
-                _value2 = 1;
+                _value2 = 2;
             }
         }
 
@@ -204,11 +204,11 @@ namespace Session_09
 
             if (_value1 == null)
             {
-                _value1 = 1;
+                _value1 = 5;
             }
             else
             {
-                _value2 = 1;
+                _value2 = 5;
             }
         }
 
@@ -227,11 +227,11 @@ namespace Session_09
 
             if (_value1 == null)
             {
-                _value1 = 1;
+                _value1 = 6;
             }
             else
             {
-                _value2 = 1;
+                _value2 = 6;
             }
         }
 
@@ -250,11 +250,11 @@ namespace Session_09
 
             if (_value1 == null)
             {
-                _value1 = 1;
+                _value1 = 8;
             }
             else
             {
-                _value2 = 1;
+                _value2 = 8;
             }
         }
 
@@ -273,11 +273,11 @@ namespace Session_09
 
             if (_value1 == null)
             {
-                _value1 = 1;
+                _value1 = 9;
             }
             else
             {
-                _value2 = 1;
+                _value2 = 9;
             }
         }
 
@@ -296,15 +296,19 @@ namespace Session_09
 
                 case CalcOperation.Subtraction:
 
-                    Addition subtraction = new Subtraction();
+                    Subtraction subtraction = new Subtraction();
                     _result = subtraction.Do(_value1, _value2);
 
                     break;
+                case CalcOperation.Multiplication:
+
+                    Miltiplication multiplication = new Miltiplication();
+                    _result = multiplication.Do(_value1, _value2);
+                    break; 
 
                 default:
                     break;
             }
-
             ctrlDisplay.Text += _result;
         }
 
