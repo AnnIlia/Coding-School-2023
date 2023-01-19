@@ -16,7 +16,7 @@ namespace Session_09
             Addition,
             Subtraction,
             Multiplication,
-           // Division,
+            Division,
            // RaiseToPower,
            // SquareRoot
         }
@@ -304,7 +304,12 @@ namespace Session_09
 
                     Miltiplication multiplication = new Miltiplication();
                     _result = multiplication.Do(_value1, _value2);
-                    break; 
+                    break;
+                case CalcOperation.Division:
+                    Division division = new Division();
+                    _result = division.Do(_value1, _value2);
+                    break;
+
 
                 default:
                     break;

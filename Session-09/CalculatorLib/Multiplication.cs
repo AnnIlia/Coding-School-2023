@@ -14,7 +14,7 @@
             if (x != null && y != null)
             {
                 ret = x.Value * y.Value;
-                //ret = Decimal.Multiply(x.Value , y.Value);;
+               
             }
 
             return ret;
