@@ -167,6 +167,7 @@
             this.CtrlDivition.TabIndex = 15;
             this.CtrlDivition.Text = "/";
             this.CtrlDivition.UseVisualStyleBackColor = true;
+            this.CtrlDivition.Click += new System.EventHandler(this.CtrlDivition_Click);
             // 
             // CtrlMultiplication
             // 
@@ -176,6 +177,7 @@
             this.CtrlMultiplication.TabIndex = 14;
             this.CtrlMultiplication.Text = "x";
             this.CtrlMultiplication.UseVisualStyleBackColor = true;
+            this.CtrlMultiplication.Click += new System.EventHandler(this.CtrlMultiplication_Click);
             // 
             // CtrlSubstraction
             // 
@@ -205,6 +207,7 @@
             this.CtrlSquareRoot.TabIndex = 17;
             this.CtrlSquareRoot.Text = "√";
             this.CtrlSquareRoot.UseVisualStyleBackColor = true;
+            this.CtrlSquareRoot.Click += new System.EventHandler(this.CtrlSquareRoot_Click);
             // 
             // CtrlRaiseToPower
             // 

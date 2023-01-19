@@ -13,7 +13,12 @@ namespace Session_09
 
         enum CalcOperation
         {
-            Addition
+            Addition,
+            Subtraction,
+            Multiplication,
+            Division,
+            RaiseToPower,
+            SquareRoot
         }
 
 
@@ -76,7 +81,8 @@ namespace Session_09
 
         private void button17_Click(object sender, EventArgs e)
         {
-
+            ctrlDisplay.Text += " ^ ";
+            // _calcOperation = CalcOperation.RaiseToPower;
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -307,6 +313,24 @@ namespace Session_09
         {
             ctrlDisplay.Text += " - ";
            // _calcOperation = CalcOperation.Subtractions;
+        }
+
+        private void CtrlMultiplication_Click(object sender, EventArgs e)
+        {
+            ctrlDisplay.Text += " * ";
+            // _calcOperation = CalcOperation.Multiplication;
+        }
+
+        private void CtrlDivition_Click(object sender, EventArgs e)
+        {
+            ctrlDisplay.Text += " / ";
+            // _calcOperation = CalcOperation.Division;
+        }
+
+        private void CtrlSquareRoot_Click(object sender, EventArgs e)
+        {
+            ctrlDisplay.Text += " ? ";
+            // _calcOperation = CalcOperation.SquareRoot;
         }
     }
 }
