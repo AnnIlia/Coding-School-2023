@@ -46,6 +46,7 @@
             this.CtrlSquareRoot = new System.Windows.Forms.Button();
             this.CtrlRaiseToPower = new System.Windows.Forms.Button();
             this.ctrlDisplay = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnThree
@@ -188,18 +189,18 @@
             // 
             // CtrlSquareRoot
             // 
-            this.CtrlSquareRoot.Location = new System.Drawing.Point(8, 140);
+            this.CtrlSquareRoot.Location = new System.Drawing.Point(14, 141);
             this.CtrlSquareRoot.Name = "CtrlSquareRoot";
-            this.CtrlSquareRoot.Size = new System.Drawing.Size(159, 40);
+            this.CtrlSquareRoot.Size = new System.Drawing.Size(146, 40);
             this.CtrlSquareRoot.TabIndex = 17;
             this.CtrlSquareRoot.Text = "√";
             this.CtrlSquareRoot.UseVisualStyleBackColor = true;
             // 
             // CtrlRaiseToPower
             // 
-            this.CtrlRaiseToPower.Location = new System.Drawing.Point(173, 140);
+            this.CtrlRaiseToPower.Location = new System.Drawing.Point(186, 141);
             this.CtrlRaiseToPower.Name = "CtrlRaiseToPower";
-            this.CtrlRaiseToPower.Size = new System.Drawing.Size(159, 40);
+            this.CtrlRaiseToPower.Size = new System.Drawing.Size(146, 40);
             this.CtrlRaiseToPower.TabIndex = 16;
             this.CtrlRaiseToPower.Text = "x^y";
             this.CtrlRaiseToPower.UseVisualStyleBackColor = true;
@@ -207,17 +208,29 @@
             // 
             // ctrlDisplay
             // 
-            this.ctrlDisplay.Location = new System.Drawing.Point(8, 82);
+            this.ctrlDisplay.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.ctrlDisplay.Location = new System.Drawing.Point(14, 74);
             this.ctrlDisplay.Name = "ctrlDisplay";
-            this.ctrlDisplay.Size = new System.Drawing.Size(324, 27);
+            this.ctrlDisplay.Size = new System.Drawing.Size(318, 27);
             this.ctrlDisplay.TabIndex = 18;
             this.ctrlDisplay.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(14, 24);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(114, 20);
+            this.label1.TabIndex = 19;
+            this.label1.Text = "Basic Calculator";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(348, 384);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.ctrlDisplay);
             this.Controls.Add(this.CtrlSquareRoot);
             this.Controls.Add(this.CtrlRaiseToPower);
@@ -263,5 +276,6 @@
         private Button CtrlSquareRoot;
         private Button CtrlRaiseToPower;
         private TextBox ctrlDisplay;
+        private Label label1;
     }
 }
