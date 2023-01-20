@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace UniLibrary
 {
-    public class Student
+
+    public class Student : Person
     {
+        public string Name { get; set; }
+        public int RegistrationNumber { get; set; } 
+        
+
     }
 }

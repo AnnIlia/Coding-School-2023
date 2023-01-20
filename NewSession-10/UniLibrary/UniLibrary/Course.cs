@@ -6,7 +6,21 @@ using System.Threading.Tasks;
 
 namespace UniLibrary
 {
-    internal class Class1
+    public class Course
     {
+        public Guid ID { get; set; }
+        public string? Code { get; set; }
+        public string? Subject { get; set; }
+
+
+
+        public Course()
+        {
+            ID = Guid.NewGuid();
+        }
+
+
     }
+ 
 }
+

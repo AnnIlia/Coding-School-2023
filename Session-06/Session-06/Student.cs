@@ -4,13 +4,15 @@ namespace Session_06
 {
 
     public class Student
-    {
+    { }
         // properties
         public int RegistrationNumber { get; set; }
         public string? Course[]? courses { get; set; }
 
+
+
     //constructor
-    public Student()
+    public void Student()
     {
 
     }
@@ -28,4 +30,4 @@ namespace Session_06
     }
 
 }
-}
+
