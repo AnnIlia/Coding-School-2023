@@ -34,26 +34,15 @@ namespace UniLibrary
 
 
 
-
-
         public University()
         { 
             Students = new List<Student>();
-            
             Courses = new List<Course>();   
             Grades = new List<Grade>();
             Schedules = new List<Schedule>(); 
              
-
         }
 
     }
-
-    public class Student
-    {
-
-        public string Name { get; set; }
-        public int Age { get; set; }
-
-    }
+        
 }
