@@ -21,9 +21,10 @@ namespace Session_06
         {
             //evaluate srudent
         }
-        public void GetName()
+    
+        public override string GetName()
         {
-            //Dr + name(person)
+           return ("Dr " + base.GetName());
         }
         
     }

@@ -11,19 +11,15 @@ namespace Session_06
         public int Age { get; set; }
 
         // methods
-        public void GetName()
+        public virtual string GetName()
         {
-
+            return Name;
         }
 
         public void SetName(string name)
         {
+            Name = name;
+        }
 
-        }
-/*
-        public class Student : Person { 
-        
-        }
-*/
     }
 }
