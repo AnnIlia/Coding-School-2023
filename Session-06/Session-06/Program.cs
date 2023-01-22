@@ -1,27 +1,34 @@
 ﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+Console.WriteLine("Hello, World this is is is is!");
 
-internal class Program
+namespace Session_06
 {
-
-    private static void Main(string[] args)
+    internal class Programm
     {
-     
+
+        private static void Main(string[] args)
+        {
+            Student[] students = new Student[30];
+           // Student student[] =  new Student[30];    
+
+
+
+        }
+
+        public int GetName()
+        {
+
+            return 1; //Convert.ToInt32(/*GetString()*/);
+        }
+
+
+        public int SetName()
+        {
+
+            return 1; // Convert.ToInt32(/*GetString()*/);
+        }
     }
 }
-public int GetName()
-    {
-
-        return Convert.ToInt32(GetString());
-    }
-
-
-    public int SetName()
-    {
-
-        return Convert.ToInt32(GetString());
-    }
-
 
 
 

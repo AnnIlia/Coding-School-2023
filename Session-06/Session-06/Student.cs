@@ -3,30 +3,23 @@
 namespace Session_06
 {
 
-    public class Student
-    { }
+    public class Student : Person
+    {
         // properties
         public int RegistrationNumber { get; set; }
-        public string? Course[]? courses { get; set; }
+        public Course[]? courses { get; set; }
 
 
+        // methods
+        public void Attend(string Course, DateTime dateTime)
+        {
 
-    //constructor
-    public void Student()
-    {
+        }
 
-    }
+        public void WriteExam(string Course, DateTime dateTime)
+        {
 
-
-    // methods
-    public void Attend(string Course, DateTime dateTime)
-    {
-
-    }
-
-    public void WriteExam(string Course, DateTime dateTime)
-    {
-
+        }
     }
 
 }

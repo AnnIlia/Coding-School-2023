@@ -20,10 +20,10 @@ namespace Session_06
         {
 
         }
-
+/*
         public class Student : Person { 
         
         }
-
+*/
     }
 }

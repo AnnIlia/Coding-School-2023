@@ -4,7 +4,7 @@ using System.Globalization;
 namespace Session_06
 {
 
-    public class University
+    public class University : Institute
     {
 
         // properties

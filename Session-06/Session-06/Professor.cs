@@ -6,10 +6,8 @@ namespace Session_06
     public class Professor : Person
     {
         // properties
-        public [] ?Rank { get; set; }
-
-        string [] Rank = new string[] { "ful", "associate", "assistant" };
-
+        public string? Rank { get; set; }
+   
         public Course[] ?courses { get; set; }
 
                
@@ -23,7 +21,7 @@ namespace Session_06
         {
             //evaluate srudent
         }
-        public void GetName(string name)
+        public void GetName()
         {
             //Dr + name(person)
         }
