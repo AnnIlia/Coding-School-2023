@@ -11,7 +11,24 @@ namespace UniLibrary
     {
         public string Name { get; set; }
         public int RegistrationNumber { get; set; } 
-        
+       
+    }
+
+    public void Student()
+    {
 
     }
+
+
+    // methods
+    void Attend(string Course, DateTime dateTime)
+    {
+
+    }
+
+    void WriteExam(string Course, DateTime dateTime)
+    {
+
+    }
+
 }

@@ -13,11 +13,7 @@ namespace Session_06
         public Grade[]? grades { get; set; }
         public Schedule[]? ScheduleCourse { get; set; }
 
-
-        
-
-
-
+             
         // methods
         public void GetStudents()
         {

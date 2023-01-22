@@ -21,5 +21,11 @@ namespace Session_06
 
         }
 
+        // inheritance
+        public class University : Institute
+        {
+
+        }
+
     }
 }
