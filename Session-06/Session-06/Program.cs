@@ -10,21 +10,21 @@ namespace Session_06
 
         private static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World this is is is is!");
+            
 
             Student[] students = new Student[30];
 
-            //Professor[] professors = new Professor[5];
+            
             
             Course[] courses = new Course[20];   
 
             Schedule[] schedule = new Schedule[60];
 
-            //professors[0].Name="takis";
+            
 
             Professor professors = new Professor();
 
-            professors.SetName("Roupina");
+            //professors.SetName("Roupina");
             Console.WriteLine(professors.GetName());
         }
 
