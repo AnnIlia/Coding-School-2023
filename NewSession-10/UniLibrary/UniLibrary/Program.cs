@@ -3,7 +3,7 @@
 
 //Console.WriteLine("Hello, World this is is is is!");
 
-namespace Session_06
+namespace UniLibrary
 {
     internal class Programm
     {
