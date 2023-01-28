@@ -117,7 +117,8 @@
             // 
             // CtrlEqual
             // 
-            this.CtrlEqual.BackColor = System.Drawing.SystemColors.Desktop;
+            this.CtrlEqual.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.CtrlEqual.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.CtrlEqual.Location = new System.Drawing.Point(88, 335);
             this.CtrlEqual.Name = "CtrlEqual";
             this.CtrlEqual.Size = new System.Drawing.Size(150, 40);
