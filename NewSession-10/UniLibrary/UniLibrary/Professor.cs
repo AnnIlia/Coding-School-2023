@@ -14,7 +14,15 @@ namespace UniLibrary
    
         public Course[] ?courses { get; set; }
 
-               
+
+        // constructors
+
+        public Professor()
+        {
+
+        }
+
+
         // methods
         public void Teach(string Course, DateTime dateTime)
         {

@@ -16,4 +16,17 @@ namespace UniLibrary
         public DateTime Callendar { get; set; }
 
     }
+
+
+    // constructors
+
+    public Schedule()
+    {
+        ID = Guid.NewGuid();
+        CourseID = Guid.NewGuid();
+        ProfessorID = Guid.NewGuid();
+
+    }
+
+
 }

@@ -9,19 +9,19 @@ namespace UniLibrary
 {
 
 
-    public class Institute
-    {
+    //public class Institute
+    //{
 
-        public Guid ID { get; set; }
-        public string? Name { get; set; }
-        public int YearsInService { get; set; }
+    //    public Guid ID { get; set; }
+    //    public string? Name { get; set; }
+    //    public int YearsInService { get; set; }
 
 
-        public Institute()
-        {
-            ID = Guid.NewGuid();
-        }
-    }
+    //    public Institute()
+    //    {
+    //        ID = Guid.NewGuid();
+    //    }
+    //}
 
     public class University : Institute
     {
@@ -41,6 +41,28 @@ namespace UniLibrary
             Grades = new List<Grade>();
             Schedules = new List<Schedule>(); 
              
+        }
+
+        // methods
+
+        public void GetStudents()
+        {
+
+        }
+
+        public void GetCourses()
+        {
+
+        }
+
+        public void GetGrades()
+        {
+
+        }
+
+        public void SetSchedule(Guid courseID, Guid professorID)
+        {
+
         }
 
     }

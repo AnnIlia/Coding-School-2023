@@ -11,7 +11,12 @@ namespace UniLibrary
     {
         // properties
         public int RegistrationNumber { get; set; }
-        public Course[]? courses { get; set; }
+        public Course courses { get; set; }
+
+        public Student()
+        {
+            //Courses = new List<Course>();
+        }
 
 
         // methods

@@ -14,4 +14,16 @@ public class Course
         public string? Subject { get; set; }
 
     }
+
+
+    // constructors
+
+    public Course()
+    {
+        ID = Guid.NewGuid();
+
+    }
+
+
+
 }

@@ -14,6 +14,14 @@ namespace UniLibrary
         public string? Name { get; set; }
         public int YearsInService { get; set; }
 
+        // constructors
+
+        public Institute()
+        {
+            ID = Guid.NewGuid();
+        }
+
+
         // methods
         public void GetName()
         {

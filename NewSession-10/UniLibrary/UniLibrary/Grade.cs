@@ -16,6 +16,15 @@ namespace UniLibrary
         public int Grades { get; set; }
 
 
+        // constructors
+        public Grade()
+        {
+            ID = Guid.NewGuid();
+            StudentID = Guid.NewGuid();
+            CourseID = Guid.NewGuid();
+        }
+
+
         //methods
         /* student's info*/
 
