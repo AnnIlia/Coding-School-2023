@@ -58,7 +58,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.BtnSave = new System.Windows.Forms.Button();
             this.BtnLoad = new System.Windows.Forms.Button();
-            this.BtnClose = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
@@ -77,11 +76,11 @@
             this.ClmAge,
             this.ClmStRegistrationNumber,
             this.ClmStCourses});
-            this.dataGridView1.Location = new System.Drawing.Point(12, 189);
+            this.dataGridView1.Location = new System.Drawing.Point(16, 217);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 29;
-            this.dataGridView1.Size = new System.Drawing.Size(814, 98);
+            this.dataGridView1.Size = new System.Drawing.Size(1018, 113);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -131,9 +130,11 @@
             // LdStudents
             // 
             this.LdStudents.AutoSize = true;
-            this.LdStudents.Location = new System.Drawing.Point(12, 166);
+            this.LdStudents.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.LdStudents.ForeColor = System.Drawing.Color.Teal;
+            this.LdStudents.Location = new System.Drawing.Point(16, 191);
             this.LdStudents.Name = "LdStudents";
-            this.LdStudents.Size = new System.Drawing.Size(66, 20);
+            this.LdStudents.Size = new System.Drawing.Size(77, 23);
             this.LdStudents.TabIndex = 1;
             this.LdStudents.Text = "Students";
             this.LdStudents.Click += new System.EventHandler(this.label1_Click);
@@ -141,9 +142,11 @@
             // LbCourse
             // 
             this.LbCourse.AutoSize = true;
-            this.LbCourse.Location = new System.Drawing.Point(12, 291);
+            this.LbCourse.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.LbCourse.ForeColor = System.Drawing.Color.Teal;
+            this.LbCourse.Location = new System.Drawing.Point(16, 335);
             this.LbCourse.Name = "LbCourse";
-            this.LbCourse.Size = new System.Drawing.Size(60, 20);
+            this.LbCourse.Size = new System.Drawing.Size(70, 23);
             this.LbCourse.TabIndex = 3;
             this.LbCourse.Text = "Courses";
             // 
@@ -154,11 +157,11 @@
             this.ClmCourseID,
             this.ClmCourseCode,
             this.ClmSubject});
-            this.dataGridView2.Location = new System.Drawing.Point(12, 314);
+            this.dataGridView2.Location = new System.Drawing.Point(16, 361);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowHeadersWidth = 51;
             this.dataGridView2.RowTemplate.Height = 29;
-            this.dataGridView2.Size = new System.Drawing.Size(814, 98);
+            this.dataGridView2.Size = new System.Drawing.Size(1018, 113);
             this.dataGridView2.TabIndex = 2;
             // 
             // ClmCourseID
@@ -186,28 +189,32 @@
             // LbScheduledCourses
             // 
             this.LbScheduledCourses.AutoSize = true;
-            this.LbScheduledCourses.Location = new System.Drawing.Point(12, 540);
+            this.LbScheduledCourses.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.LbScheduledCourses.ForeColor = System.Drawing.Color.Teal;
+            this.LbScheduledCourses.Location = new System.Drawing.Point(16, 621);
             this.LbScheduledCourses.Name = "LbScheduledCourses";
-            this.LbScheduledCourses.Size = new System.Drawing.Size(129, 20);
+            this.LbScheduledCourses.Size = new System.Drawing.Size(149, 23);
             this.LbScheduledCourses.TabIndex = 7;
             this.LbScheduledCourses.Text = "ScheduledCourses";
             // 
             // dataGridView3
             // 
             this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Location = new System.Drawing.Point(12, 563);
+            this.dataGridView3.Location = new System.Drawing.Point(16, 647);
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.RowHeadersWidth = 51;
             this.dataGridView3.RowTemplate.Height = 29;
-            this.dataGridView3.Size = new System.Drawing.Size(814, 0);
+            this.dataGridView3.Size = new System.Drawing.Size(1018, 0);
             this.dataGridView3.TabIndex = 6;
             // 
             // LbGrades
             // 
             this.LbGrades.AutoSize = true;
-            this.LbGrades.Location = new System.Drawing.Point(12, 415);
+            this.LbGrades.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.LbGrades.ForeColor = System.Drawing.Color.Teal;
+            this.LbGrades.Location = new System.Drawing.Point(16, 477);
             this.LbGrades.Name = "LbGrades";
-            this.LbGrades.Size = new System.Drawing.Size(55, 20);
+            this.LbGrades.Size = new System.Drawing.Size(63, 23);
             this.LbGrades.TabIndex = 5;
             this.LbGrades.Text = "Grades";
             this.LbGrades.Click += new System.EventHandler(this.label2_Click);
@@ -219,11 +226,11 @@
             this.ClmGradeID,
             this.ClmStuID,
             this.ClmGrade});
-            this.dataGridView4.Location = new System.Drawing.Point(12, 438);
+            this.dataGridView4.Location = new System.Drawing.Point(16, 504);
             this.dataGridView4.Name = "dataGridView4";
             this.dataGridView4.RowHeadersWidth = 51;
             this.dataGridView4.RowTemplate.Height = 29;
-            this.dataGridView4.Size = new System.Drawing.Size(814, 98);
+            this.dataGridView4.Size = new System.Drawing.Size(1018, 113);
             this.dataGridView4.TabIndex = 4;
             // 
             // ClmGradeID
@@ -258,11 +265,11 @@
             this.ClmScCourseID,
             this.ClmScProfID,
             this.ClmCallendar});
-            this.dataGridView5.Location = new System.Drawing.Point(12, 563);
+            this.dataGridView5.Location = new System.Drawing.Point(16, 647);
             this.dataGridView5.Name = "dataGridView5";
             this.dataGridView5.RowHeadersWidth = 51;
             this.dataGridView5.RowTemplate.Height = 29;
-            this.dataGridView5.Size = new System.Drawing.Size(814, 98);
+            this.dataGridView5.Size = new System.Drawing.Size(1018, 113);
             this.dataGridView5.TabIndex = 8;
             // 
             // ClmSceduleID
@@ -296,9 +303,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(12, 13);
+            this.pictureBox1.Location = new System.Drawing.Point(16, 15);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(140, 124);
+            this.pictureBox1.Size = new System.Drawing.Size(176, 143);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 9;
             this.pictureBox1.TabStop = false;
@@ -307,8 +314,8 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Yu Gothic UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.label1.Location = new System.Drawing.Point(126, 57);
+            this.label1.ForeColor = System.Drawing.Color.Teal;
+            this.label1.Location = new System.Drawing.Point(158, 66);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(142, 31);
             this.label1.TabIndex = 10;
@@ -319,9 +326,9 @@
             this.BtnSave.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.BtnSave.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.BtnSave.ForeColor = System.Drawing.Color.Teal;
-            this.BtnSave.Location = new System.Drawing.Point(560, 100);
+            this.BtnSave.Location = new System.Drawing.Point(879, 67);
             this.BtnSave.Name = "BtnSave";
-            this.BtnSave.Size = new System.Drawing.Size(122, 37);
+            this.BtnSave.Size = new System.Drawing.Size(152, 43);
             this.BtnSave.TabIndex = 11;
             this.BtnSave.Text = "Save";
             this.BtnSave.UseVisualStyleBackColor = false;
@@ -332,33 +339,21 @@
             this.BtnLoad.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.BtnLoad.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.BtnLoad.ForeColor = System.Drawing.Color.Teal;
-            this.BtnLoad.Location = new System.Drawing.Point(416, 100);
+            this.BtnLoad.Location = new System.Drawing.Point(699, 67);
             this.BtnLoad.Name = "BtnLoad";
-            this.BtnLoad.Size = new System.Drawing.Size(122, 37);
+            this.BtnLoad.Size = new System.Drawing.Size(152, 43);
             this.BtnLoad.TabIndex = 12;
             this.BtnLoad.Text = "Load";
             this.BtnLoad.UseVisualStyleBackColor = false;
-            // 
-            // BtnClose
-            // 
-            this.BtnClose.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.BtnClose.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.BtnClose.ForeColor = System.Drawing.Color.Teal;
-            this.BtnClose.Location = new System.Drawing.Point(704, 100);
-            this.BtnClose.Name = "BtnClose";
-            this.BtnClose.Size = new System.Drawing.Size(122, 37);
-            this.BtnClose.TabIndex = 13;
-            this.BtnClose.Text = "Close";
-            this.BtnClose.UseVisualStyleBackColor = false;
+            this.BtnLoad.Click += new System.EventHandler(this.BtnLoad_Click);
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(844, 724);
-            this.Controls.Add(this.BtnClose);
+            this.ClientSize = new System.Drawing.Size(1056, 772);
             this.Controls.Add(this.BtnLoad);
             this.Controls.Add(this.BtnSave);
             this.Controls.Add(this.label1);
@@ -373,6 +368,8 @@
             this.Controls.Add(this.LdStudents);
             this.Controls.Add(this.dataGridView1);
             this.Enabled = false;
+            this.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.ForeColor = System.Drawing.Color.Teal;
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
