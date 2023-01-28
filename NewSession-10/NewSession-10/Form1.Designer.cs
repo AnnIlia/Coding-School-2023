@@ -30,32 +30,35 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.LdStudents = new System.Windows.Forms.Label();
-            this.LbCourse = new System.Windows.Forms.Label();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.LbScheduledCourses = new System.Windows.Forms.Label();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
-            this.LbGrades = new System.Windows.Forms.Label();
-            this.dataGridView4 = new System.Windows.Forms.DataGridView();
-            this.dataGridView5 = new System.Windows.Forms.DataGridView();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.ClmStID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ClmName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ClmSurname = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ClmAge = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ClmStRegistrationNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ClmStCourses = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LdStudents = new System.Windows.Forms.Label();
+            this.LbCourse = new System.Windows.Forms.Label();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.ClmCourseID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ClmCourseCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ClmSubject = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LbScheduledCourses = new System.Windows.Forms.Label();
+            this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.LbGrades = new System.Windows.Forms.Label();
+            this.dataGridView4 = new System.Windows.Forms.DataGridView();
             this.ClmGradeID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ClmStuID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ClmGrade = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridView5 = new System.Windows.Forms.DataGridView();
             this.ClmSceduleID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ClmScCourseID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ClmScProfID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ClmCallendar = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.BtnSave = new System.Windows.Forms.Button();
+            this.BtnLoad = new System.Windows.Forms.Button();
+            this.BtnClose = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
@@ -81,118 +84,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(814, 98);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // LdStudents
-            // 
-            this.LdStudents.AutoSize = true;
-            this.LdStudents.Location = new System.Drawing.Point(12, 166);
-            this.LdStudents.Name = "LdStudents";
-            this.LdStudents.Size = new System.Drawing.Size(66, 20);
-            this.LdStudents.TabIndex = 1;
-            this.LdStudents.Text = "Students";
-            this.LdStudents.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // LbCourse
-            // 
-            this.LbCourse.AutoSize = true;
-            this.LbCourse.Location = new System.Drawing.Point(12, 291);
-            this.LbCourse.Name = "LbCourse";
-            this.LbCourse.Size = new System.Drawing.Size(60, 20);
-            this.LbCourse.TabIndex = 3;
-            this.LbCourse.Text = "Courses";
-            // 
-            // dataGridView2
-            // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ClmCourseID,
-            this.ClmCourseCode,
-            this.ClmSubject});
-            this.dataGridView2.Location = new System.Drawing.Point(12, 314);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowHeadersWidth = 51;
-            this.dataGridView2.RowTemplate.Height = 29;
-            this.dataGridView2.Size = new System.Drawing.Size(814, 98);
-            this.dataGridView2.TabIndex = 2;
-            // 
-            // LbScheduledCourses
-            // 
-            this.LbScheduledCourses.AutoSize = true;
-            this.LbScheduledCourses.Location = new System.Drawing.Point(12, 540);
-            this.LbScheduledCourses.Name = "LbScheduledCourses";
-            this.LbScheduledCourses.Size = new System.Drawing.Size(129, 20);
-            this.LbScheduledCourses.TabIndex = 7;
-            this.LbScheduledCourses.Text = "ScheduledCourses";
-            // 
-            // dataGridView3
-            // 
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Location = new System.Drawing.Point(12, 563);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.RowHeadersWidth = 51;
-            this.dataGridView3.RowTemplate.Height = 29;
-            this.dataGridView3.Size = new System.Drawing.Size(814, 0);
-            this.dataGridView3.TabIndex = 6;
-            // 
-            // LbGrades
-            // 
-            this.LbGrades.AutoSize = true;
-            this.LbGrades.Location = new System.Drawing.Point(12, 415);
-            this.LbGrades.Name = "LbGrades";
-            this.LbGrades.Size = new System.Drawing.Size(55, 20);
-            this.LbGrades.TabIndex = 5;
-            this.LbGrades.Text = "Grades";
-            this.LbGrades.Click += new System.EventHandler(this.label2_Click);
-            // 
-            // dataGridView4
-            // 
-            this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView4.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ClmGradeID,
-            this.ClmStuID,
-            this.ClmGrade});
-            this.dataGridView4.Location = new System.Drawing.Point(12, 438);
-            this.dataGridView4.Name = "dataGridView4";
-            this.dataGridView4.RowHeadersWidth = 51;
-            this.dataGridView4.RowTemplate.Height = 29;
-            this.dataGridView4.Size = new System.Drawing.Size(814, 98);
-            this.dataGridView4.TabIndex = 4;
-            // 
-            // dataGridView5
-            // 
-            this.dataGridView5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView5.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ClmSceduleID,
-            this.ClmScCourseID,
-            this.ClmScProfID,
-            this.ClmCallendar});
-            this.dataGridView5.Location = new System.Drawing.Point(12, 563);
-            this.dataGridView5.Name = "dataGridView5";
-            this.dataGridView5.RowHeadersWidth = 51;
-            this.dataGridView5.RowTemplate.Height = 29;
-            this.dataGridView5.Size = new System.Drawing.Size(814, 98);
-            this.dataGridView5.TabIndex = 8;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(12, 13);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(140, 124);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 9;
-            this.pictureBox1.TabStop = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Yu Gothic UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.label1.Location = new System.Drawing.Point(126, 57);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(142, 31);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "UNIVERSITY";
             // 
             // ClmStID
             // 
@@ -237,6 +128,39 @@
             this.ClmStCourses.Name = "ClmStCourses";
             this.ClmStCourses.Width = 125;
             // 
+            // LdStudents
+            // 
+            this.LdStudents.AutoSize = true;
+            this.LdStudents.Location = new System.Drawing.Point(12, 166);
+            this.LdStudents.Name = "LdStudents";
+            this.LdStudents.Size = new System.Drawing.Size(66, 20);
+            this.LdStudents.TabIndex = 1;
+            this.LdStudents.Text = "Students";
+            this.LdStudents.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // LbCourse
+            // 
+            this.LbCourse.AutoSize = true;
+            this.LbCourse.Location = new System.Drawing.Point(12, 291);
+            this.LbCourse.Name = "LbCourse";
+            this.LbCourse.Size = new System.Drawing.Size(60, 20);
+            this.LbCourse.TabIndex = 3;
+            this.LbCourse.Text = "Courses";
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ClmCourseID,
+            this.ClmCourseCode,
+            this.ClmSubject});
+            this.dataGridView2.Location = new System.Drawing.Point(12, 314);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.RowHeadersWidth = 51;
+            this.dataGridView2.RowTemplate.Height = 29;
+            this.dataGridView2.Size = new System.Drawing.Size(814, 98);
+            this.dataGridView2.TabIndex = 2;
+            // 
             // ClmCourseID
             // 
             this.ClmCourseID.HeaderText = "ID";
@@ -258,6 +182,49 @@
             this.ClmSubject.MinimumWidth = 6;
             this.ClmSubject.Name = "ClmSubject";
             this.ClmSubject.Width = 125;
+            // 
+            // LbScheduledCourses
+            // 
+            this.LbScheduledCourses.AutoSize = true;
+            this.LbScheduledCourses.Location = new System.Drawing.Point(12, 540);
+            this.LbScheduledCourses.Name = "LbScheduledCourses";
+            this.LbScheduledCourses.Size = new System.Drawing.Size(129, 20);
+            this.LbScheduledCourses.TabIndex = 7;
+            this.LbScheduledCourses.Text = "ScheduledCourses";
+            // 
+            // dataGridView3
+            // 
+            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView3.Location = new System.Drawing.Point(12, 563);
+            this.dataGridView3.Name = "dataGridView3";
+            this.dataGridView3.RowHeadersWidth = 51;
+            this.dataGridView3.RowTemplate.Height = 29;
+            this.dataGridView3.Size = new System.Drawing.Size(814, 0);
+            this.dataGridView3.TabIndex = 6;
+            // 
+            // LbGrades
+            // 
+            this.LbGrades.AutoSize = true;
+            this.LbGrades.Location = new System.Drawing.Point(12, 415);
+            this.LbGrades.Name = "LbGrades";
+            this.LbGrades.Size = new System.Drawing.Size(55, 20);
+            this.LbGrades.TabIndex = 5;
+            this.LbGrades.Text = "Grades";
+            this.LbGrades.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // dataGridView4
+            // 
+            this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView4.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ClmGradeID,
+            this.ClmStuID,
+            this.ClmGrade});
+            this.dataGridView4.Location = new System.Drawing.Point(12, 438);
+            this.dataGridView4.Name = "dataGridView4";
+            this.dataGridView4.RowHeadersWidth = 51;
+            this.dataGridView4.RowTemplate.Height = 29;
+            this.dataGridView4.Size = new System.Drawing.Size(814, 98);
+            this.dataGridView4.TabIndex = 4;
             // 
             // ClmGradeID
             // 
@@ -282,6 +249,21 @@
             this.ClmGrade.Name = "ClmGrade";
             this.ClmGrade.ReadOnly = true;
             this.ClmGrade.Width = 125;
+            // 
+            // dataGridView5
+            // 
+            this.dataGridView5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView5.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ClmSceduleID,
+            this.ClmScCourseID,
+            this.ClmScProfID,
+            this.ClmCallendar});
+            this.dataGridView5.Location = new System.Drawing.Point(12, 563);
+            this.dataGridView5.Name = "dataGridView5";
+            this.dataGridView5.RowHeadersWidth = 51;
+            this.dataGridView5.RowTemplate.Height = 29;
+            this.dataGridView5.Size = new System.Drawing.Size(814, 98);
+            this.dataGridView5.TabIndex = 8;
             // 
             // ClmSceduleID
             // 
@@ -311,6 +293,64 @@
             this.ClmCallendar.Name = "ClmCallendar";
             this.ClmCallendar.Width = 125;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(12, 13);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(140, 124);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 9;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Yu Gothic UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.label1.Location = new System.Drawing.Point(126, 57);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(142, 31);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "UNIVERSITY";
+            // 
+            // BtnSave
+            // 
+            this.BtnSave.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.BtnSave.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.BtnSave.ForeColor = System.Drawing.Color.Teal;
+            this.BtnSave.Location = new System.Drawing.Point(560, 100);
+            this.BtnSave.Name = "BtnSave";
+            this.BtnSave.Size = new System.Drawing.Size(122, 37);
+            this.BtnSave.TabIndex = 11;
+            this.BtnSave.Text = "Save";
+            this.BtnSave.UseVisualStyleBackColor = false;
+            this.BtnSave.Click += new System.EventHandler(this.BtnSave_Click);
+            // 
+            // BtnLoad
+            // 
+            this.BtnLoad.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.BtnLoad.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.BtnLoad.ForeColor = System.Drawing.Color.Teal;
+            this.BtnLoad.Location = new System.Drawing.Point(416, 100);
+            this.BtnLoad.Name = "BtnLoad";
+            this.BtnLoad.Size = new System.Drawing.Size(122, 37);
+            this.BtnLoad.TabIndex = 12;
+            this.BtnLoad.Text = "Load";
+            this.BtnLoad.UseVisualStyleBackColor = false;
+            // 
+            // BtnClose
+            // 
+            this.BtnClose.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.BtnClose.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.BtnClose.ForeColor = System.Drawing.Color.Teal;
+            this.BtnClose.Location = new System.Drawing.Point(704, 100);
+            this.BtnClose.Name = "BtnClose";
+            this.BtnClose.Size = new System.Drawing.Size(122, 37);
+            this.BtnClose.TabIndex = 13;
+            this.BtnClose.Text = "Close";
+            this.BtnClose.UseVisualStyleBackColor = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -318,6 +358,9 @@
             this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(844, 724);
+            this.Controls.Add(this.BtnClose);
+            this.Controls.Add(this.BtnLoad);
+            this.Controls.Add(this.BtnSave);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.dataGridView5);
@@ -372,5 +415,8 @@
         private DataGridViewTextBoxColumn ClmScCourseID;
         private DataGridViewTextBoxColumn ClmScProfID;
         private DataGridViewTextBoxColumn ClmCallendar;
+        private Button BtnSave;
+        private Button BtnLoad;
+        private Button BtnClose;
     }
 }
