@@ -9,26 +9,27 @@ namespace UniLibrary
 
     public class Student : Person
     {
-        public string Name { get; set; }
-        public int RegistrationNumber { get; set; } 
-       
-    }
+        // properties
+        public int RegistrationNumber { get; set; }
+        public Course courses { get; set; }
 
-    public void Student()
-    {
+        public Student()
+        {
+            //Courses = new List<Course>();
+        }
 
-    }
 
+        // methods
+        public void Attend(string Course, DateTime dateTime)
+        {
 
-    // methods
-    void Attend(string Course, DateTime dateTime)
-    {
+        }
 
-    }
+        public void WriteExam(string Course, DateTime dateTime)
+        {
 
-    void WriteExam(string Course, DateTime dateTime)
-    {
-
+        }
     }
 
 }
+

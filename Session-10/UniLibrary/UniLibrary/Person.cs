@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace UniLibrary
 {
+
     public class Person
     {
         // properties
@@ -13,20 +14,23 @@ namespace UniLibrary
         public string? Name { get; set; }
         public int Age { get; set; }
 
-        // methods
-        public void GetName()
-        {
 
+        public Person()
+        {
+            ID = Guid.NewGuid();
+
+        }
+
+
+        // methods
+        public virtual string GetName()
+        {
+            return Name;
         }
 
         public void SetName(string name)
         {
-
-        }
-
-        public class Student : Person
-        {
-
+            Name = name;
         }
 
     }

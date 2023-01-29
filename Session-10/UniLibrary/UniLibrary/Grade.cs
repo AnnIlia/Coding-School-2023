@@ -13,10 +13,20 @@ namespace UniLibrary
         public Guid ID { get; set; }
         public Guid StudentID { get; set; }
         public Guid CourseID { get; set; }
-        public int GradeValue { get; set; }
+        public int Grades { get; set; }
+
+
+        // constructors
+        public Grade()
+        {
+            ID = Guid.NewGuid();
+            StudentID = Guid.NewGuid();
+            CourseID = Guid.NewGuid();
+        }
 
 
         //methods
         /* student's info*/
+
     }
 }
