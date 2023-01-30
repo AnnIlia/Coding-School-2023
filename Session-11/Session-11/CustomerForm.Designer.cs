@@ -75,6 +75,7 @@
             this.cmbMenu.Name = "cmbMenu";
             this.cmbMenu.Size = new System.Drawing.Size(72, 23);
             this.cmbMenu.TabIndex = 34;
+            this.cmbMenu.SelectedValueChanged += new System.EventHandler(this.Menu_TextChanged);
             // 
             // numQuantity
             // 
@@ -82,6 +83,7 @@
             this.numQuantity.Name = "numQuantity";
             this.numQuantity.Size = new System.Drawing.Size(72, 23);
             this.numQuantity.TabIndex = 35;
+            this.numQuantity.ValueChanged += new System.EventHandler(this.Menu_TextChanged);
             // 
             // addToCart
             // 
@@ -238,6 +240,8 @@
             this.cmbPayment.Name = "cmbPayment";
             this.cmbPayment.Size = new System.Drawing.Size(121, 23);
             this.cmbPayment.TabIndex = 40;
+            this.cmbPayment.SelectedIndexChanged += new System.EventHandler(this.Payment_TextChanged);
+            this.cmbPayment.SelectedValueChanged += new System.EventHandler(this.Payment_TextChanged);
             // 
             // pictureBox1
             // 
