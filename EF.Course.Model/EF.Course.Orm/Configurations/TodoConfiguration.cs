@@ -22,6 +22,9 @@ namespace EF.Course.Orm.Configurations
             //}
             builder.HasKey(todo => todo.Id); //lamda expr
 
+            builder.Property(todo => todo.Id).ValueGeneratedOnAdd(); //generator value of 
+            //guid: is to do new guid
+            //generator: define how new creations i want
             builder.Property(todo => todo.Title).HasMaxLength(50);
 
 
