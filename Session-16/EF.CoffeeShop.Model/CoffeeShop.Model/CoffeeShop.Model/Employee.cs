@@ -1,5 +1,5 @@
 ﻿using System;
-using static Library.Product;
+using static CoffeeShop.Model.Product;
 
 namespace CoffeeShop.Model
 {
