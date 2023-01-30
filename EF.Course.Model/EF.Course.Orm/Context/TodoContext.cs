@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 
-namespace EF.Course.Orm
+namespace EF.Course.Orm.Context
 {
     public class TodoContext : DbContext
     {
