@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace NewSession_10.Properties {
+namespace Session_10.Properties {
     using System;
     
     

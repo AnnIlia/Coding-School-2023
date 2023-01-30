@@ -1,4 +1,4 @@
-namespace NewSession_10
+namespace Session_10
 {
     internal static class Program
     {
