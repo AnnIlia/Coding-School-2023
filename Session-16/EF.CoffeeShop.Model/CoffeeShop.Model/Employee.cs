@@ -31,15 +31,6 @@ namespace CoffeeShop.Model
         {
             ID = Guid.NewGuid();
         }
-    }
-
-    /* Each shop should have: 1 Manager, 1-2 Cashiers, 1-2 Baristas and 1-3 Waiters */
-
-  
-
-    
-   
-
-    //Methods
+    }  
 }
 
