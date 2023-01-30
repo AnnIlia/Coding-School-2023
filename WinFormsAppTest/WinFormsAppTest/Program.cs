@@ -1,4 +1,4 @@
-namespace Test1
+namespace WinFormsAppTest
 {
     internal static class Program
     {
