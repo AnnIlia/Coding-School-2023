@@ -1,7 +1,7 @@
 ﻿using System;
 using static Library.Product;
 
-namespace Library
+namespace CoffeeShop.Model
 {
     public enum EmployeeType
     {

@@ -4,7 +4,7 @@
 
 namespace Library
 {
-    public class Customer
+    public class CoffeeShop.Model
     { 
         public Guid ID { get; set; }
         public int Code { get; set; }
