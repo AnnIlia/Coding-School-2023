@@ -17,14 +17,8 @@ namespace CoffeeShop.Model
        public Guid ID { get; set; }
        public string Name { get; set; }
        public string Surname { get; set; }
-       
-       // public enum EmployeeType { get; set; }
        public EmployeeType TypeOfEmployee { get; set; }
-
-       //public List<Employee>? employees;
-
-
-        public decimal SalaryPerMonth { get; set; }
+       public decimal SalaryPerMonth { get; set; }
 
         //Constructors
         public Employee()
