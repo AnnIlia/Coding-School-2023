@@ -12,7 +12,7 @@ namespace CoffeeShop.Orm.Context
 {
     public class AddDbContext : DbContext
     {
-        //maybe must include and Customer
+        //maybe must include and Customer -im not sure-
         public DbSet<Employee> Employees { get; set; }
         public DbSet<Product> Products { get; set; }
         public DbSet<ProductCategory> ProductCategories { get; set; }
