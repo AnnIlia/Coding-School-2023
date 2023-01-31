@@ -15,6 +15,7 @@ namespace CoffeeShop.Model
         public Guid ID { get; set; }
         public int Code { get; set; }
         public string Description { get; set; }
+        public object Product { get; set; }
 
         public ProductCategory()
         {

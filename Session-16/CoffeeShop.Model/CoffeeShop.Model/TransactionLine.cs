@@ -14,15 +14,15 @@ namespace CoffeeShop.Model
         public string Description { get; set; }
         public int Quantity { get; set; }
         public decimal Price { get; set; }
-        public decimal TotalCost { get; set; }        
+        public decimal TotalCost { get; set; }
         public decimal TotalPrice { get; set; }
+        public Transaction Transaction { get; set; }
+        public Product Product { get; set; }
 
         public TransactionLine()
         {
             ID = Guid.NewGuid();
-            Date= DateTime.Now;
+            Date = DateTime.Now;
         }
     }
 }
-
-

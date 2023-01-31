@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace CoffeeShop.Model
 {
-    public class Transaction {
-        public enum MethodPayment {
+    public class Transaction
+    {
+        public enum MethodPayment
+        {
             Cash,
             Credit_Card
         };
@@ -18,10 +20,15 @@ namespace CoffeeShop.Model
         public MethodPayment TypeOfPayment { get; set; }
         public decimal Cost { get; set; }
         public decimal TotalPrice { get; set; }
+        public List<TransactionLine> TransactionLines { get; set; }
+        public Customer Customer { get; set; }
+        public Employee Employee { get; set; }
 
-        public Transaction() {
+        public Transaction()
+        {
             ID = Guid.NewGuid();
             Date = DateTime.Now;
+            TransactionLines = new List<TransactionLine>();
         }
     }
 }
