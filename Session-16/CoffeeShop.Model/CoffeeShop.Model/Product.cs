@@ -4,7 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Library {
+namespace CoffeeShop.Model
+{
     public class Product  {
 
         public enum ProductType {
@@ -24,7 +25,8 @@ namespace Library {
         public decimal Price { get; set; }
         public decimal Cost { get; set; }
 
-        
+        public TransactionLine TransactionLine { get; set; }
+        public ProductCategory ProductCategory { get; set; }
 
         //Constractors
         public Product()
