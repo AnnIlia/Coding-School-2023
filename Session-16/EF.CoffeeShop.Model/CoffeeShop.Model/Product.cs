@@ -24,8 +24,10 @@ namespace CoffeeShop.Model
         
         public decimal Price { get; set; }
         public decimal Cost { get; set; }
-
         
+        public TransactionLine TransactionLine { get; set; }
+        public ProductCategory ProductCategory { get; set; }
+
 
         //Constractors
         public Product()

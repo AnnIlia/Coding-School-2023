@@ -1,8 +1,28 @@
-﻿using System;
+﻿using CoffeeShop.Model;
+using Microsoft.EntityFrameworkCore;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-public class Class1
+namespace CoffeeShop.Orm.Configuration
 {
-	public Class1()
-	{
-	}
+    public class EmployeeConfig : IEntityTypeConfiguration<Employee>
+    {
+        public void Configuration()
+        {
+
+        }
+
+        public void Configure(Microsoft.EntityFrameworkCore.Metadata.Builders.EntityTypeBuilder<Employee> builder)
+        {
+            builder.ToTable("Employees");
+            builder.HasKey(ee => ee.ID);
+            builder.Property(ee => ee.Name).HasMaxLength(50);
+            builder.Property(ee => ee.Surname).HasMaxLength(50);
+            builder.Property(ee => ee.TypeOfEmployee).HasMaxLength(20);
+            builder.Property(ee => ee.SalaryPerMonth).HasColumnType("decimal(5,2)").HasPrecision(5, 2);
+        }
+    }
 }
