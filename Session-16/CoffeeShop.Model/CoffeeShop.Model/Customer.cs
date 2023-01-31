@@ -1,10 +1,14 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 
 
-namespace Library
+namespace CoffeeShop.Model
 {
-    public class CoffeeShop.Model
+    public class Customer
     { 
         public Guid ID { get; set; }
         public int Code { get; set; }
