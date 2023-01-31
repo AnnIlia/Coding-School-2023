@@ -22,14 +22,15 @@ namespace CoffeeShop.Orm.Configuration
             builder.Property(prod => prod.ProductCategoryID);
             builder.Property(prod => prod.TypeOfProduct);
             builder.Property(prod => prod.Price)
-                    .HasColumnType("decimal(5,2)")
-                    .HasPrecision(5, 2);
+                    .HasColumnType("decimal(6,2)")
+                    .HasPrecision(6, 2);
             builder.Property(prod => prod.Cost)
-                    .HasColumnType("decimal(5,2)")
-                    .HasPrecision(5, 2);
-            builder.HasOne(prod => prod.ProductCategory)
+                    .HasColumnType("decimal(6,2)")
+                    .HasPrecision(6, 2);
+          /*  builder.HasOne(prod => prod.ProductCategory)
                     .WithOne(prodCat => prodCat.Product)
                     .HasForeignKey<Product>(prod => prod.ID);
+          */
         }
     }
 }

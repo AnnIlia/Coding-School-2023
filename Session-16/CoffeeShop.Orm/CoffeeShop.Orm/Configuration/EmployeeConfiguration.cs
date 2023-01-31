@@ -28,9 +28,10 @@ namespace CoffeeShop.Orm.Configuration
             builder.Property(ee => ee.SalaryPerMonth)
                     .HasColumnType("decimal(5,2)")
                     .HasPrecision(5, 2);
-            builder.HasOne(ee => ee.Transaction)
+          /*  builder.HasOne(ee => ee.Transaction)
                     .WithOne(trans => trans.Employee)
                     .HasForeignKey<Transaction>(trans => trans.ID);
+          */
         }
     }
 }
