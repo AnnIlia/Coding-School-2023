@@ -7,11 +7,8 @@ using System.Threading.Tasks;
 namespace CoffeeShop.Model
 {
     [Serializable]
-    public class ProductCategory {
-        
-        
-
-
+    public class ProductCategory
+    {
         //Properties
         public Guid ID { get; set; }
         public int Code { get; set; }
@@ -19,10 +16,6 @@ namespace CoffeeShop.Model
         public object Product { get; set; }
         public object ProductType { get; set; }
 
-        public ProductCategory()
-        {
-            ID = Guid.NewGuid();
-           
-        }
+        public ProductCategory() => ID = Guid.NewGuid();
     }
 }

@@ -19,7 +19,7 @@ namespace CoffeeShop.Orm.Configuration
                     .HasMaxLength(50);
             builder.Property(prod => prod.Description)
                     .HasMaxLength(50);
-            builder.Property(prod => prod.ProductCategoryID);
+            //builder.Property(prod => prod.ProductCategoryID);
             builder.Property(prod => prod.TypeOfProduct);
             builder.Property(prod => prod.Price)
                     .HasPrecision(22, 2);
