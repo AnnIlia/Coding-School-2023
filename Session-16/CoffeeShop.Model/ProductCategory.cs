@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace CoffeeShop.Model
 {
+    [Serializable]
     public class ProductCategory {
         
         
@@ -16,6 +17,7 @@ namespace CoffeeShop.Model
         public int Code { get; set; }
         public string Description { get; set; }
         public object Product { get; set; }
+        public object ProductType { get; set; }
 
         public ProductCategory()
         {

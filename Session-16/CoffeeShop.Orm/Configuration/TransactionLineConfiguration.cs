@@ -20,14 +20,11 @@ namespace CoffeeShop.Orm.Configuration
             builder.Property(transln => transln.Description);
             builder.Property(transln => transln.Quantity);
             builder.Property(transln => transln.Price)
-                    .HasColumnType("decimal(6,2)")
-                    .HasPrecision(6, 2);
+                    .HasPrecision(22, 2);
             builder.Property(transln => transln.TotalCost)
-                    .HasColumnType("decimal(6,2)")
-                    .HasPrecision(6, 2);
+                    .HasPrecision(22, 2);
             builder.Property(transln => transln.TotalPrice)
-                    .HasColumnType("decimal(6,2)")
-                    .HasPrecision(6, 2);
+                    .HasPrecision(22, 2);
         }
     }
 }

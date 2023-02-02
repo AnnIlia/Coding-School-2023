@@ -16,21 +16,19 @@ namespace CoffeeShop.Orm.Configuration
             builder.ToTable("Products");
             builder.HasKey(prod => prod.ID);
             builder.Property(prod => prod.Code)
-                    .HasMaxLength(10);
+                    .HasMaxLength(50);
             builder.Property(prod => prod.Description)
-                    .HasMaxLength(30);
+                    .HasMaxLength(50);
             builder.Property(prod => prod.ProductCategoryID);
             builder.Property(prod => prod.TypeOfProduct);
             builder.Property(prod => prod.Price)
-                    .HasColumnType("decimal(6,2)")
-                    .HasPrecision(6, 2);
+                    .HasPrecision(22, 2);
             builder.Property(prod => prod.Cost)
-                    .HasColumnType("decimal(6,2)")
-                    .HasPrecision(6, 2);
-          /*  builder.HasOne(prod => prod.ProductCategory)
-                    .WithOne(prodCat => prodCat.Product)
-                    .HasForeignKey<Product>(prod => prod.ID);
-          */
+                    .HasPrecision(22, 2);
+            //builder.HasOne(prod => prod.ProductCategory)
+            //          .WithOne(prodCat => prodCat.Product)
+            //          .HasForeignKey<Product>(prod => prod.ID);
+            
         }
     }
 }

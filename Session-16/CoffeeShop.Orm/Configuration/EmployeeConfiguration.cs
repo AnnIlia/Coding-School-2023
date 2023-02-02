@@ -19,19 +19,19 @@ namespace CoffeeShop.Orm.Configuration
         {
             builder.ToTable("Employees");
             builder.HasKey(ee => ee.ID);
+            builder.Property(ee => ee.ID).HasMaxLength(100) ;
             builder.Property(ee => ee.Name)
-                    .HasMaxLength(30);
+                    .HasMaxLength(50);
             builder.Property(ee => ee.Surname)
-                    .HasMaxLength(30);
+                    .HasMaxLength(50);
             builder.Property(ee => ee.TypeOfEmployee)
-                    .HasMaxLength(10);
+                    .HasMaxLength(50);
             builder.Property(ee => ee.SalaryPerMonth)
-                    .HasColumnType("decimal(5,2)")
-                    .HasPrecision(5, 2);
-          /*  builder.HasOne(ee => ee.Transaction)
-                    .WithOne(trans => trans.Employee)
-                    .HasForeignKey<Transaction>(trans => trans.ID);
-          */
+                    .HasPrecision(22, 2);
+            /*  builder.HasOne(ee => ee.Transaction)
+                      .WithOne(trans => trans.Employee)
+                      .HasForeignKey<Transaction>(trans => trans.ID);
+            */
         }
     }
 }

@@ -20,19 +20,17 @@ namespace CoffeeShop.Orm.Configuration
             builder.Property(trans => trans.EmployeeID);
             builder.Property(trans => trans.TypeOfPayment);
             builder.Property(trans => trans.Cost)
-                    .HasColumnType("decimal(6, 2)")
-                    .HasPrecision(6, 2);
+                    .HasPrecision(22, 2);
             builder.Property(trans => trans.TotalPrice)
-                    .HasColumnType("decimal(6, 2)")
-                    .HasPrecision(6, 2);
-           /* builder.HasOne(trans => trans.Employee)
-                    .WithOne(ee => ee.Transaction).HasForeignKey<Transaction>(trans => trans.ID);
-            builder.HasOne(trans => trans.Customer)
-                    .WithOne(cus => cus.Transaction).HasForeignKey<Transaction>(trans => trans.ID);
-            builder.HasMany(trans => trans.TransactionLines)
-                    .WithOne(transLine => transLine.Transaction)
-                    .HasForeignKey(transLine => transLine.ID);
-           */
+                    .HasPrecision(22, 2);
+            //builder.HasOne(trans => trans.Employee)
+            //         .WithOne(ee => ee.Transaction).HasForeignKey<Transaction>(trans => trans.ID);
+            // builder.HasOne(trans => trans.Customer)
+            //         .WithOne(cus => cus.Transaction).HasForeignKey<Transaction>(trans => trans.ID);
+            // builder.HasMany(trans => trans.TransactionLines)
+            //         .WithOne(transLine => transLine.Transaction)
+            //         .HasForeignKey(transLine => transLine.ID);
+            
         }
     }
 }
