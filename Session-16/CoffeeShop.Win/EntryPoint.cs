@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 using static DevExpress.Utils.Svg.CommonSvgImages;
-using Library;
+using CoffeeShop.Model;
 
 namespace Session_11 {
     public partial class EntryPoint : Form {

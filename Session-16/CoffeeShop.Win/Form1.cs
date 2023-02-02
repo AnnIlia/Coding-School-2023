@@ -1,14 +1,14 @@
+using CoffeeShop.Model;
 using DevExpress.DataAccess.Native.Data;
 using DevExpress.Internal.WinApi.Windows.UI.Notifications;
 using DevExpress.Pdf.Native.BouncyCastle.Asn1.Cms;
 using DevExpress.Utils.DPI;
 using DevExpress.XtraCharts;
 using DevExpress.XtraSpreadsheet.Export;
-using Library;
 using System.Collections.ObjectModel;
 using System.Linq;
+using static CoffeeShop.Model.Product;
 using static DevExpress.Utils.Svg.CommonSvgImages;
-using static Library.Product;
 
 namespace Session_11
 {
