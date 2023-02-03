@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CoffeeShop.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,7 +8,7 @@ using System.Threading.Tasks;
 namespace coffeeshop.model
 {
     
-    public class Productcategory
+    public class ProductCategory : IEntityBase
     {
         //properties
         public Guid id { get; set; }
@@ -15,7 +16,11 @@ namespace coffeeshop.model
         public string description { get; set; }
         public object product { get; set; }
         public object producttype { get; set; }
+        public object Code { get; set; }
+        public object ProductType { get; set; }
+        public object Description { get; set; }
+        public object Product { get; set; }
 
-        public Productcategory() => id = Guid.NewGuid();
+        public ProductCategory() => id = Guid.NewGuid();
     }
 }

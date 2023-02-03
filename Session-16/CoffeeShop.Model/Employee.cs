@@ -14,7 +14,7 @@ namespace CoffeeShop.Model
         Waiter
     }
 
-    public class Employee
+    public class Employee : IEntityBase
     {
        //Properties
        public Guid ID { get; set; }
@@ -28,7 +28,7 @@ namespace CoffeeShop.Model
 
 
         public decimal SalaryPerMonth { get; set; }
-        public object Transaction { get; set; }
+        public Transaction Transaction { get; set; }
 
         //Constructors
         public Employee()

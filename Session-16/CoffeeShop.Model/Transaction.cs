@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CoffeeShop.Model
 {
-    public class Transaction
+    public class Transaction : IEntityBase
     {
         public enum MethodPayment
         {
@@ -29,6 +29,7 @@ namespace CoffeeShop.Model
             ID = Guid.NewGuid();
             Date = DateTime.Now;
             TransactionLines = new List<TransactionLine>();
+            Customer = new Customer();
         }
     }
 }

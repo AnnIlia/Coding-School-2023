@@ -29,7 +29,7 @@ namespace CoffeeShop.Model
         public decimal Cost { get; set; }
 
         public TransactionLine TransactionLine { get; set; }
-        public Productcategory ProductCategory { get; set; }
+        public ProductCategory ProductCategory { get; set; }
 
         //Constractors
         public Product()

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 
 
+
 namespace CoffeeShop.Model
 {
     public class Customer : IEntityBase
@@ -13,8 +14,9 @@ namespace CoffeeShop.Model
         public Guid ID { get; set; }
         public int Code { get; set; }
         public string Description { get; set; }
-        
-        
+        public Transaction Transaction { get; set; }
+
+
         //Constructors
         public Customer() {
             ID = Guid.NewGuid();
