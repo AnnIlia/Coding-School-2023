@@ -1,5 +1,4 @@
-﻿using coffeeshop.model;
-using CoffeeShop.Model;
+﻿using CoffeeShop.Model;
 using CoffeeShop.Orm.Configuration;
 using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
@@ -13,19 +12,16 @@ namespace CoffeeShop.Orm.Context
 {
     public class AddDbContext : DbContext
     {
-        //maybe must include and Customer -im not sure-
-        //Problem: ProductCategory
         public DbSet<Employee> Employees { get; set; }
         public DbSet<Product> Products { get; set; }
-
         public DbSet<ProductCategory> ProductCategories { get; set; }
         public DbSet<TransactionLine> TransactionLines { get; set; }
         public DbSet<Transaction> Transactions { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            
 
+            modelBuilder.ApplyConfiguration(new CustomerConfiguration());
             modelBuilder.ApplyConfiguration(new EmployeeConfiguration());
             modelBuilder.ApplyConfiguration(new ProductConfiguration());
             modelBuilder.ApplyConfiguration(new ProductCatConfiguration());

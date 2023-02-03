@@ -23,9 +23,9 @@ namespace CoffeeShop.Orm.Configuration
                     .HasMaxLength(3);
             builder.Property(cus => cus.Description)
                     .HasMaxLength(50);
-            //builder.HasOne(cus => cus.Transaction)
-            //        .WithOne(trans => trans.Customer)
-            //        .HasForeignKey<Transaction>(trans => trans.ID);
+            builder.HasOne(cus => cus.Transaction)
+                    .WithOne(trans => trans.Customer)
+                    .HasForeignKey<Transaction>(trans => trans.ID);
         }
     }
 }
