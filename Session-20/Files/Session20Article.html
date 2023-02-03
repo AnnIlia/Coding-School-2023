@@ -152,26 +152,23 @@
             </ol>
         </nav>
 
-        <form action='' method='get' class='speaker-form'>
-            <h3>Άφησε το σχόλιο σου</h3>
-            <p>Τα στοιχεία σου</p>
+
+        <h3>Άφησε το σχόλιο σου</h3>
+        <form action="/action_page.php" id="usrform">
             <div>
                 <label for='full-name'>Ονοματεπώνυμο</label>
                 <input id='full-name' name='full-name' type='text' />
             </div>
-
-            <p>Το σχόλιο</p>
+       
+        <br>
+<textarea rows="4" cols="50" name="comment" form="usrform">
+Γράψε το σχόλιο σου εδώ..</textarea>
+       
             <div>
-                <label for='abstract'>Σχόλιο</label>
-                <textarea id='abstract' name='abstract'></textarea>
-            </div>
-
-            <div>
-                <button>Υποβολή</button>
+                <button>Submit</button>
             </div>
 
         </form>
-
 
 
 
