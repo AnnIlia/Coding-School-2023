@@ -26,10 +26,10 @@ namespace CoffeeShop.Orm.Context
             
 
             modelBuilder.ApplyConfiguration(new EmployeeConfiguration());
-            //modelBuilder.ApplyConfiguration(new ProductConfiguration());
-         // modelBuilder.ApplyConfiguration(new ProductCatConfiguration());
-            //modelBuilder.ApplyConfiguration(new TransactionLineConfiguration());
-            //modelBuilder.ApplyConfiguration(new TransactionConfiguration());
+            modelBuilder.ApplyConfiguration(new ProductConfiguration());
+            modelBuilder.ApplyConfiguration(new ProductCatConfiguration());
+            modelBuilder.ApplyConfiguration(new TransactionLineConfiguration());
+            modelBuilder.ApplyConfiguration(new TransactionConfiguration());
             base.OnModelCreating(modelBuilder);
         }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

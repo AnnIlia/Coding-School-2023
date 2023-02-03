@@ -1,21 +1,21 @@
-﻿//using System;
-//using System.Collections.Generic;
-//using System.Linq;
-//using System.Text;
-//using System.Threading.Tasks;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-//namespace CoffeeShop.Model
-//{
-//    [Serializable]
-//    public class ProductCategory
-//    {
-//        //Properties
-//        public Guid ID { get; set; }
-//        public int Code { get; set; }
-//        public string Description { get; set; }
-//        public object Product { get; set; }
-//        public object ProductType { get; set; }
+namespace coffeeshop.model
+{
+    
+    public class Productcategory
+    {
+        //properties
+        public Guid id { get; set; }
+        public int code { get; set; }
+        public string description { get; set; }
+        public object product { get; set; }
+        public object producttype { get; set; }
 
-//        public ProductCategory() => ID = Guid.NewGuid();
-//    }
-//}
+        public Productcategory() => id = Guid.NewGuid();
+    }
+}

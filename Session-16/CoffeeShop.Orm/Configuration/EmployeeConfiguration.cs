@@ -28,10 +28,10 @@ namespace CoffeeShop.Orm.Configuration
                     .HasMaxLength(50);
             builder.Property(ee => ee.SalaryPerMonth)
                     .HasPrecision(22, 2);
-            /*  builder.HasOne(ee => ee.Transaction)
+            builder.HasOne(ee => ee.Transaction)
                       .WithOne(trans => trans.Employee)
                       .HasForeignKey<Transaction>(trans => trans.ID);
-            */
+            
         }
     }
 }

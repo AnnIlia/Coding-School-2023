@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace CoffeeShop.Model
 {
-    public class Customer
+    public class Customer : IEntityBase
     { 
         public Guid ID { get; set; }
         public int Code { get; set; }

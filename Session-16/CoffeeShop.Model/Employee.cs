@@ -28,6 +28,7 @@ namespace CoffeeShop.Model
 
 
         public decimal SalaryPerMonth { get; set; }
+        public object Transaction { get; set; }
 
         //Constructors
         public Employee()
