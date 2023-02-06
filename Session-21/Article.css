@@ -74,6 +74,43 @@ ul {
     scale: 60%;
     margin-top: -50px;
 }
+.main {
+    margin-left: -60px;
+}
+
+.side {
+    padding-left: 10px;
+}
+
+.side-links li {
+    padding: 5px 0;
+    padding-left: 10px;
+}
+
+.side-links a {
+    color: darkcyan;
+    text-decoration: none;
+}
+.form-item input {
+    width: 100%;
+    padding: 8px;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.form-item textarea {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    min-height: 100px;
+    margin-top: 10px;
+}
+
+.form-item label {
+    font-weight: normal;
+}
+
 
 
 
