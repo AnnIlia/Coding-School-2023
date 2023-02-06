@@ -16,9 +16,6 @@ body {
     margin: 0;
 }
 
-h2 {
-    font-weight: normal;
-}
 h1 {
     font-family: "Open Sans", sans-serif;
     font-size: 36px;
@@ -38,7 +35,6 @@ ul {
     background-color: lightgray;
     float: right;
 }
-
 
 .nav {
     list-style: none;
@@ -110,6 +106,15 @@ ul {
 .form-item label {
     font-weight: normal;
 }
+
+button {
+    font-weight: bold;
+    border-radius: 10px;
+    background-color: darkcyan;
+    color: white;
+    padding: 10px 20px;
+}
+
 
 
 
