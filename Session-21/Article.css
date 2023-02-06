@@ -30,7 +30,7 @@ h2 {
 }
 
 ul {
-    background-color: #DDE0E3;
+    background-color: lightgray;
     float: right;
 }
 
@@ -46,3 +46,11 @@ ul {
         display: inline;
         padding: 20px;
     }
+
+        .nav li a:hover {
+            background-color: papayawhip;
+            border-radius: 0px; /**/
+        }
+        .nav li a {
+            color: darkcyan;
+        }
