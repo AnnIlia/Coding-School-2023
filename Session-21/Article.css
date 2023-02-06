@@ -1,2 +1,35 @@
-﻿body {
+﻿header {
+
+
+
 }
+
+
+body {
+    color: #414141; /* Dark gray */
+    background-color: white; /* Light gray */
+    font-size: 24px;
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+    padding: 2rem;
+    margin: 0;
+}
+
+h1 {
+    font-family: "Open Sans", sans-serif;
+
+    font-size: 36px;
+    font-size: 2em;
+}
+
+h2 {
+    font-size: 28px;
+    font-size: 1.6em;
+    color: gray;
+}
+
+ul {
+    background-color: #DDE0E3;
+    float: right;
+}
+
+
