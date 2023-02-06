@@ -58,8 +58,22 @@ ul {
         }
         .nav li a {
             color: darkcyan;
-            text-decoration: none;
+            text-decoration: none; /*unlinked*/
         }
+
+.content {
+    padding: 50px;
+    margin: auto; /**/
+}
+.article {
+    display: flex;
+    margin-left: -50px;
+}
+
+.article-img {
+    scale: 60%;
+    margin-top: -50px;
+}
 
 
 
