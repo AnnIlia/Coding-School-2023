@@ -29,6 +29,7 @@ h2 {
     font-size: 1.6em;
     color: gray;
     font-weight: normal;
+    font-size: larger;
 }
 
 ul {
@@ -112,7 +113,7 @@ button {
     border-radius: 10px;
     background-color: darkcyan;
     color: white;
-    padding: 10px 20px;
+    padding: 10px 10px;
 }
 
 
