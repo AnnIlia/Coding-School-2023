@@ -35,3 +35,14 @@ ul {
 }
 
 
+.nav {
+    list-style: none;
+    display: flex;
+    margin: 0; /**/
+    padding: 0; /**/
+}
+
+    .nav li {
+        display: inline;
+        padding: 20px;
+    }
