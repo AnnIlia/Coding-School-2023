@@ -16,17 +16,22 @@ body {
     margin: 0;
 }
 
+h2 {
+    font-weight: normal;
+}
 h1 {
     font-family: "Open Sans", sans-serif;
-
     font-size: 36px;
     font-size: 2em;
+    font-weight: bold;
+    text-align: center;
 }
 
 h2 {
     font-size: 28px;
     font-size: 1.6em;
     color: gray;
+    font-weight: normal;
 }
 
 ul {
