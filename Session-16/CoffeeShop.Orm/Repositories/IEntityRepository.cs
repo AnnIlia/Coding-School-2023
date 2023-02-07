@@ -1,8 +1,19 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using CoffeeShop.Model;
 
-public class Class1
+namespace CoffeeShop.Orm.Repositories
 {
-	public Class1()
-	{
-	}
+    public interface IEntityRepository<TEntity>
+        where TEntity : IEntityBase
+    {
+        List<TEntity> GetAll();  //get all registries
+        TEntity? GetById(Guid id); //return registry
+        void Add(TEntity entity);
+        void Update(Guid id, TEntity entity);
+        void Delete(Guid id);
+    }
 }
