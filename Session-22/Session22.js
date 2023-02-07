@@ -17,6 +17,7 @@ btn.addEventListener("click", function () {
     result.textContent = reverseString(input.value);
 });
 
+document.writeln(result);
 
 // // Log the result to the console
-console.log(reversed);
+//console.log(reversed);
