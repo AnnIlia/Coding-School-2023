@@ -10,7 +10,9 @@ namespace CoffeeShop.EF.Repositories
 {
     public interface IEntityRepository<IEntity>
         where IEntity : class
-    { 
+    {
+        IList<IEntity> GetAll();
+
         IEntity GetById(int id);
 
         void Create (IEntity entity);
