@@ -1,10 +1,5 @@
 ﻿using CoffeeShop.EF.Context;
 using CoffeeShop.Model;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CoffeeShop.EF.Repositories
 {
@@ -20,10 +15,10 @@ namespace CoffeeShop.EF.Repositories
         public void Delete(int id)
         {
             using var context = new CoffeeShopDbContext();
-            var foundcustomer = context.Customers.SingleOrDefault(x => x.Id == id);
-            if (foundcustomer != null) 
+            var foundCustomer = context.Customers.SingleOrDefault(x => x.Id == id);
+            if (foundCustomer != null) 
                 return;
-            context.Customers.Remove(foundcustomer);
+            context.Customers.Remove(foundCustomer);
             context.SaveChanges();
         }
         public IList<Customer> GetAll()
@@ -38,9 +33,18 @@ namespace CoffeeShop.EF.Repositories
             return context.Customers.Where(Customer => Customer.Id == id).FirstOrDefault();
         }
 
-        public void Update(int id, Customer entity)
+        public void Update(int id, Customer entity, Customer? foundCustomer)
         {
             using var context = new CoffeeShopDbContext();
+            Customer? customer
+                = context.Customers.SingleOrDefault(customer => customer.Id == id);
+            var foundCustomer = customer;   
+            if (foundCustomer is null) 
+                return;
+            foundCustomer.Code = entity.Code;
+            foundCustomer.Description = entity.Description;
+            context.SaveChanges();
+
         }
     }
 }
