@@ -1,4 +1,5 @@
-﻿using CoffeeShop.Model;
+﻿using CoffeeShop.EF.Context;
+using CoffeeShop.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,22 +12,23 @@ namespace CoffeeShop.EF.Repositories
     {
         public void Create(Customer entity)
         {
-            throw new NotImplementedException();
+            using var context = new CoffeeShopDbContext();
+
         }
 
         public void Delete(int id)
         {
-            throw new NotImplementedException();
+            using var context = new CoffeeShopDbContext();
         }
 
         public Customer GetById(int id)
         {
-            throw new NotImplementedException();
+            using var context = new CoffeeShopDbContext();
         }
 
         public void Update(int id, Customer entity)
         {
-            throw new NotImplementedException();
+            using var context = new CoffeeShopDbContext();
         }
     }
 }
