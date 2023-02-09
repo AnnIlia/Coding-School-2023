@@ -31,13 +31,11 @@ namespace CoffeeShop.EF.Repositories
             using var context = new CoffeeShopDbContext();
             return context.Customers.ToList();
         }
-        
-        
-        }
-
-        public Customer GetById(int id)
+       
+        public Customer? GetById(int id)
         {
             using var context = new CoffeeShopDbContext();
+            return context.Customers.Where(Customer => Customer.Id == id).FirstOrDefault();
         }
 
         public void Update(int id, Customer entity)
