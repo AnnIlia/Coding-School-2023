@@ -20,11 +20,19 @@ namespace CoffeeShop.EF.Repositories
         public void Delete(int id)
         {
             using var context = new CoffeeShopDbContext();
-            var customer = context.Customers.SingleOrDefault(x => x.Id == id);
-            if (customer != null) 
+            var foundcustomer = context.Customers.SingleOrDefault(x => x.Id == id);
+            if (foundcustomer != null) 
                 return;
-            context.Customers.Remove(customer);
+            context.Customers.Remove(foundcustomer);
             context.SaveChanges();
+        }
+        public IList<Customer> GetAll()
+        {
+            using var context = new CoffeeShopDbContext();
+            return context.Customers.ToList();
+        }
+        
+        
         }
 
         public Customer GetById(int id)
