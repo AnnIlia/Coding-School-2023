@@ -13,7 +13,7 @@ namespace CoffeeShop.EF.Repositories
     {
         IList<IEntity> GetAll();
 
-        IEntity GetById(int id);
+        IEntity? GetById(int id);
 
         void Create (IEntity entity);
 
