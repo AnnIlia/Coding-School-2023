@@ -21,20 +21,5 @@ namespace CoffeeShop.EF.Repositories
 
         void Delete(int id);
 
-
-
-
-
-
-
-        GetById(int id);
-
-        Add();
-
-        void Update(int id, IEntity entity);
-
-        void Delete(int id);
-
-
     }
 }
