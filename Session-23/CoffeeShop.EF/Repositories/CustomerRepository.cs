@@ -33,20 +33,14 @@ namespace CoffeeShop.EF.Repositories
             return context.Customers.Where(Customer => Customer.Id == id).FirstOrDefault();
         }
 
-        public void Update(int id, Customer entity, Customer? foundCustomer)
+        public void Update(int id, Customer entity)
         {
             using var context = new CoffeeShopDbContext();
-            var foundCustomer = context.Customers.SingleOrDefault(customer => customer.Id == id); if (foundCustomer is null) 
+            var foundCustomer = context.Customers.SingleOrDefault(customer => customer.Id == id); if (foundCustomer is null)
                 return;
             foundCustomer.Code = entity.Code;
             foundCustomer.Description = entity.Description;
             context.SaveChanges();
-
-        }
-
-        public void Update(int id, Customer entity)
-        {
-            throw new NotImplementedException();
         }
     }
 }
