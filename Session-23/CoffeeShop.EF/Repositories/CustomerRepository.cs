@@ -15,7 +15,7 @@ namespace CoffeeShop.EF.Repositories
         public void Delete(int id)
         {
             using var context = new CoffeeShopDbContext();
-            var foundCustomer = context.Customers.SingleOrDefault(x => x.Id == id);
+            var foundCustomer = context.Customers.SingleOrDefault(customer => customer.Id == id);
             if (foundCustomer is null) 
                 return;
             context.Customers.Remove(foundCustomer);
@@ -36,10 +36,7 @@ namespace CoffeeShop.EF.Repositories
         public void Update(int id, Customer entity, Customer? foundCustomer)
         {
             using var context = new CoffeeShopDbContext();
-            Customer? customer
-                = context.Customers.SingleOrDefault(customer => customer.Id == id);
-            var foundCustomer = customer;   
-            if (foundCustomer is null) 
+            var foundCustomer = context.Customers.SingleOrDefault(customer => customer.Id == id); if (foundCustomer is null) 
                 return;
             foundCustomer.Code = entity.Code;
             foundCustomer.Description = entity.Description;
