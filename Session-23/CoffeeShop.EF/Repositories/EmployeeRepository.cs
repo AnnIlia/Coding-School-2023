@@ -1,4 +1,5 @@
-﻿using CoffeeShop.Model;
+﻿using CoffeeShop.EF.Context;
+using CoffeeShop.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,32 +12,49 @@ namespace CoffeeShop.EF.Repositories
     {
         public void Create(Employee entity)
         {
-            throw new NotImplementedException();
+            using var context = new CoffeeShopDbContext();
+            context.Employees.Add(entity);
+            context.SaveChanges();
         }
 
         public void Delete(int id)
         {
-            throw new NotImplementedException();
+            using var context = new CoffeeShopDbContext();
+            var foundEmployee = context.Employees.FirstOrDefault(employee => employee.Id == id);
+            if (foundEmployee is null)
+                return;
+            context.Employees.Remove(foundEmployee);
+            context.SaveChanges();
         }
 
         public IList<Employee> GetAll()
         {
-            throw new NotImplementedException();
+            using var context = new CoffeeShopDbContext();
+            return context.Employees.ToList();
         }
 
         public Employee? GetById(int id)
         {
-            throw new NotImplementedException();
+            using var context = new CoffeeShopDbContext();
+            return context.Employees.Where(employee => employee.Id == id).SingleOrDefault();
         }
 
         public void Update(int id, Employee entity)
         {
-            throw new NotImplementedException();
+            using var context = new CoffeeShopDbContext();
+            var foundEmployee = context.Employees.SingleOrDefault(employee => employee.Id == id);
+            if (foundEmployee is null)
+                return;
+
+            foundEmployee.Name = entity.Name;
+            foundEmployee.Surname= entity.Surname;
+            foundEmployee.SalaryPerMonth = entity.SalaryPerMonth;
+            foundEmployee.EmployeeType = entity.EmployeeType;
+
+            context.SaveChanges();
         }
 
-        Employee? IEntityRepository<Employee>.GetById(int id)
-        {
-            throw new NotImplementedException();
+       
         }
     }
-}
+
