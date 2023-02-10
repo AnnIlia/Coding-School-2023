@@ -23,5 +23,6 @@
         public ProductCategory ProductCategory { get; set; } = null!;
 
         public List<TransactionLine> TransactionLines { get; set; }
+        public string Descripion { get; set; }
     }
 }
