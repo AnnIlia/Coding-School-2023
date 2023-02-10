@@ -16,7 +16,7 @@ namespace CoffeeShop.EF.Repositories
         {
             using var context = new CoffeeShopDbContext();
             var foundCustomer = context.Customers.SingleOrDefault(x => x.Id == id);
-            if (foundCustomer != null) 
+            if (foundCustomer is null) 
                 return;
             context.Customers.Remove(foundCustomer);
             context.SaveChanges();
@@ -45,6 +45,11 @@ namespace CoffeeShop.EF.Repositories
             foundCustomer.Description = entity.Description;
             context.SaveChanges();
 
+        }
+
+        public void Update(int id, Customer entity)
+        {
+            throw new NotImplementedException();
         }
     }
 }
