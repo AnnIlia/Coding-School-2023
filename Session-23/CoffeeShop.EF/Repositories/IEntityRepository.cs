@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore.Migrations.Operations;
+﻿using CoffeeShop.Model;
+using Microsoft.EntityFrameworkCore.Migrations.Operations;
 using Microsoft.EntityFrameworkCore.Update.Internal;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ using System.Threading.Tasks;
 namespace CoffeeShop.EF.Repositories
 {
     public interface IEntityRepository<IEntity>
-        where IEntity : class
+        where IEntity : BaseEntity
     {
         IList<IEntity> GetAll();
 
