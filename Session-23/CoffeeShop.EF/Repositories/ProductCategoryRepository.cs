@@ -31,16 +31,27 @@ namespace CoffeeShop.EF.Repositories
         public IList<ProductCategory> GetAll()
         {
             using var context = new CoffeeShopDbContext();
+            return context.ProductCategories.ToList();
         }
 
         public ProductCategory? GetById(int id)
         {
             using var context = new CoffeeShopDbContext();
+            return context.ProductCategories.SingleOrDefault(category => category.Id == id);
         }
 
         public void Update(int id, ProductCategory entity)
         {
             using var context = new CoffeeShopDbContext();
+            var foundProductCategories = context.ProductCategories.SingleOrDefault();
+            if (foundProductCategories is null)
+                return;
+
+            foundProductCategories.Code = entity.Code;
+            foundProductCategories.Description = entity.Description;
+            foundProductCategories.ProductType = entity.ProductType;
+
+            context.SaveChanges();
         }
     }
 }
