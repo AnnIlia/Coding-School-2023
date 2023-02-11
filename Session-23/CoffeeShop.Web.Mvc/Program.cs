@@ -2,7 +2,7 @@ using CoffeeShop.Model;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddScoped<IEntityRepo<Product>, ProductRepo>();
+
 
 // Add services to the container.
 //builder.Services.AddControllersWithViews();
