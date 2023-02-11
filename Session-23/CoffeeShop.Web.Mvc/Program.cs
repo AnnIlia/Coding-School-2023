@@ -1,9 +1,13 @@
+using CoffeeShop.Model;
+
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-builder.Services.AddControllersWithViews();
+builder.Services.AddScoped<IEntityRepo<Product>, ProductRepo>();
 
-var app = builder.Build();
+// Add services to the container.
+//builder.Services.AddControllersWithViews();
+
+//var app = builder.Build();
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
