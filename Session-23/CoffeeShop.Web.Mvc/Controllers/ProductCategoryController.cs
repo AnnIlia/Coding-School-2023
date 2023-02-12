@@ -19,7 +19,10 @@ namespace CoffeeShop.Web.Mvc.Controllers
         // GET: ProductCategoryController
         public ActionResult Index()
         {
-            return View();
+            var prodCats = _prodCatRepo.GetAll();
+            //var prodCategories = prodCats.ToList();
+
+            return View(model:prodCats);
         }
 
         // GET: ProductCategoryController/Details/5
