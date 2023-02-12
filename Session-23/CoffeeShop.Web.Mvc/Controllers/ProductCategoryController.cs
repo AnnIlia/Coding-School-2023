@@ -1,7 +1,10 @@
 ﻿using CoffeeShop.EF.Repositories;
 using CoffeeShop.Model;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Identity.Client;
+using static CoffeeShop.Model.ProductCategoryEditDto;
 
 namespace CoffeeShop.Web.Mvc.Controllers
 {
@@ -38,16 +41,15 @@ namespace CoffeeShop.Web.Mvc.Controllers
             {
                 return NotFound();
             }
-            var viewProductCategory = new // ProductCategoryDetailsDto();
+            var viewProdCat = new ProductCategoryDetailsDto();
             {
-                Id = prodCat.Id,
-                Description = prodCat.Description,
-                Code = prodCat.Code,
-                ProductType = prodCat.ProductType
+                viewProdCat.Id = prodCat.Id;
+                viewProdCat.Code = prodCat.Code;
+                viewProdCat.Description = prodCat.Description;
+                viewProdCat.ProductType = prodCat.ProductType;
+                viewProdCat.Products = prodCat.Products.ToList();
+                return View(model: viewProdCat);
             };
-            return View(model:viewProductCategory);
-
-
         }
 
         // GET: ProductCategoryController/Create
