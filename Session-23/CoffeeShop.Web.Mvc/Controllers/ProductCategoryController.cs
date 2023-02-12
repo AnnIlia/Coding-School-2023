@@ -27,19 +27,20 @@ namespace CoffeeShop.Web.Mvc.Controllers
         }
 
         // GET: ProductCategoryController/Details/5
-        public ActionResult Details(int id)
+        public ActionResult Details(int? id)
         {
-           //var prodCat = _prodCatRepo.GetById(id); //change as id.value for display
-           // if (id == null)
-           // {
-           //     return NotFound();
-           // if (prodCat == null)
-           //     {
-           //         return NotFound();
+            //var prodCat = _prodCatRepo.GetById(id.Value); //without ? (id)-without .Value
+            //if (id == null)
+            //{
+            //    return NotFound();
+            //}
+            //if (prodCat == null)
+            //{
+            //        return NotFound();
 
-           //     }
-           // }
+            //}
             return View();
+
         }
 
         // GET: ProductCategoryController/Create
