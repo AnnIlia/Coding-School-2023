@@ -21,7 +21,7 @@ namespace CoffeeShop.Web.Mvc.Controllers
         public ActionResult Index()
         {
             var prodCats = _prodCatRepo.GetAll();
-            //var prodCategories = prodCats.ToList();
+            var prodCategories = prodCats.ToList();
 
             return View(model:prodCats);
         }
@@ -29,6 +29,16 @@ namespace CoffeeShop.Web.Mvc.Controllers
         // GET: ProductCategoryController/Details/5
         public ActionResult Details(int id)
         {
+           //var prodCat = _prodCatRepo.GetById(id); //change as id.value for display
+           // if (id == null)
+           // {
+           //     return NotFound();
+           // if (prodCat == null)
+           //     {
+           //         return NotFound();
+
+           //     }
+           // }
             return View();
         }
 
