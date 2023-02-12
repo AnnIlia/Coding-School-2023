@@ -9,18 +9,18 @@ using System.Threading.Tasks;
 
 namespace CoffeeShop.EF.Repositories
 {
-    public interface IEntityRepository<IEntity>
-        where IEntity : BaseEntity
+    public interface IEntityRepository<TEntity>
+        where TEntity : BaseEntity
     {
-        IList<IEntity> GetAll();
+        IList<TEntity> GetAll();
 
-        IEntity? GetById(int id);
+        TEntity? GetById(int id);
 
-        void Create (IEntity entity);
+        void Create (TEntity entity);
 
-        void Update(int id, IEntity entity);
+        void Update(int id, TEntity entity);
 
         void Delete(int id);
 
-    }
+    }//checked
 }

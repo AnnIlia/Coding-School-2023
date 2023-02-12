@@ -1,4 +1,5 @@
-﻿using CoffeeShop.Model;
+﻿using CoffeeShop.EF.Repositories;
+using CoffeeShop.Model;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -6,9 +7,9 @@ namespace CoffeeShop.Web.Mvc.Controllers
 {
     public class ProductController : Controller
     {
-        private IEntityRepo<Product> _prodRepo;
+        private IEntityRepository<Product> _prodRepo;
        // private IEntityRepo<ProductCategory> _categoryRepo;
-        public ProductController(IEntityRepo<Product> prodRepo, IEntityRepo<ProductCategory> prodCatRepo)
+        public ProductController(IEntityRepository<Product> prodRepo, IEntityRepository<ProductCategory> prodCatRepo)
         {
             _prodRepo = prodRepo;
          //   _categoryRepo = prodCatRepo;

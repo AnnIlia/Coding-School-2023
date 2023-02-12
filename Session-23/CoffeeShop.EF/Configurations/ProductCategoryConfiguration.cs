@@ -22,6 +22,7 @@ namespace CoffeeShop.EF.Configurations
             builder.Property(t => t.ProductType).IsRequired();
 
             // Relations
+            //--chck
         }
     }
 }

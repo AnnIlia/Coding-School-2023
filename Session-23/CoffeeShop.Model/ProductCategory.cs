@@ -21,4 +21,4 @@ namespace CoffeeShop.Model
         // Relations
         public List<Product> Products { get; set; }
     }
-}
+}//checked
