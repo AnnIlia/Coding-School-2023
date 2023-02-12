@@ -1,4 +1,5 @@
-﻿using CoffeeShop.Model.Enums;
+﻿using CoffeeShop.Model;
+using CoffeeShop.Model.Enums;
 
 namespace CoffeeShop.Model
 {
@@ -21,4 +22,35 @@ namespace CoffeeShop.Model
         // Relations
         public List<Product> Products { get; set; }
     }
-}//checked
+    //dtos
+    public class ProductCategoryCreateDto
+    {
+        public string Code { get; set; }
+        public string Description { get; set; }
+        public ProductType ProductType { get; set; }
+    }
+    public class ProductCategoryEditDto
+    {
+        public int Id { get; set; }
+        public string Code { get; set; }
+        public string Description { get; set; }
+        public ProductType ProductType { get; set; }
+
+        public class ProductCategoryDeleteDto
+        {
+            public int Id { get; set; }
+            public string Code { get; set; }
+            public string Description { get; set; }
+            public ProductType ProductType { get; set; }
+        }
+        public class ProductCategoryDetailsDto
+        {
+            public int Id { get; set; }
+            public string Code { get; set; }
+            public string Description { get; set; }
+            public ProductType ProductType { get; set; }
+            public List<Product> Products { get; set; } = new List<Product>();
+        }
+    }
+}
+

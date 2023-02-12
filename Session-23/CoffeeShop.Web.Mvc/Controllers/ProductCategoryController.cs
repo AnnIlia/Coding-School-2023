@@ -38,7 +38,7 @@ namespace CoffeeShop.Web.Mvc.Controllers
             {
                 return NotFound();
             }
-            var viewProductCategory = new 
+            var viewProductCategory = new // ProductCategoryDetailsDto();
             {
                 Id = prodCat.Id,
                 Description = prodCat.Description,
