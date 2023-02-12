@@ -1,3 +1,3 @@
-﻿internal interface IEntityRepo<T>
+﻿public interface IEntityRepo<I>
 {
 }
