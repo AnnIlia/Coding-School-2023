@@ -7,7 +7,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-builder.Services.AddScoped<IEntityRepo<ProductCategory>, ProductCategoryRepository>();
+//builder.Services.AddScoped<IEntityRepo<ProductCategory>, ProductCategoryRepository>();
 
 var app = builder.Build();
 
