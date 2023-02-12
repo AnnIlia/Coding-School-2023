@@ -1,4 +1,5 @@
 ﻿using CoffeeShop.EF.Context;
+using CoffeeShop.EF.Repositories;
 using CoffeeShop.Model;
 using System;
 using System.Collections.Generic;
