@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorAppTest.Server", "BlazorAppTest\Server\BlazorAppTest.Server.csproj", "{DE1F8EA7-15F7-4202-BD39-8DE36A7DC0DF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorAppTest.Server", "BlazorAppTest\Server\BlazorAppTest.Server.csproj", "{DE1F8EA7-15F7-4202-BD39-8DE36A7DC0DF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorAppTest.Client", "BlazorAppTest\Client\BlazorAppTest.Client.csproj", "{F4DB06DD-C1CB-4777-B8BB-39D28E8CF2AA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorAppTest.Client", "BlazorAppTest\Client\BlazorAppTest.Client.csproj", "{F4DB06DD-C1CB-4777-B8BB-39D28E8CF2AA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorAppTest.Shared", "BlazorAppTest\Shared\BlazorAppTest.Shared.csproj", "{548CE297-D681-43FB-9F55-E3FB5701A2BE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorAppTest.Shared", "BlazorAppTest\Shared\BlazorAppTest.Shared.csproj", "{548CE297-D681-43FB-9F55-E3FB5701A2BE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
