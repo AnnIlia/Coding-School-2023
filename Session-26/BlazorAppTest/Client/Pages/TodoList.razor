@@ -1,7 +1,16 @@
 ﻿@page "/todolist"
-@using BlazorAppTest.Shared;
 <h3>TodoList</h3>
 
+<ul>
+    @foreach (var todoItem in todoList)
+    {
+        <li>@todoItem.Title - Finished: @todoItem.Finished</li>
+    }
+   
+
+</ul>
+
+
 @code {
-    private List<TodoListDto>
+    private List<TodoListDto> todoList = new();
 }
