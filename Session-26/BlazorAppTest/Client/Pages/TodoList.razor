@@ -10,22 +10,23 @@
 
 </ul>
 
+<input @bind="newTodoItemTitle" placeholder="New Item.."   />
+<button class=" btn btn-primary"@onclick="OnAddClick">Add </button>
 
 @code {
-    private List<TodoListDto> todoList = new List<TodoListDto>
+    private List<TodoListDto> todoList = new();
+    private string newTodoItemTitle;
+
+    private void OnAddClick()
     {
-      new TodoListDto
-        {
-        Title = "Mock1",
-        Finished = true
-        },
+        todoList.Add(new TodoListDto
+            {
+                Title = newTodoItemTitle
+            });
+    }
 
-      new TodoListDto
-        {
-        Title = "Mock2",
-        Finished = true
-      }
+ }
 
-    };
+    
 
-}
+
