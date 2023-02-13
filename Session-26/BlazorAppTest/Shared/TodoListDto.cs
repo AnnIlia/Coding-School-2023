@@ -8,5 +8,8 @@ namespace BlazorAppTest.Shared
 {
     public class TodoListDto
     {
+        public string Title { get; set; }
+        public bool Finished { get; set; }
+
     }
 }
