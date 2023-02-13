@@ -12,5 +12,20 @@
 
 
 @code {
-    private List<TodoListDto> todoList = new();
+    private List<TodoListDto> todoList = new List<TodoListDto>
+    {
+      new TodoListDto
+        {
+        Title = "Mock1",
+        Finished = true
+        },
+
+      new TodoListDto
+        {
+        Title = "Mock2",
+        Finished = true
+      }
+
+    };
+
 }
