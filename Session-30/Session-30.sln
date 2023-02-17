@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FuelStation", "FuelStation\FuelStation.csproj", "{8E86519F-6D9A-4BC9-9412-13E7754C6DA4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FuelStation", "FuelStation\FuelStation.csproj", "{43D92136-5B73-45F1-A357-4EC0DD56037A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{8E86519F-6D9A-4BC9-9412-13E7754C6DA4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8E86519F-6D9A-4BC9-9412-13E7754C6DA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8E86519F-6D9A-4BC9-9412-13E7754C6DA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8E86519F-6D9A-4BC9-9412-13E7754C6DA4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{43D92136-5B73-45F1-A357-4EC0DD56037A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43D92136-5B73-45F1-A357-4EC0DD56037A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43D92136-5B73-45F1-A357-4EC0DD56037A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43D92136-5B73-45F1-A357-4EC0DD56037A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {62DC1E87-E5A9-4AC5-B813-52A89BABB402}
+		SolutionGuid = {39702225-9400-4440-9325-C7C11FB6D284}
 	EndGlobalSection
 EndGlobal
