@@ -1,4 +1,4 @@
-﻿namespace FuelStation.Model
+﻿namespace FuelStation.Enums
 
 
 public class EmployeeType
