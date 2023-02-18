@@ -2,7 +2,7 @@
 {
     public class Customer
     {
-        public Customer(string name, string surname, string CardNumber)
+        public Customer(string name, string surname, string cardNumber)
         {
             Name = name;
             Surname = surname;
@@ -18,7 +18,7 @@
         public string Name { get; set; }
         public string Surname { get; set; }
         private string _cardNumber;
-        public string CardNumber
+        public string CardNumber()
         {
             get { return _cardNumber; }
             set

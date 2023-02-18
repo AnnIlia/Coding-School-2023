@@ -2,7 +2,7 @@
 
 public class Item
 {
-	public Item()
+	public Item
 	{
 		public int Id { get; set; }
 		public string Code { get; set; }
@@ -11,7 +11,7 @@ public class Item
 	    public decimal Price { get; set; }
 	    public decimal Cost { get; set; }
 
-	public Item()
+	public Item(string code, string description, ItemType itemType, decimal price, decimal cost)
 	{
         Code = code;
         Description = description;
