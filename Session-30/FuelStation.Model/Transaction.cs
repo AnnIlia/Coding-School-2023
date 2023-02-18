@@ -2,7 +2,7 @@
 
 public class Transaction
 {
-    public Transaction(decimal totalPrice, PaymentMethod paymentMethod)
+    public Transaction(decimal totalValue, PaymentMethod paymentMethod)
     {
         Date = DateTime.Now;
         TotalValue = totalValue;
