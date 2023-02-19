@@ -18,7 +18,7 @@ namespace FuelStation.EF.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(type: "nvarchar(40)", maxLength: 40, nullable: false),
-                    Surname = table.Column<string>(type: "nvarchar(400)", maxLength: 400, nullable: false),
+                    Surname = table.Column<string>(type: "nvarchar(40)", maxLength: 40, nullable: false),
                     CardNumber = table.Column<string>(type: "nvarchar(20)", maxLength: 20, nullable: false)
                 },
                 constraints: table =>
@@ -35,7 +35,7 @@ namespace FuelStation.EF.Migrations
                     Name = table.Column<string>(type: "nvarchar(40)", maxLength: 40, nullable: false),
                     Surname = table.Column<string>(type: "nvarchar(40)", maxLength: 40, nullable: false),
                     HireDateStart = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    HireDateEnd = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    HireDateEnd = table.Column<DateTime>(type: "datetime2", nullable: true),
                     SallaryPerMonth = table.Column<int>(type: "int", precision: 7, scale: 2, nullable: false),
                     EmployeeType = table.Column<int>(type: "int", maxLength: 20, nullable: false)
                 },

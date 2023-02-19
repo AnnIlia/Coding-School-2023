@@ -42,8 +42,8 @@ namespace FuelStation.EF.Migrations
 
                     b.Property<string>("Surname")
                         .IsRequired()
-                        .HasMaxLength(400)
-                        .HasColumnType("nvarchar(400)");
+                        .HasMaxLength(40)
+                        .HasColumnType("nvarchar(40)");
 
                     b.HasKey("Id");
 
@@ -65,7 +65,7 @@ namespace FuelStation.EF.Migrations
                         .HasMaxLength(20)
                         .HasColumnType("int");
 
-                    b.Property<DateTime>("HireDateEnd")
+                    b.Property<DateTime?>("HireDateEnd")
                         .HasColumnType("datetime2");
 
                     b.Property<DateTime>("HireDateStart")
