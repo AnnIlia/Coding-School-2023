@@ -15,11 +15,16 @@ namespace FuelStation.EF.Context
         public DbSet<Employee> Employees { get; set; } = null!;
         public DbSet<Item> Items { get; set; } 
 
+        public DbSet<Transaction> Transactions { get; set; }
+
+
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfiguration(new CustomerConfiguration());
             modelBuilder.ApplyConfiguration(new EmployeeConfiguration());
             modelBuilder.ApplyConfiguration(new ItemConfiguration());
+            modelBuilder.ApplyConfiguration(new TransactionConfiguration());
 
             base.OnModelCreating(modelBuilder);
         }
