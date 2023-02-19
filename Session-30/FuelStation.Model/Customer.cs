@@ -10,29 +10,13 @@
             Transactions = new List<Transaction>();
         }
 
-        public Customer()
-        {
-
-        }
+        
         public int Id { get; set; }
         public string Name { get; set; }
         public string Surname { get; set; }
-        private string _cardNumber;
-        public string CardNumber()
-        {
-            get { return _cardNumber; }
-            set
-            {
-                if (value.StartsWith("A"))
-                {
-                    _cardNumber = value;
-                }
-                else
-                {
-                    throw new ArgumentException("Card number must start with 'A'");
-                }
-            }
-        }
+        public string CardNumber { get; set; }
+        
+       
 
         // Relations
         public List<Transaction> Transactions { get; set; }
