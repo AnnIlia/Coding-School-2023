@@ -5,11 +5,11 @@ namespace FuelStation.Model
 
     public class Employee
     {
-        public Employee(string name, string surname, int salaryPerMonth, EmployeeType employeeType)
+        public Employee(string name, string surname, int sallaryPerMonth, EmployeeType employeeType)
         {
             Name = name;
             Surname = surname;
-            SallaryPerMonth = salaryPerMonth;
+            SallaryPerMonth = sallaryPerMonth;
             EmployeeType = employeeType;
 
             Transactions = new List<Transaction>();
