@@ -16,7 +16,7 @@ namespace FuelStation.EF.Configurations
         {
             builder.ToTable("Transactions");
 
-            builder.HasKey(transaction => transaction.ID);
+            builder.HasKey(transaction => transaction.Id);
 
             builder.Property(transaction => transaction.Date).IsRequired();
             builder.Property(transaction => transaction.EmployeeId).IsRequired();
