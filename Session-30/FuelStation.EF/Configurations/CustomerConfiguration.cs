@@ -18,7 +18,7 @@ namespace FuelStation.EF.Configurations
 
             builder.ToTable("Customer");
 
-            builder.HasKey(customer => customer.CustomerId);
+            builder.HasKey(customer => customer.Id);
             
             builder.HasIndex(customer => customer.CardNumber).IsUnique();
 

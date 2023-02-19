@@ -18,7 +18,7 @@ namespace FuelStation.EF.Configurations
             builder.ToTable("Employees");
 
             //Primary Key
-            builder.HasKey(employee => employee.ID);
+            builder.HasKey(employee => employee.Id);
 
             builder.Property(employee => employee.Name).HasMaxLength(40).IsRequired();
             builder.Property(employee => employee.Surname).HasMaxLength(40).IsRequired();
