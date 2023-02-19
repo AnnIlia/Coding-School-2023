@@ -12,7 +12,7 @@ namespace FuelStation.EF.Context
     public class FuelStationDbContext : DbContext
     {
         public DbSet<Customer> Customers { get; set; } = null!;
-        public DbSet<Employee> Employees { get; set; } = null!;
+        public DbSet<Employee> Employees { get; set; }
         public DbSet<Item> Items { get; set; } = null;
         public DbSet<Transaction> Transactions { get; set; }
         public DbSet<TransactionLine> TransactionsLine { get; set; }
