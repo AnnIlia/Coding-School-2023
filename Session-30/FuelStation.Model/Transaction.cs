@@ -4,7 +4,7 @@ namespace FuelStation.Model
 {
     public class Transaction
     {
-        public int ID { get; set; }
+        public int Id { get; set; }
         public DateTime Date { get; set; }
         public decimal TotalValue { get; set; }
         public PaymentMethod PaymentMethod { get; set; }
