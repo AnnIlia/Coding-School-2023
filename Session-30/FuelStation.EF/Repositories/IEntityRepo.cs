@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FuelStation.EF.Repositories
 {
-    public interface IEntityRepository<TEntity>
+    public interface IEntityRepo<TEntity>
     {
         IList<TEntity> GetAll();
         TEntity? GetById(int Id);
