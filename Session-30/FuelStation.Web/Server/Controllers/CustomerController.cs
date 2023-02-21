@@ -72,7 +72,7 @@ namespace FuelStation.Web.Server.Controllers
             itemToUpdate.Name = customer.Name;
             itemToUpdate.Surname = customer.Surname;
             itemToUpdate.CardNumber = customer.CardNumber;
-           // itemToUpdate.Transactions = customer.Transactions;
+            itemToUpdate.Transactions = customer.Transactions;
             _customerRepo.Update(customer.Id, itemToUpdate);
         }
 
