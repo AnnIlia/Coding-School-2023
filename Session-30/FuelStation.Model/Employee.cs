@@ -23,7 +23,7 @@ namespace FuelStation.Model
         public int SallaryPerMonth { get; set; }
         public EmployeeType EmployeeType { get; set; }
 
-        // Relations
+        // Relations 
         public List<Transaction> Transactions { get; set; }
     }
 }
