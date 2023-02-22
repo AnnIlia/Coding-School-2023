@@ -1,0 +1,108 @@
+﻿@page "/employeelist/edit/{Id:int?}"
+@inject HttpClient httpClient
+@inject NavigationManager navigationManager
+@using FuelStation.Enums;
+@using FuelStation.Web.Shared;
+@using FuelStation.Web.Shared.Employee;
+
+<h3>Edit Employee Info</h3>
+
+@if (Employee == null)
+{
+    <p>Loading ...</p>
+}
+
+else
+{
+    <EditForm Model="Employee" OnValidSubmit="OnUpdate">
+        <DataAnnotationsValidator />
+        <ValidationSummary />
+        <div class="col-md-6">
+            <label class="form-label">Name</label>
+            <InputText class="form-control" id="name" @bind-Value="Employee.Name" />
+            <ValidationMessage For="@(() => Employee.Name)" />
+        </div>
+        <div class="col-md-6">
+            <label class="form-label">Surname</label>
+            <InputText class="form-control" id="surname" @bind-Value="Employee.Surname" />
+            <ValidationMessage For="@(() => Employee.Surname)" />
+        </div>
+
+
+        @*<div class="rz-p-12 rz-text-align-center">
+    <label class="form-label">Hire Date Start</label>
+    <RadzenDatePicker @bind=@Employee.HireDateStart />
+    </div>
+    <div class="rz-p-12 rz-text-align-center">
+    <label class="form-label">Hire Date End</label>
+    <RadzenDatePicker @bind=@Employee.HireDateEnd />
+    </div>*@
+
+        <div class="col-md-6">
+            <label class="form-label">Hire Date Start</label>
+            <input type="date" class="form-control" @bind="@Employee.HireDateStart" />
+        </div>
+        <div class="col-md-6">
+            <label class="form-label">Hire Date End</label>
+            <input type="date" class="form-control" @bind="@Employee.HireDateEnd" />
+        </div>
+
+
+        <div class="col-md-6">
+            <label class="form-label">Salary Per Month</label>
+            <input class="form-control" id="sallaryPerMonth" @bind="Employee.SallaryPerMonth" />
+
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <label class="form-label">Employee Type</label>
+                <InputSelect class="form-control" @bind-Value="Employee.EmployeeType">
+                    @foreach (var enumValue in Enum.GetValues<EmployeeType>())
+                    {
+                        <option value="@enumValue">@enumValue</option>
+                    }
+                </InputSelect>
+            </div>
+        </div>
+
+
+
+
+
+        <div class="row mt-2">
+            <div class="col">
+                <button class="btn btn-success" type="submit">Add new Employee</button>
+                <button class="btn btn-danger" @onclick="OnCancel">Cancel</button>
+            </div>
+        </div>
+    </EditForm>
+}
+
+@code {
+
+    [Parameter] public int? Id { get; set; }
+    EmployeeDto Employee { get; set; }
+    bool isLoading = true;
+    protected override async Task OnInitializedAsync()
+    {
+        await LoadItemsFromServer();
+        isLoading = false;
+    }
+    private async Task LoadItemsFromServer()
+    {
+        if (Id.HasValue)
+            Employee = await httpClient.GetFromJsonAsync<EmployeeDto>($"employee/{Id}");
+    }
+
+    private void OnCancel()
+    {
+        navigationManager.NavigateTo("employeelist");
+    }
+    private async Task OnUpdate()
+    {
+        HttpResponseMessage? response;
+        response = await httpClient.PutAsJsonAsync("employee", Employee);
+        response.EnsureSuccessStatusCode();
+        navigationManager.NavigateTo("employeelist");
+    }
+}
