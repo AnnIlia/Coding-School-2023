@@ -77,6 +77,7 @@ namespace FuelStation.Web.Server.Controllers
         {
             var itemToUpdate = _itemRepo.GetById(item.Id);
             itemToUpdate.Id = item.Id;
+            itemToUpdate.Code = item.Code;
             itemToUpdate.Description = item.Description;
             itemToUpdate.ItemType = item.ItemType;
             itemToUpdate.Price = item.Price;
