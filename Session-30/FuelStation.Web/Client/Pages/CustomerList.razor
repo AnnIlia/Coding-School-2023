@@ -1,6 +1,7 @@
 ﻿@page "/customerlist"
 @using FuelStation.Web.Shared;
 @using FuelStation.Web.Shared.Customer;
+@using PetShop.Web.Blazor.Client.Shared;
 @inject HttpClient httpClient
 @inject NavigationManager navigationManager
 @inject IJSRuntime jsRuntime
@@ -9,9 +10,8 @@
 <h3>Customer Managment </h3>
 
 
-@if (isLoading)
-{
-    <p>Loading ...</p>
+@if (isLoading) {
+	<LoadingSpinner Type="LoadingSpinnerType.Border" />
 }
 else
 {
@@ -48,7 +48,6 @@ else
 @code {
     private List<CustomerListDto> customerList = new();
     bool isLoading { get; set; } = true;
-
     protected override async Task OnInitializedAsync()
     {
         await LoadItemsFromServer();

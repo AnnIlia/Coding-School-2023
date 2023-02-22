@@ -3,12 +3,13 @@
 @inject NavigationManager navigationManager
 @using FuelStation.Web.Shared;
 @using FuelStation.Web.Shared.Customer;
+@using PetShop.Web.Blazor.Client.Shared;
 
 <h3>Edit Customer Info</h3>
 
-@if (Customer == null)
+@if (isLoading)
 {
-    <p>Loading ...</p>
+    <LoadingSpinner Type="LoadingSpinnerType.Border" />
 } 
 
 else
@@ -49,7 +50,7 @@ else
 
     [Parameter] public int? Id { get; set; }
     CustomerEditDto Customer { get; set; }
-    bool isLoading = true;
+    bool isLoading { get; set; } = true;
     protected override async Task OnInitializedAsync()
     {
         await LoadItemsFromServer();
