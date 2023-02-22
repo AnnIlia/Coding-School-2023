@@ -1,0 +1,61 @@
+﻿@page "/itemlist/add"
+@inject HttpClient httpClient
+@inject NavigationManager navigationManager
+@using FuelStation.Web.Shared;
+@using FuelStation.Web.Shared.Item;
+
+<h3>Add new </h3>
+<EditForm Model="Item" OnValidSubmit="OnCreate">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+    <div class="col-md-6">
+        <label class="form-label">Code</label>
+        <InputText class="form-control" id="name" @bind-Value="Item.Code" />
+        <ValidationMessage For="@(() => Item.Code)" />
+    </div>
+    <div class="col-md-6">
+        <label class="form-label">Descriptiom</label>
+        <InputText class="form-control" id="description" @bind-Value="Item.Description" />
+        <ValidationMessage For="@(() => Item.Description)" />
+    </div>
+    <div class="col-md-6">
+        <label class="form-label">Item Type</label>
+        <input class="form-control" id="ItemType" @bind="Item.ItemType" />
+    </div>
+    <div class="col-md-6">
+        <label class="form-label">Price</label>
+        <input class="form-control" id="price" @bind="Item.Price" />
+    </div>
+    <div class="col-md-6">
+        <label class="form-label">Cost</label>
+        <input class="form-control" id="Cost" @bind="Item.Cost" />
+    </div>
+
+
+
+    <div class="row mt-2">
+        <div class="col">
+            <button class="btn btn-success" type="submit">Add new Customer</button>
+            <button class="btn btn-danger" @onclick="OnCancel">Cancel</button>
+        </div>
+    </div>
+</EditForm>
+
+@code {
+    ItemCreateDto Item { get; set; } = new();
+    bool isLoading = true;
+
+    private void OnCancel()
+    {
+        navigationManager.NavigateTo("itemlist");
+    }
+    private async Task OnCreate()
+    {
+        HttpResponseMessage? response;
+        response = await httpClient.PostAsJsonAsync("item", Item);
+        response.EnsureSuccessStatusCode();
+        navigationManager.NavigateTo("itemlist");
+    }
+
+
+}
