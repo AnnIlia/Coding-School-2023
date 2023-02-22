@@ -1,6 +1,7 @@
 ﻿@page "/itemlist/edit/{Id:int?}"
 @inject HttpClient httpClient
 @inject NavigationManager navigationManager
+@using FuelStation.Model.Enums;
 @using FuelStation.Web.Shared;
 @using FuelStation.Web.Shared.Item;
 
@@ -30,9 +31,16 @@ else
             <InputText class="form-control" id="description" @bind-Value="Item.Description" />
             <ValidationMessage For="@(() => Item.Description)" />
         </div>
-        <div class="col-md-6">
-            <label class="form-label">Item Type</label>
-            <input class="form-control" id="itemType" @bind="Item.ItemType" />
+        <div class="row">
+            <div class="col-md-6">
+                <label class="form-label">Item Type</label>
+                <InputSelect class="form-control" @bind-Value="Item.ItemType">
+                    @foreach (var enumValue in Enum.GetValues<ItemType>())
+                    {
+                        <option value="@enumValue">@enumValue</option>
+                    }
+                </InputSelect>
+            </div>
         </div>
         <div class="col-md-6">
             <label class="form-label">Price</label>
