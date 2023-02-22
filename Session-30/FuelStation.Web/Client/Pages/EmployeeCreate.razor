@@ -1,0 +1,73 @@
+﻿@page "/employeelist/add"
+@inject HttpClient httpClient
+@inject NavigationManager navigationManager
+@using FuelStation.Web.Shared;
+@using FuelStation.Web.Shared.Employee;
+
+<h3>Add new Employee</h3>
+<EditForm Model="Employee" OnValidSubmit="OnCreate">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+    <div class="col-md-6">
+        <label class="form-label">Name</label>
+        <InputText class="form-control" id="name" @bind-Value="Employee.Name" />
+        <ValidationMessage For="@(() => Employee.Name)" />
+    </div>
+    <div class="col-md-6">
+        <label class="form-label">Surname</label>
+        <InputText class="form-control" id="surname" @bind-Value="Employee.Surname" />
+        <ValidationMessage For="@(() => Employee.Surname)" />
+    </div>
+
+
+    <div class="rz-p-12 rz-text-align-center">
+        <label class="form-label">Hire Date Start</label>
+    <RadzenDatePicker @bind=@Employee.HireDateStart />
+    </div>
+     <div class="rz-p-12 rz-text-align-center">
+        <label class="form-label">Hire Date End</label>
+    <RadzenDatePicker @bind=@Employee.HireDateEnd />
+    </div>
+
+   
+    <div class="col-md-6">
+        <label class="form-label">Salary Per Month</label>
+        <input class="form-control" id="sallaryPerMonth" @bind="Employee.SallaryPerMonth" />
+
+    </div>
+    <div class="col-md-6">
+        <label class="form-label">Employee Type</label>
+        <input class="form-control" id="employeeType" @bind="Employee.EmployeeType" />
+    </div>
+
+   
+
+
+
+    <div class="row mt-2">
+        <div class="col">
+            <button class="btn btn-success" type="submit">Add new Employee</button>
+            <button class="btn btn-danger" @onclick="OnCancel">Cancel</button>
+        </div>
+    </div>
+</EditForm>
+
+@code {
+    EmployeeCreateDto Employee { get; set; } = new();
+    bool isLoading = true;
+
+    private void OnCancel()
+    {
+        navigationManager.NavigateTo("employeelist");
+    }
+    private async Task OnCreate()
+    {
+        HttpResponseMessage? response;
+        response = await httpClient.PostAsJsonAsync("employee", Employee);
+        response.EnsureSuccessStatusCode();
+        navigationManager.NavigateTo("employeelist");
+    }
+    DateTime? value = DateTime.Now;
+
+
+}
