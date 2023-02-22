@@ -10,7 +10,7 @@ using System.Transactions;
 
 namespace FuelStation.Web.Shared.Item
 {
-    //mono gia tin create
+    // create
     public class ItemCreateDto
     {
         

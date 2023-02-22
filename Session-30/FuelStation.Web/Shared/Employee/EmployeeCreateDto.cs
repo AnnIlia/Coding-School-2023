@@ -7,15 +7,14 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using System.Transactions;
 
 namespace FuelStation.Web.Shared.Employee
 {
 
     // edit & list
-    public class EmployeeDto
+    public class EmployeeCreateDto
     {
-        public int Id { get; set; }
         [RegularExpression("^[a-zA-Z]*$", ErrorMessage = "The Name field can only contain Latin letters ")]
         [Required]
         public string Name { get; set; }
