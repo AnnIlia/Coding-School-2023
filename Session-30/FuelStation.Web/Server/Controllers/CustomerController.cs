@@ -19,10 +19,10 @@ namespace FuelStation.Web.Server.Controllers
 
         //Index - GetAlL()
         [HttpGet]
-        public async Task<IEnumerable<ItemListDto>> Get()
+        public async Task<IEnumerable<CustomerListDto>> Get()
         {
             var customerList = _customerRepo.GetAll();
-            return customerList.Select(customer => new ItemListDto
+            return customerList.Select(customer => new CustomerListDto
             {
                 Id = customer.Id,
                 Name = customer.Name,
