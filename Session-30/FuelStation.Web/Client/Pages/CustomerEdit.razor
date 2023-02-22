@@ -5,10 +5,12 @@
 @using FuelStation.Web.Shared.Customer;
 
 <h3>Edit Customer Info</h3>
-@if (isLoading)
+
+@if (Customer == null)
 {
-    <div class="lds-hourglass"></div>
-}
+    <p>Loading ...</p>
+} 
+
 else
 {
     <EditForm Model="Customer" OnValidSubmit="OnUpdate">
