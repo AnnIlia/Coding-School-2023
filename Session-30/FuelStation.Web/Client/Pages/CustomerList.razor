@@ -46,7 +46,7 @@ else
 
 
 @code {
-    private List<ItemListDto> customerList = new();
+    private List<CustomerListDto> customerList = new();
     bool isLoading { get; set; } = true;
 
     protected override async Task OnInitializedAsync()
@@ -57,7 +57,7 @@ else
 
     private async Task LoadItemsFromServer()
     {
-        customerList = await httpClient.GetFromJsonAsync<List<ItemListDto>>("customer");
+        customerList = await httpClient.GetFromJsonAsync<List<CustomerListDto>>("customer");
     }
 
     private async Task CreateItem()
@@ -65,12 +65,12 @@ else
         navigationManager.NavigateTo("customerlist/add");
     }
 
-    private async Task EditItem(ItemListDto customer)
+    private async Task EditItem(CustomerListDto customer)
     {
         navigationManager.NavigateTo($"customerlist/edit/{customer.Id}");
     }
 
-    private async Task DeleteItem(ItemListDto customer)
+    private async Task DeleteItem(CustomerListDto customer)
     {
         var confirm = await jsRuntime.InvokeAsync<bool>("confirm", "Delete Item. Are you sure?");
         if (confirm)
