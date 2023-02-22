@@ -1,0 +1,77 @@
+﻿@page "/itemlist/edit/{Id:int?}"
+@inject HttpClient httpClient
+@inject NavigationManager navigationManager
+@using FuelStation.Web.Shared;
+@using FuelStation.Web.Shared.Item;
+
+<h3>Edit Item Info</h3>
+
+<EditForm Model="Item" OnValidSubmit="OnUpdate">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+    <div class="col-md-6">
+        <input type="hidden" class="form-control" id="id" @bind="Item.Id" />
+    </div>
+    <div class="col-md-6">
+        <label class="form-label">Code</label>
+        <InputText class="form-control" id="code" @bind-Value="Item.Code" />
+        <ValidationMessage For="@(() => Item.Code)" />
+    </div>
+    <div class="col-md-6">
+        <label class="form-label">Description</label>
+        <InputText class="form-control" id="description" @bind-Value="Item.Description" />
+        <ValidationMessage For="@(() => Item.Description)" />
+    </div>
+    <div class="col-md-6">
+        <label class="form-label">Item Type</label>
+        <input class="form-control" id="itemType" @bind="Item.ItemType" />
+    </div>
+    <div class="col-md-6">
+        <label class="form-label">Price</label>
+        <input class="form-control" id="price" @bind="Item.Price" />
+
+    </div>
+    <div class="col-md-6">
+        <label class="form-label">Cost</label>
+        <input class="form-control" id="cost" @bind="Item.Cost" />
+
+    </div>
+
+
+
+    <div class="row mt-2">
+        <div class="col">
+            <button class="btn btn-success" type="submit">Edit Item Info</button>
+            <button class="btn btn-danger" @onclick="OnCancel">Cancel</button>
+        </div>
+    </div>
+</EditForm>
+
+@code {
+
+    [Parameter] public int? Id { get; set; }
+    ItemDto Item { get; set; }
+    bool isLoading = true;
+    protected override async Task OnInitializedAsync()
+    {
+        await LoadItemsFromServer();
+        isLoading = false;
+    }
+    private async Task LoadItemsFromServer()
+    {
+        if (Id.HasValue)
+            Item = await httpClient.GetFromJsonAsync<ItemDto>($"item/{Id}");
+    }
+
+    private void OnCancel()
+    {
+        navigationManager.NavigateTo("itemlist");
+    }
+    private async Task OnUpdate()
+    {
+        HttpResponseMessage? response;
+        response = await httpClient.PutAsJsonAsync("item", Item);
+        response.EnsureSuccessStatusCode();
+        navigationManager.NavigateTo("itemlist");
+    }
+}
