@@ -33,7 +33,7 @@ namespace FuelStation.Web.Server.Controllers
 
         //Create - Post
         [HttpPost]
-        public async Task Post(ItemCreateDto customer)
+        public async Task Post(CustomerCreateDto customer)
         {
             var newCustomer = new Customer(customer.Name, customer.Surname, customer.CardNumber);
             newCustomer.Transactions = new();
@@ -50,10 +50,10 @@ namespace FuelStation.Web.Server.Controllers
 
         //Edit - GetbyID
         [HttpGet("{Id}")]
-        public async Task<ItemEditDto> GetById(int id)
+        public async Task<CustomerEditDto> GetById(int id)
         {
             var result = _customerRepo.GetById(id);
-            return new ItemEditDto
+            return new CustomerEditDto
             {
                 Id = id,
                 Name = result.Name,
@@ -65,14 +65,13 @@ namespace FuelStation.Web.Server.Controllers
 
 
         //Put
-        public async Task Put(ItemEditDto customer)
+        public async Task Put(CustomerEditDto customer)
         {
             var itemToUpdate = _customerRepo.GetById(customer.Id);
             itemToUpdate.Id = customer.Id;
             itemToUpdate.Name = customer.Name;
             itemToUpdate.Surname = customer.Surname;
             itemToUpdate.CardNumber = customer.CardNumber;
-            itemToUpdate.Transactions = customer.Transactions;
             _customerRepo.Update(customer.Id, itemToUpdate);
         }
 

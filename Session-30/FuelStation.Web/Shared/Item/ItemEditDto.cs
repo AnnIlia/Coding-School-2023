@@ -10,9 +10,11 @@ using System.Threading.Tasks;
 
 namespace FuelStation.Web.Shared.Item
 {
-    public class ItemEditDto
+
+    //to xrisimopoio stin edit , list
+    public class ItemDto
     {
-        public int ID { get; set; }
+        public int Id { get; set; }
         public string Code { get; set; }
         public string Description { get; set; }
         public ItemType ItemType { get; set; }
@@ -20,6 +22,5 @@ namespace FuelStation.Web.Shared.Item
         public decimal Cost { get; set; }
 
         //Relations
-        public List<TransactionLine> TransactionLines { get; set; } = new();
     }
 }

@@ -13,7 +13,7 @@ namespace FuelStation.Model
         public Item() { }
 
         // Relations
-        public List<TransactionLine> TransactionLines { get; set; }
+        public List<TransactionLine> TransactionLines { get; set; } = new();
 
     }
 }

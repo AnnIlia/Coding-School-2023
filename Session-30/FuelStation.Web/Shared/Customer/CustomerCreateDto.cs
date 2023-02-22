@@ -8,7 +8,7 @@ using System.Transactions;
 
 namespace FuelStation.Web.Shared.Customer
 {
-    public class ItemCreateDto
+    public class CustomerCreateDto
     {
         public int Id { get; set; }
         [RegularExpression("^[a-zA-Z]*$", ErrorMessage = "The Name field can only contain Latin letters ")]
@@ -28,7 +28,5 @@ namespace FuelStation.Web.Shared.Customer
         [Required]
         public string CardNumber { get; set; }
 
-        // Relations
-        public List<Transaction> Transactions { get; set; } = new();
     }
 }

@@ -27,8 +27,5 @@ namespace FuelStation.Web.Shared.Customer
         [RegularExpression(@"^A\d+$", ErrorMessage = "Card number must start with 'A' and contain only digits")]
         [Required]
         public string CardNumber { get; set; }
-
-        // Relations
-        public List<Transaction> Transactions { get; set; } = new List<Transaction>();
     }
 }

@@ -16,12 +16,11 @@ namespace FuelStation.EF.Configurations
         public void Configure(EntityTypeBuilder<Customer>builder) 
         {
 
-            builder.ToTable("Customer");
+            builder.ToTable("Customers");
 
             builder.HasKey(customer => customer.Id);
             
             builder.HasIndex(customer => customer.CardNumber).IsUnique();
-
             builder.Property(customer => customer.Name).HasMaxLength(40).IsRequired();
             builder.Property(customer => customer.Surname).HasMaxLength(40).IsRequired();
             builder.Property(customer => customer.CardNumber).HasMaxLength(20).IsRequired();
