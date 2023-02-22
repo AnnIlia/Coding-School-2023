@@ -1,6 +1,7 @@
 ﻿@page "/itemlist"
 @using FuelStation.Web.Shared;
 @using FuelStation.Web.Shared.Item;
+@using PetShop.Web.Blazor.Client.Shared;
 @inject HttpClient httpClient
 @inject NavigationManager navigationManager
 @inject IJSRuntime jsRuntime
@@ -11,7 +12,7 @@
 
 @if (isLoading)
 {
-    <p>Loading ...</p>
+    <LoadingSpinner Type="LoadingSpinnerType.Border" />
 }
 else
 {
