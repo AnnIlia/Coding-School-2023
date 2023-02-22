@@ -1,6 +1,7 @@
 ﻿@page "/employeelist/add"
 @inject HttpClient httpClient
 @inject NavigationManager navigationManager
+@using FuelStation.Enums;
 @using FuelStation.Web.Shared;
 @using FuelStation.Web.Shared.Employee;
 
@@ -21,13 +22,22 @@
     </div>
 
 
-    <div class="rz-p-12 rz-text-align-center">
+    @*<div class="rz-p-12 rz-text-align-center">
         <label class="form-label">Hire Date Start</label>
     <RadzenDatePicker @bind=@Employee.HireDateStart />
     </div>
      <div class="rz-p-12 rz-text-align-center">
         <label class="form-label">Hire Date End</label>
     <RadzenDatePicker @bind=@Employee.HireDateEnd />
+    </div>*@
+
+    <div class="col-md-6">
+        <label class="form-label">Hire Date Start</label>
+        <input type="date" class="form-control" @bind="@Employee.HireDateStart" />
+    </div>
+    <div class="col-md-6">
+        <label class="form-label">Hire Date End</label>
+        <input type="date" class="form-control" @bind="@Employee.HireDateEnd" />
     </div>
 
    
@@ -36,9 +46,16 @@
         <input class="form-control" id="sallaryPerMonth" @bind="Employee.SallaryPerMonth" />
 
     </div>
-    <div class="col-md-6">
-        <label class="form-label">Employee Type</label>
-        <input class="form-control" id="employeeType" @bind="Employee.EmployeeType" />
+    <div class="row">
+        <div class="col-md-6">
+            <label class="form-label">Employee Type</label>
+            <InputSelect class="form-control" @bind-Value="Employee.EmployeeType">
+                @foreach (var enumValue in Enum.GetValues<EmployeeType>())
+                {
+                    <option value="@enumValue">@enumValue</option>
+                }
+            </InputSelect>
+        </div>
     </div>
 
    
@@ -68,7 +85,9 @@
         response.EnsureSuccessStatusCode();
         navigationManager.NavigateTo("employeelist");
     }
-    DateTime? value = DateTime.Now;
+    
+
+
 
 
 }
