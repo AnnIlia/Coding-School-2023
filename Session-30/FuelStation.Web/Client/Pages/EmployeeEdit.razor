@@ -7,9 +7,10 @@
 
 <h3>Edit Employee Info</h3>
 
-@if (Employee == null)
+
+@if (isLoading)
 {
-    <p>Loading ...</p>
+    <LoadingSpinner Type="LoadingSpinnerType.Border" />
 }
 
 else
@@ -73,7 +74,7 @@ else
 
     [Parameter] public int? Id { get; set; }
     EmployeeDto Employee { get; set; }
-    bool isLoading = true;
+    bool isLoading { get; set; } = true;
     protected override async Task OnInitializedAsync()
     {
         await LoadItemsFromServer();
