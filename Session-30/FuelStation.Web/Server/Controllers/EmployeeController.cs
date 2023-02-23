@@ -1,5 +1,6 @@
 ﻿using FuelStation.EF.Repositories;
 using FuelStation.Model;
+using FuelStation.Web.Shared;
 using FuelStation.Web.Shared.Employee;
 using Microsoft.AspNetCore.Mvc;
 
@@ -10,9 +11,12 @@ namespace FuelStation.Web.Server.Controllers
     public class EmployeeController : Controller
     {
         private readonly IEntityRepo<Employee> _employeeRepo;
-        public EmployeeController(IEntityRepo<Employee> employeeRepo)
+        private readonly Validator _validator;
+
+        public EmployeeController(IEntityRepo<Employee> employeeRepo, Validator validator)
         {
             _employeeRepo = employeeRepo;
+            _validator = validator;
         }
 
         //Index - GetAlL()
@@ -37,14 +41,13 @@ namespace FuelStation.Web.Server.Controllers
         public async Task Post(EmployeeCreateDto employee)
         {
             var newEmployee = new Employee(employee.Name, employee.Surname, employee.SallaryPerMonth, employee.EmployeeType);
-            //newEmployee.Name = employee.Name;
-            //newEmployee.Surname = employee.Surname;
-            //newEmployee.HireDateStart = employee.HireDateStart;
-            //newEmployee.HireDateEnd = employee.HireDateEnd;
-            //newEmployee.SallaryPerMonth = employee.SallaryPerMonth;
-            //newEmployee.EmployeeType = employee.EmployeeType;
             newEmployee.Transactions = new();
-            _employeeRepo.Add(newEmployee);
+            var employeeList = _employeeRepo.GetAll();
+            if (_validator.CheckEmployeeLimits(employeeList.ToList(), newEmployee))
+            {
+                _employeeRepo.Add(newEmployee);
+            }
+            
         }
 
 
@@ -74,16 +77,22 @@ namespace FuelStation.Web.Server.Controllers
 
 
         //Put
-        public async Task Put(EmployeeDto employee)
+        public async Task Put(EmployeeDto incomigEmployee)
         {
-            var itemToUpdate = _employeeRepo.GetById(employee.Id);
-            itemToUpdate.Id = employee.Id;
-            itemToUpdate.Name = employee.Name;
-            itemToUpdate.Surname = employee.Surname;
-            itemToUpdate.HireDateStart = employee.HireDateStart;
-            itemToUpdate.HireDateEnd = employee.HireDateEnd;
-            itemToUpdate.SallaryPerMonth = employee.SallaryPerMonth; 
-            _employeeRepo.Update(employee.Id, itemToUpdate);
+            var itemToUpdate = _employeeRepo.GetById(incomigEmployee.Id);
+            itemToUpdate.Id = incomigEmployee.Id;
+            itemToUpdate.Name = incomigEmployee.Name;
+            itemToUpdate.Surname = incomigEmployee.Surname;
+            itemToUpdate.HireDateStart = incomigEmployee.HireDateStart;
+            itemToUpdate.HireDateEnd = incomigEmployee.HireDateEnd;
+            itemToUpdate.EmployeeType = incomigEmployee.EmployeeType;
+            itemToUpdate.SallaryPerMonth = incomigEmployee.SallaryPerMonth;
+            var employeeList = _employeeRepo.GetAll();
+            if (_validator.CheckEmployeeLimits(employeeList.ToList(), itemToUpdate))
+            {
+                _employeeRepo.Update(incomigEmployee.Id, itemToUpdate);
+
+            }
         }
     }
 }
