@@ -1,7 +1,8 @@
-﻿@page "/"
+﻿@*@page "/"
 @using FuelStation.Enums;
 @using FuelStation.Model;
-@using Session_30.Client.Shared;
+@using FuelStation.Web.Client.Shared;
+@using FuelStation.Web.Shared;
 @inject NavigationManager navigationManager
 @inject EmployeeUser userStatus
 <PageTitle>Login Page</PageTitle>
@@ -22,3 +23,4 @@
         userStatus.Role = role;
     }
 }
+*@

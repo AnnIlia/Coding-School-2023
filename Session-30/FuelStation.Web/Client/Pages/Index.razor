@@ -4,16 +4,25 @@
 
 <PageTitle>Index</PageTitle>
 
-<h1>Fuel Station App!</h1>
+<h1> Fuel Station App!</h1>
+
+<hr />
+<br />
+<br />
+
+<h2><i>Login as</i></h2>
+
 <div class="row">
     <div class="col-md-6">
         <button type="button" class="btn btn-primary" @onclick='()=> SetUserRole(EmployeeType.Manager)'>Manager</button>
-        <button type="button" class="btn btn-primary" @onclick='()=> SetUserRole(EmployeeType.Staff)'>Staff</button>
+        
         <button type="button" class="btn btn-primary" @onclick='()=> SetUserRole(EmployeeType.Cashier)'>Cashier</button>
+
+        <button type="button" class="btn btn-primary" @onclick='()=> SetUserRole(EmployeeType.Staff)'>Staff</button>
     </div>
 </div>
 
-Welcome!
+
 
 @code{
 
