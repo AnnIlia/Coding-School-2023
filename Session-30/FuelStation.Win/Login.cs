@@ -13,16 +13,20 @@ using System.Windows.Forms;
 namespace FuelStation.Win
 {
     public partial class Login : Form
+
     {
-        private EmployeeType _role;
-
-
         public Login()
         {
             InitializeComponent();
+        }
+        private EmployeeType _role;
+
+
+        private void FuelStation_Load(object sender, EventArgs e)
+        {
 
         }
-       
+
         private void btnLgCashier_Click(object sender, EventArgs e)
         {
             _role = EmployeeType.Cashier;
