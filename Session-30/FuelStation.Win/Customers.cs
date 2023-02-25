@@ -21,5 +21,10 @@ namespace FuelStation.Win
         {
 
         }
+
+        private void btnNewCustomer_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
