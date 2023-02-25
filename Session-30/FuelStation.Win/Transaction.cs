@@ -21,5 +21,15 @@ namespace FuelStation.Win
         {
 
         }
+
+        private void lbTransaction_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

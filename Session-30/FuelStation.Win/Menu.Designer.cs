@@ -44,6 +44,7 @@
             this.btnMnTransactions.TabIndex = 5;
             this.btnMnTransactions.Text = "Transactions";
             this.btnMnTransactions.UseVisualStyleBackColor = true;
+            this.btnMnTransactions.Click += new System.EventHandler(this.btnMnTransactions_Click);
             // 
             // btnMnItems
             // 
@@ -54,6 +55,7 @@
             this.btnMnItems.TabIndex = 4;
             this.btnMnItems.Text = "Items";
             this.btnMnItems.UseVisualStyleBackColor = true;
+            this.btnMnItems.Click += new System.EventHandler(this.btnMnItems_Click);
             // 
             // btnMnCustomers
             // 
@@ -64,6 +66,7 @@
             this.btnMnCustomers.TabIndex = 3;
             this.btnMnCustomers.Text = "Customers";
             this.btnMnCustomers.UseVisualStyleBackColor = true;
+            this.btnMnCustomers.Click += new System.EventHandler(this.btnMnCustomers_Click);
             // 
             // btnClose
             // 
@@ -74,6 +77,7 @@
             this.btnClose.TabIndex = 6;
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // lbMenu
             // 
