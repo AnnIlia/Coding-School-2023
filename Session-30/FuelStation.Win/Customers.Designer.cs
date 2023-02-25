@@ -37,6 +37,7 @@
             this.btnClose = new System.Windows.Forms.Button();
             this.lbCustomers = new System.Windows.Forms.Label();
             this.btnNewCustomer = new System.Windows.Forms.Button();
+            this.lbTransaction = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -47,7 +48,7 @@
             this.CustomerName,
             this.CustomerSurname,
             this.CustomerCardNumber});
-            this.dataGridView1.Location = new System.Drawing.Point(106, 82);
+            this.dataGridView1.Location = new System.Drawing.Point(114, 110);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 29;
@@ -78,7 +79,7 @@
             // btnSave
             // 
             this.btnSave.Font = new System.Drawing.Font("Yu Gothic UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnSave.Location = new System.Drawing.Point(129, 383);
+            this.btnSave.Location = new System.Drawing.Point(135, 419);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(137, 42);
             this.btnSave.TabIndex = 1;
@@ -88,7 +89,7 @@
             // btnDelete
             // 
             this.btnDelete.Font = new System.Drawing.Font("Yu Gothic UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnDelete.Location = new System.Drawing.Point(323, 383);
+            this.btnDelete.Location = new System.Drawing.Point(329, 419);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(137, 42);
             this.btnDelete.TabIndex = 2;
@@ -98,7 +99,7 @@
             // btnClose
             // 
             this.btnClose.Font = new System.Drawing.Font("Yu Gothic UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnClose.Location = new System.Drawing.Point(523, 383);
+            this.btnClose.Location = new System.Drawing.Point(529, 419);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(137, 42);
             this.btnClose.TabIndex = 3;
@@ -118,7 +119,7 @@
             // btnNewCustomer
             // 
             this.btnNewCustomer.Font = new System.Drawing.Font("Yu Gothic UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnNewCustomer.Location = new System.Drawing.Point(265, 319);
+            this.btnNewCustomer.Location = new System.Drawing.Point(273, 347);
             this.btnNewCustomer.Name = "btnNewCustomer";
             this.btnNewCustomer.Size = new System.Drawing.Size(299, 42);
             this.btnNewCustomer.TabIndex = 5;
@@ -126,12 +127,23 @@
             this.btnNewCustomer.UseVisualStyleBackColor = true;
             this.btnNewCustomer.Click += new System.EventHandler(this.btnNewCustomer_Click);
             // 
+            // lbTransaction
+            // 
+            this.lbTransaction.AutoSize = true;
+            this.lbTransaction.Font = new System.Drawing.Font("Yu Gothic UI Light", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.lbTransaction.Location = new System.Drawing.Point(116, 79);
+            this.lbTransaction.Name = "lbTransaction";
+            this.lbTransaction.Size = new System.Drawing.Size(586, 28);
+            this.lbTransaction.TabIndex = 11;
+            this.lbTransaction.Text = "Customers ------------------------------------------------------------";
+            // 
             // Customers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 505);
+            this.Controls.Add(this.lbTransaction);
             this.Controls.Add(this.btnNewCustomer);
             this.Controls.Add(this.lbCustomers);
             this.Controls.Add(this.btnClose);
@@ -158,5 +170,6 @@
         private Button btnClose;
         private Label lbCustomers;
         private Button btnNewCustomer;
+        private Label lbTransaction;
     }
 }

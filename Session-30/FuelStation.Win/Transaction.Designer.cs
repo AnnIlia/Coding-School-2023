@@ -119,10 +119,10 @@
             // lbTransaction
             // 
             this.lbTransaction.AutoSize = true;
-            this.lbTransaction.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lbTransaction.Font = new System.Drawing.Font("Yu Gothic UI Light", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
             this.lbTransaction.Location = new System.Drawing.Point(34, 160);
             this.lbTransaction.Name = "lbTransaction";
-            this.lbTransaction.Size = new System.Drawing.Size(827, 28);
+            this.lbTransaction.Size = new System.Drawing.Size(824, 28);
             this.lbTransaction.TabIndex = 1;
             this.lbTransaction.Text = "Transactions --------------------------------------------------------------------" +
     "--------------------";
@@ -266,10 +266,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.Font = new System.Drawing.Font("Yu Gothic UI Light", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
             this.label1.Location = new System.Drawing.Point(34, 512);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(1179, 28);
+            this.label1.Size = new System.Drawing.Size(1175, 28);
             this.label1.TabIndex = 16;
             this.label1.Text = "Transactions Lines --------------------------------------------------------------" +
     "----------------------------------------------------------------";

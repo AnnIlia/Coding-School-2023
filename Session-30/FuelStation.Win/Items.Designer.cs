@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.GridItems = new System.Windows.Forms.DataGridView();
             this.ItemCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ItemType = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ItemDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -39,24 +39,25 @@
             this.btnClose = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.lbTransaction = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.GridItems)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // GridItems
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.GridItems.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.GridItems.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ItemCode,
             this.ItemType,
             this.ItemDescription,
             this.ItemCost,
             this.ItemPrice});
-            this.dataGridView1.Location = new System.Drawing.Point(60, 99);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 29;
-            this.dataGridView1.Size = new System.Drawing.Size(683, 202);
-            this.dataGridView1.TabIndex = 0;
+            this.GridItems.Location = new System.Drawing.Point(60, 99);
+            this.GridItems.Name = "GridItems";
+            this.GridItems.RowHeadersWidth = 51;
+            this.GridItems.RowTemplate.Height = 29;
+            this.GridItems.Size = new System.Drawing.Size(683, 202);
+            this.GridItems.TabIndex = 0;
             // 
             // ItemCode
             // 
@@ -97,7 +98,7 @@
             // 
             this.lbItems.AutoSize = true;
             this.lbItems.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbItems.Location = new System.Drawing.Point(333, 39);
+            this.lbItems.Location = new System.Drawing.Point(332, 9);
             this.lbItems.Name = "lbItems";
             this.lbItems.Size = new System.Drawing.Size(167, 28);
             this.lbItems.TabIndex = 5;
@@ -143,22 +144,34 @@
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
             // 
+            // lbTransaction
+            // 
+            this.lbTransaction.AutoSize = true;
+            this.lbTransaction.Font = new System.Drawing.Font("Yu Gothic UI Light", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.lbTransaction.Location = new System.Drawing.Point(60, 68);
+            this.lbTransaction.Name = "lbTransaction";
+            this.lbTransaction.Size = new System.Drawing.Size(686, 28);
+            this.lbTransaction.TabIndex = 10;
+            this.lbTransaction.Text = "Items ---------------------------------------------------------------------------" +
+    "---";
+            // 
             // Items
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lbTransaction);
             this.Controls.Add(this.btnNewItem);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.lbItems);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.GridItems);
             this.Name = "Items";
             this.Text = "Items";
             this.Load += new System.EventHandler(this.Items_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GridItems)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -166,7 +179,7 @@
 
         #endregion
 
-        private DataGridView dataGridView1;
+        private DataGridView GridItems;
         private DataGridViewTextBoxColumn ItemCode;
         private DataGridViewTextBoxColumn ItemType;
         private DataGridViewTextBoxColumn ItemDescription;
@@ -177,5 +190,6 @@
         private Button btnClose;
         private Button btnDelete;
         private Button btnSave;
+        private Label lbTransaction;
     }
 }
