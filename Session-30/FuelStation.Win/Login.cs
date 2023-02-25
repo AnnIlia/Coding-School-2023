@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace FuelStation.Win
 {
     public partial class Login : Form
@@ -21,15 +22,27 @@ namespace FuelStation.Win
             InitializeComponent();
 
         }
+        public FuelStationApp()
+        {
+            InitializeComponent();
 
+        }
         private void btnLgCashier_Click(object sender, EventArgs e)
         {
+            _role = EmployeeType.Cashier;
+            Menu menu = new Menu(_role);
+            menu.Show();
 
+            this.Hide();
         }
 
         private void btnLgStaff_Click(object sender, EventArgs e)
         {
-            
+            _role = EmployeeType.Staff;
+            Menu menu = new Menu(_role);
+            menu.Show();
+
+            this.Hide();
         }
 
         private void btnLgManager_Click(object sender, EventArgs e)
