@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\FuelStation.Model\FuelStation.Model.csproj" />
+    <ProjectReference Include="..\FuelStation.Web\Shared\FuelStation.Web.Shared.csproj" />
   </ItemGroup>
 
   <ItemGroup>

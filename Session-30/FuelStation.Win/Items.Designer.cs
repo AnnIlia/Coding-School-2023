@@ -28,13 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Items));
-            this.GridItems = new System.Windows.Forms.DataGridView();
-            this.ItemCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ItemType = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ItemDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ItemCost = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ItemPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lbItems = new System.Windows.Forms.Label();
             this.btnNewItem = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
@@ -43,61 +38,18 @@
             this.lbTransaction = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.GridItems)).BeginInit();
+            this.GridItems = new System.Windows.Forms.DataGridView();
+            this.bsItems = new System.Windows.Forms.BindingSource(this.components);
+            this.ItemCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ItemType = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.ItemDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ItemCost = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ItemPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GridItems)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsItems)).BeginInit();
             this.SuspendLayout();
-            // 
-            // GridItems
-            // 
-            this.GridItems.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.GridItems.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ItemCode,
-            this.ItemType,
-            this.ItemDescription,
-            this.ItemCost,
-            this.ItemPrice});
-            this.GridItems.Location = new System.Drawing.Point(60, 99);
-            this.GridItems.Name = "GridItems";
-            this.GridItems.RowHeadersWidth = 51;
-            this.GridItems.RowTemplate.Height = 29;
-            this.GridItems.Size = new System.Drawing.Size(683, 202);
-            this.GridItems.TabIndex = 0;
-            // 
-            // ItemCode
-            // 
-            this.ItemCode.HeaderText = "Code";
-            this.ItemCode.MinimumWidth = 6;
-            this.ItemCode.Name = "ItemCode";
-            this.ItemCode.Width = 125;
-            // 
-            // ItemType
-            // 
-            this.ItemType.HeaderText = "Type";
-            this.ItemType.MinimumWidth = 6;
-            this.ItemType.Name = "ItemType";
-            this.ItemType.Width = 125;
-            // 
-            // ItemDescription
-            // 
-            this.ItemDescription.HeaderText = "Description";
-            this.ItemDescription.MinimumWidth = 6;
-            this.ItemDescription.Name = "ItemDescription";
-            this.ItemDescription.Width = 125;
-            // 
-            // ItemCost
-            // 
-            this.ItemCost.HeaderText = "Cost";
-            this.ItemCost.MinimumWidth = 6;
-            this.ItemCost.Name = "ItemCost";
-            this.ItemCost.Width = 125;
-            // 
-            // ItemPrice
-            // 
-            this.ItemPrice.HeaderText = "Price";
-            this.ItemPrice.MinimumWidth = 6;
-            this.ItemPrice.Name = "ItemPrice";
-            this.ItemPrice.Width = 125;
             // 
             // lbItems
             // 
@@ -179,12 +131,68 @@
             this.pictureBox2.TabIndex = 13;
             this.pictureBox2.TabStop = false;
             // 
+            // GridItems
+            // 
+            this.GridItems.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.GridItems.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ItemCode,
+            this.ItemType,
+            this.ItemDescription,
+            this.ItemCost,
+            this.ItemPrice});
+            this.GridItems.Location = new System.Drawing.Point(52, 111);
+            this.GridItems.Name = "GridItems";
+            this.GridItems.RowHeadersWidth = 51;
+            this.GridItems.RowTemplate.Height = 29;
+            this.GridItems.Size = new System.Drawing.Size(689, 135);
+            this.GridItems.TabIndex = 14;
+            // 
+            // ItemCode
+            // 
+            this.ItemCode.DataPropertyName = "Code";
+            this.ItemCode.HeaderText = "Code";
+            this.ItemCode.MinimumWidth = 6;
+            this.ItemCode.Name = "ItemCode";
+            this.ItemCode.Width = 125;
+            // 
+            // ItemType
+            // 
+            this.ItemType.HeaderText = "Type";
+            this.ItemType.MinimumWidth = 6;
+            this.ItemType.Name = "ItemType";
+            this.ItemType.Width = 125;
+            // 
+            // ItemDescription
+            // 
+            this.ItemDescription.DataPropertyName = "Description";
+            this.ItemDescription.HeaderText = "Description";
+            this.ItemDescription.MinimumWidth = 6;
+            this.ItemDescription.Name = "ItemDescription";
+            this.ItemDescription.Width = 125;
+            // 
+            // ItemCost
+            // 
+            this.ItemCost.DataPropertyName = "Cost";
+            this.ItemCost.HeaderText = "Cost";
+            this.ItemCost.MinimumWidth = 6;
+            this.ItemCost.Name = "ItemCost";
+            this.ItemCost.Width = 125;
+            // 
+            // ItemPrice
+            // 
+            this.ItemPrice.DataPropertyName = "Price";
+            this.ItemPrice.HeaderText = "Price";
+            this.ItemPrice.MinimumWidth = 6;
+            this.ItemPrice.Name = "ItemPrice";
+            this.ItemPrice.Width = 125;
+            // 
             // Items
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.GridItems);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lbTransaction);
@@ -193,26 +201,19 @@
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.lbItems);
-            this.Controls.Add(this.GridItems);
             this.Name = "Items";
             this.Text = "Items";
             this.Load += new System.EventHandler(this.Items_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.GridItems)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GridItems)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsItems)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private DataGridView GridItems;
-        private DataGridViewTextBoxColumn ItemCode;
-        private DataGridViewTextBoxColumn ItemType;
-        private DataGridViewTextBoxColumn ItemDescription;
-        private DataGridViewTextBoxColumn ItemCost;
-        private DataGridViewTextBoxColumn ItemPrice;
         private Label lbItems;
         private Button btnNewItem;
         private Button btnClose;
@@ -221,5 +222,12 @@
         private Label lbTransaction;
         private PictureBox pictureBox1;
         private PictureBox pictureBox2;
+        private DataGridView GridItems;
+        private BindingSource bsItems;
+        private DataGridViewTextBoxColumn ItemCode;
+        private DataGridViewComboBoxColumn ItemType;
+        private DataGridViewTextBoxColumn ItemDescription;
+        private DataGridViewTextBoxColumn ItemCost;
+        private DataGridViewTextBoxColumn ItemPrice;
     }
 }

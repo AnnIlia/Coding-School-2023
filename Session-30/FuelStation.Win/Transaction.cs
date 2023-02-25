@@ -31,5 +31,10 @@ namespace FuelStation.Win
         {
 
         }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
