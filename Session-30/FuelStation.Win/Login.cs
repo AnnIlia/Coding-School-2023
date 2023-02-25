@@ -22,11 +22,7 @@ namespace FuelStation.Win
             InitializeComponent();
 
         }
-        public FuelStationApp()
-        {
-            InitializeComponent();
-
-        }
+       
         private void btnLgCashier_Click(object sender, EventArgs e)
         {
             _role = EmployeeType.Cashier;
