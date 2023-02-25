@@ -28,8 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Customers));
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.GridCustomers = new System.Windows.Forms.DataGridView();
             this.CustomerName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CustomerSurname = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CustomerCardNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -41,27 +42,30 @@
             this.lbTransaction = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.bsCustomers = new System.Windows.Forms.BindingSource(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.GridCustomers)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsCustomers)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // GridCustomers
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.GridCustomers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.GridCustomers.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.CustomerName,
             this.CustomerSurname,
             this.CustomerCardNumber});
-            this.dataGridView1.Location = new System.Drawing.Point(114, 110);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 29;
-            this.dataGridView1.Size = new System.Drawing.Size(591, 220);
-            this.dataGridView1.TabIndex = 0;
+            this.GridCustomers.Location = new System.Drawing.Point(114, 110);
+            this.GridCustomers.Name = "GridCustomers";
+            this.GridCustomers.RowHeadersWidth = 51;
+            this.GridCustomers.RowTemplate.Height = 29;
+            this.GridCustomers.Size = new System.Drawing.Size(591, 220);
+            this.GridCustomers.TabIndex = 0;
             // 
             // CustomerName
             // 
+            this.CustomerName.DataPropertyName = "Name";
             this.CustomerName.HeaderText = "Name";
             this.CustomerName.MinimumWidth = 6;
             this.CustomerName.Name = "CustomerName";
@@ -69,6 +73,7 @@
             // 
             // CustomerSurname
             // 
+            this.CustomerSurname.DataPropertyName = "Surname";
             this.CustomerSurname.HeaderText = "Surname";
             this.CustomerSurname.MinimumWidth = 6;
             this.CustomerSurname.Name = "CustomerSurname";
@@ -76,6 +81,7 @@
             // 
             // CustomerCardNumber
             // 
+            this.CustomerCardNumber.DataPropertyName = "CardNumber";
             this.CustomerCardNumber.HeaderText = "CardNumber";
             this.CustomerCardNumber.MinimumWidth = 6;
             this.CustomerCardNumber.Name = "CustomerCardNumber";
@@ -177,13 +183,14 @@
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnSave);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.GridCustomers);
             this.Name = "Customers";
             this.Text = "Customers";
             this.Load += new System.EventHandler(this.Customers_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GridCustomers)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsCustomers)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -191,10 +198,7 @@
 
         #endregion
 
-        private DataGridView dataGridView1;
-        private DataGridViewTextBoxColumn CustomerName;
-        private DataGridViewTextBoxColumn CustomerSurname;
-        private DataGridViewTextBoxColumn CustomerCardNumber;
+        private DataGridView GridCustomers;
         private Button btnSave;
         private Button btnDelete;
         private Button btnClose;
@@ -203,5 +207,9 @@
         private Label lbTransaction;
         private PictureBox pictureBox2;
         private PictureBox pictureBox3;
+        private DataGridViewTextBoxColumn CustomerName;
+        private DataGridViewTextBoxColumn CustomerSurname;
+        private DataGridViewTextBoxColumn CustomerCardNumber;
+        private BindingSource bsCustomers;
     }
 }

@@ -32,7 +32,7 @@ namespace FuelStation.Win
             itemList = await httpClient.GetFromJsonAsync<List<ItemDto>>("item");
             bsItems.DataSource = itemList; //vazo itemList
             GridItems.DataSource = bsItems; //ti anoigei-deixnei sto grid
-           ItemType.DataSource = Enum.GetNames(typeof(ItemType));
+            ItemType.DataSource = Enum.GetNames(typeof(ItemType));
            // ItemType.Items = Enum.GetNames(typeof(ItemType));
 
         }
