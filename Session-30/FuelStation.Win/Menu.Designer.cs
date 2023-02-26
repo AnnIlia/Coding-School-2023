@@ -60,7 +60,7 @@
             // btnMnCustomers
             // 
             this.btnMnCustomers.Font = new System.Drawing.Font("Yu Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnMnCustomers.Location = new System.Drawing.Point(89, 192);
+            this.btnMnCustomers.Location = new System.Drawing.Point(90, 192);
             this.btnMnCustomers.Name = "btnMnCustomers";
             this.btnMnCustomers.Size = new System.Drawing.Size(177, 67);
             this.btnMnCustomers.TabIndex = 3;

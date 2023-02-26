@@ -10,7 +10,7 @@ namespace FuelStation.Web.Shared.Customer
 {
     public class CustomerListDto
     {
-        public int Id { get; set; }
+        public int? Id { get; set; }
         [RegularExpression("^[a-zA-Z]*$", ErrorMessage = "The Name field can only contain Latin letters ")]
         [Required]
         public string Name { get; set; }

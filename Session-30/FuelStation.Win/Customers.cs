@@ -19,34 +19,117 @@ namespace FuelStation.Win
     public partial class Customers : Form
     {
 
-        private readonly HttpClient httpClient = new HttpClient(new HttpClientHandler())
-        {
-            BaseAddress = new Uri("https://localhost:7102")
-        };
-        private List<CustomerListDto> customerList = new();
+        private List<CustomerListDto> customerListDtos = new List<CustomerListDto>();
+        private readonly HttpClient _client;
         public Customers()
         {
             InitializeComponent();
+            _client = new HttpClient();
+            _client.BaseAddress = new Uri("https://localhost:7102");
         }
 
-
-        private async void Customers_Load(object sender, EventArgs e)
+        private void Customers_Load(object sender, EventArgs e)
         {
-            GridCustomers.AutoGenerateColumns = false; //gia ta dipla columns
-            customerList = await httpClient.GetFromJsonAsync<List<CustomerListDto>>("customer");
-            bsCustomers.DataSource = customerList; //vazo itemList
-            GridCustomers.DataSource = bsCustomers; //ti anoigei-deixnei sto grid
-            //ItemType.DataSource = Enum.GetNames(typeof(ItemType));
+            _ = SetControlProperties();
         }
 
-        private void btnNewCustomer_Click(object sender, EventArgs e)
+        private void grdCustomers_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+
+        }
+
+        private async Task SetControlProperties()
+        {
+            customerListDtos = await _client.GetFromJsonAsync<List<CustomerListDto>>("customer");
+            GridCustomers.AutoGenerateColumns = false;
+            if (customerListDtos != null)
+            {
+                bsCustomers.DataSource = customerListDtos;
+                GridCustomers.DataSource = bsCustomers;
+            }
+        }
+
+     
+
+     
+
+        private async Task OnSave()
+        {
+            HttpResponseMessage response = null;
+            CustomerListDto customer = (CustomerListDto)bsCustomers.Current;
+            if (customer.Id is null)
+            {
+               CustomerCreateDto newCust = new CustomerCreateDto() { Name = customer.Name, Surname = customer.Surname, CardNumber = customer.CardNumber };
+                response = await _client.PostAsJsonAsync("customer", newCust);
+            }
+            else
+            {
+                response = await _client.PutAsJsonAsync("customer", customer);
+            }
+
+            if (response.IsSuccessStatusCode)
+            {
+                MessageBox.Show("Customer saved successfully!");
+            }
+            else
+            {
+                MessageBox.Show("Error saving customer.");
+            }
 
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
+            _ = SetControlProperties();
+        }
 
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            _ = OnDelete();
+        }
+
+        private async Task OnDelete()
+        {
+            HttpResponseMessage response = null;
+            CustomerListDto customer = (CustomerListDto)bsCustomers.Current;
+            if (customer.Id != null)
+            {
+                response = await _client.DeleteAsync($"customer/{customer.Id}");
+                if (response.IsSuccessStatusCode)
+                {
+                    bsCustomers.RemoveCurrent();
+                    MessageBox.Show("Customer deleted successfully!");
+                }
+                else
+                {
+                    MessageBox.Show("Error deleting customer.");
+                }
+            }
+        }
+
+        private void btnClose_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            _ = SetControlProperties();
+        }
+
+        private async void GridCustomers_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            CustomerListDto customer = bsCustomers.Current as CustomerListDto;
+            var response = await _client.PostAsJsonAsync("customer", customer);
+            response.EnsureSuccessStatusCode();
+            MessageBox.Show("Customer Created!");
+            SetControlProperties();
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            _ = OnSave();
+            _ = SetControlProperties();
         }
     }
 }

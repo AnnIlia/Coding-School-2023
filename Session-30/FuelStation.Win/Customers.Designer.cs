@@ -38,11 +38,11 @@
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
             this.lbCustomers = new System.Windows.Forms.Label();
-            this.btnNewCustomer = new System.Windows.Forms.Button();
             this.lbTransaction = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.bsCustomers = new System.Windows.Forms.BindingSource(this.components);
+            this.btnUpdate = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.GridCustomers)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -62,6 +62,7 @@
             this.GridCustomers.RowTemplate.Height = 29;
             this.GridCustomers.Size = new System.Drawing.Size(591, 220);
             this.GridCustomers.TabIndex = 0;
+            this.GridCustomers.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridCustomers_CellContentClick);
             // 
             // CustomerName
             // 
@@ -96,6 +97,7 @@
             this.btnSave.TabIndex = 1;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnDelete
             // 
@@ -106,6 +108,7 @@
             this.btnDelete.TabIndex = 2;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnClose
             // 
@@ -116,6 +119,7 @@
             this.btnClose.TabIndex = 3;
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click_1);
             // 
             // lbCustomers
             // 
@@ -126,17 +130,6 @@
             this.lbCustomers.Size = new System.Drawing.Size(212, 28);
             this.lbCustomers.TabIndex = 4;
             this.lbCustomers.Text = "Customers Information";
-            // 
-            // btnNewCustomer
-            // 
-            this.btnNewCustomer.Font = new System.Drawing.Font("Yu Gothic UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnNewCustomer.Location = new System.Drawing.Point(273, 347);
-            this.btnNewCustomer.Name = "btnNewCustomer";
-            this.btnNewCustomer.Size = new System.Drawing.Size(299, 42);
-            this.btnNewCustomer.TabIndex = 5;
-            this.btnNewCustomer.Text = "Add New Customer";
-            this.btnNewCustomer.UseVisualStyleBackColor = true;
-            this.btnNewCustomer.Click += new System.EventHandler(this.btnNewCustomer_Click);
             // 
             // lbTransaction
             // 
@@ -169,16 +162,26 @@
             this.pictureBox3.TabIndex = 14;
             this.pictureBox3.TabStop = false;
             // 
+            // btnUpdate
+            // 
+            this.btnUpdate.Location = new System.Drawing.Point(578, 347);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(112, 42);
+            this.btnUpdate.TabIndex = 15;
+            this.btnUpdate.Text = "Update";
+            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            // 
             // Customers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(800, 505);
+            this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.lbTransaction);
-            this.Controls.Add(this.btnNewCustomer);
             this.Controls.Add(this.lbCustomers);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnDelete);
@@ -203,7 +206,6 @@
         private Button btnDelete;
         private Button btnClose;
         private Label lbCustomers;
-        private Button btnNewCustomer;
         private Label lbTransaction;
         private PictureBox pictureBox2;
         private PictureBox pictureBox3;
@@ -211,5 +213,6 @@
         private DataGridViewTextBoxColumn CustomerSurname;
         private DataGridViewTextBoxColumn CustomerCardNumber;
         private BindingSource bsCustomers;
+        private Button btnUpdate;
     }
 }
