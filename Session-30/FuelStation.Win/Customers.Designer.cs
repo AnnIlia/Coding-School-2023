@@ -40,12 +40,10 @@
             this.lbCustomers = new System.Windows.Forms.Label();
             this.lbTransaction = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.bsCustomers = new System.Windows.Forms.BindingSource(this.components);
             this.btnUpdate = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.GridCustomers)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsCustomers)).BeginInit();
             this.SuspendLayout();
             // 
@@ -91,7 +89,7 @@
             // btnSave
             // 
             this.btnSave.Font = new System.Drawing.Font("Yu Gothic UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnSave.Location = new System.Drawing.Point(135, 419);
+            this.btnSave.Location = new System.Drawing.Point(155, 364);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(137, 42);
             this.btnSave.TabIndex = 1;
@@ -102,7 +100,7 @@
             // btnDelete
             // 
             this.btnDelete.Font = new System.Drawing.Font("Yu Gothic UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnDelete.Location = new System.Drawing.Point(329, 419);
+            this.btnDelete.Location = new System.Drawing.Point(349, 364);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(137, 42);
             this.btnDelete.TabIndex = 2;
@@ -113,7 +111,7 @@
             // btnClose
             // 
             this.btnClose.Font = new System.Drawing.Font("Yu Gothic UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnClose.Location = new System.Drawing.Point(529, 419);
+            this.btnClose.Location = new System.Drawing.Point(349, 439);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(137, 42);
             this.btnClose.TabIndex = 3;
@@ -152,21 +150,12 @@
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(250, 347);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(59, 42);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 14;
-            this.pictureBox3.TabStop = false;
-            // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(578, 347);
+            this.btnUpdate.Font = new System.Drawing.Font("Yu Gothic UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnUpdate.Location = new System.Drawing.Point(541, 364);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(112, 42);
+            this.btnUpdate.Size = new System.Drawing.Size(137, 42);
             this.btnUpdate.TabIndex = 15;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = true;
@@ -179,7 +168,6 @@
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(800, 505);
             this.Controls.Add(this.btnUpdate);
-            this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.lbTransaction);
             this.Controls.Add(this.lbCustomers);
@@ -192,7 +180,6 @@
             this.Load += new System.EventHandler(this.Customers_Load);
             ((System.ComponentModel.ISupportInitialize)(this.GridCustomers)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsCustomers)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -208,7 +195,6 @@
         private Label lbCustomers;
         private Label lbTransaction;
         private PictureBox pictureBox2;
-        private PictureBox pictureBox3;
         private DataGridViewTextBoxColumn CustomerName;
         private DataGridViewTextBoxColumn CustomerSurname;
         private DataGridViewTextBoxColumn CustomerCardNumber;
