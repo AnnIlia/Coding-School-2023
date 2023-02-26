@@ -84,8 +84,5 @@ namespace FuelStation.Web.Server.Controllers
             itemToUpdate.Cost = item.Cost;
             _itemRepo.Update(item.Id, itemToUpdate);
         }
-
-
-
     }
 }

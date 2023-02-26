@@ -17,6 +17,7 @@ namespace FuelStation.Win
         private EmployeeType _role;
         public Menu(EmployeeType role)
         {
+
             _role = role;
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen;

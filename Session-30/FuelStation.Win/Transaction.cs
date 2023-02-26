@@ -15,6 +15,7 @@ namespace FuelStation.Win
         public Transaction()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
         private void Transaction_Load(object sender, EventArgs e)
@@ -35,6 +36,13 @@ namespace FuelStation.Win
         private void btnSave_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            Login loginForm = new Login();
+            loginForm.Show();
+            this.Close();
         }
     }
 }

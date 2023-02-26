@@ -75,6 +75,51 @@
   <metadata name="TransactionTotalValue.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <metadata name="TransactionId.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="TransactionDate.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="TransactionEmployee.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="TransactionCustomer.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="TransactionPayMethod.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="TransactionTotalValue.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="TransactionLineId.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="TransactionLineTramsId.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="TransactionLineItemId.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="TransactionLineQuantity.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="TransactionLinePrice.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="TransactionLineNetValue.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="TransactionLineDiscount.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="TransactionLineDiscountValue.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="TransactionLineTotalValue.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <metadata name="TransactionLineId.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -106,7 +151,7 @@
   <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        zQAAC80BNxUJ1gAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAACOpSURBVHhe7d15
+        zAAAC8wB5VLrMgAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAACOpSURBVHhe7d15
         sG1ZQd9x6WZUhjQCCq1gGCIEGVQaFTGINkbKiEFFjFECGsGhlAhInLBIxQkrakRELQcGNcbgQATHIgoI
         EYpBHEAGJxQZRJpGmYdOfquoLt9+rvvO3XcPa6+zP5+q7z9d3a9vnbPvub9377pnfwhn8uHpfumb0k+l
         /5v+LL0pvT39P0lauHent6Ty2vOy9NvpR9Mj0n3TxyRgBp+Svi+9NH0g1T4hJWlLvTY9OT0oXZqAU/rI
@@ -515,7 +560,7 @@
         ycnJysrKy8vLzMzMzc3Nzs7Oz8/P0NDQ0dHR0tLS09PT1NTU1dXV1tbW19fX2NjY2dnZ2tra29vb3Nzc
         3d3d3t7e39/f4ODg4eHh4uLi4+Pj5OTk5eXl5ubm5+fn6Ojo6enp6urq6+vr7Ozs7e3t7u7u7+/v8PDw
         8fHx8vLy8/Pz9PT09fX19vb29/f3+Pj4+fn5+vr6+/v7/Pz8/f39/v7+////4rBdfQAAAAlwSFlzAAAS
-        cgAAEnIBXmVb4wAAE5ZJREFUeF7tXXuQVMW57/Oa984+QE0hYABBlGBEuIjcqmiMkWVRwBj/MAZuqaWm
+        cQAAEnEB89x6jgAAE5ZJREFUeF7tXXuQVMW57/Oa984+QE0hYABBlGBEuIjcqmiMkWVRwBj/MAZuqaWm
         4hMxVy1zYxIKqNQ18Y8rEA0SSCmlkVQKVERUEIhUvKIoC5YGLCAgCwpZdnd2Z86z7+87c2aFnTl7zsyZ
         HYa9+yseM33OdPev+/v6+7pPn/4Y7ycYIFJtGCBSbRggUm0YIFJtGCBSbRggUm0YIFJtGCDiBtNyPjgw
         7O+WYX/phmU6H8qGPukRyzJNVdNN0/oaoGjoACU6t5UVfUHEJNifLF2lf6nmmp6t/9cXy4s+IIL+QJ1V
@@ -618,7 +663,7 @@
         ycnJysrKy8vLzMzMzc3Nzs7Oz8/P0NDQ0dHR0tLS09PT1NTU1dXV1tbW19fX2NjY2dnZ2tra29vb3Nzc
         3d3d3t7e39/f4ODg4eHh4uLi4+Pj5OTk5eXl5ubm5+fn6Ojo6enp6urq6+vr7Ozs7e3t7u7u7+/v8PDw
         8fHx8vLy8/Pz9PT09fX19vb29/f3+Pj4+fn5+vr6+/v7/Pz8/f39/v7+////4rBdfQAAAAlwSFlzAAAS
-        cgAAEnIBXmVb4wAAE5ZJREFUeF7tXXuQVMW57/Oa984+QE0hYABBlGBEuIjcqmiMkWVRwBj/MAZuqaWm
+        cQAAEnEB89x6jgAAE5ZJREFUeF7tXXuQVMW57/Oa984+QE0hYABBlGBEuIjcqmiMkWVRwBj/MAZuqaWm
         4hMxVy1zYxIKqNQ18Y8rEA0SSCmlkVQKVERUEIhUvKIoC5YGLCAgCwpZdnd2Z86z7+87c2aFnTl7zsyZ
         HYa9+yseM33OdPev+/v6+7pPn/4Y7ycYIFJtGCBSbRggUm0YIFJtGCBSbRggUm0YIFJtGCDiBtNyPjgw
         7O+WYX/phmU6H8qGPukRyzJNVdNN0/oaoGjoACU6t5UVfUHEJNifLF2lf6nmmp6t/9cXy4s+IIL+QJ1V

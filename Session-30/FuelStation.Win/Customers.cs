@@ -24,6 +24,7 @@ namespace FuelStation.Win
         public Customers()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
             _client = new HttpClient();
             _client.BaseAddress = new Uri("https://localhost:7102");
         }
@@ -109,6 +110,8 @@ namespace FuelStation.Win
 
         private void btnClose_Click_1(object sender, EventArgs e)
         {
+            Login loginForm = new Login();
+            loginForm.Show();
             this.Close();
         }
 
