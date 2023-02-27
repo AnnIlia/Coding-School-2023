@@ -105,6 +105,7 @@
             this.GridItems.RowTemplate.Height = 29;
             this.GridItems.Size = new System.Drawing.Size(689, 135);
             this.GridItems.TabIndex = 14;
+            this.GridItems.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.GridItems_DataError);
             // 
             // ItemCode
             // 
@@ -116,6 +117,7 @@
             // 
             // ItemType
             // 
+            this.ItemType.DataPropertyName = "ItemType";
             this.ItemType.HeaderText = "Type";
             this.ItemType.MinimumWidth = 6;
             this.ItemType.Name = "ItemType";
@@ -324,11 +326,6 @@
         private PictureBox pictureBox1;
         private DataGridView GridItems;
         private BindingSource bsItems;
-        private DataGridViewTextBoxColumn ItemCode;
-        private DataGridViewComboBoxColumn ItemType;
-        private DataGridViewTextBoxColumn ItemDescription;
-        private DataGridViewTextBoxColumn ItemCost;
-        private DataGridViewTextBoxColumn ItemPrice;
         private Button btnUpdate;
         private Button btnClose;
         private Button btnDelete;
@@ -344,5 +341,10 @@
         private Label lbPrice;
         private TextBox textBox3;
         private Label label1;
+        private DataGridViewTextBoxColumn ItemCode;
+        private DataGridViewComboBoxColumn ItemType;
+        private DataGridViewTextBoxColumn ItemDescription;
+        private DataGridViewTextBoxColumn ItemCost;
+        private DataGridViewTextBoxColumn ItemPrice;
     }
 }

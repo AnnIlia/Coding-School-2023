@@ -28,15 +28,16 @@ namespace FuelStation.Win
             this.StartPosition = FormStartPosition.CenterScreen;
         }
 
+        private void GridItems_DataError(object sender, DataGridViewDataErrorEventArgs e)
+        {
+            e.Cancel = true;
+        }
+
+
         private async void Items_Load(object sender, EventArgs e)
         {
             GridItems.AutoGenerateColumns = false; //gia ta dipla columns
-            itemList = await httpClient.GetFromJsonAsync<List<ItemDto>>("item");
-            bsItems.DataSource = itemList; //vazo itemList
-            GridItems.DataSource = bsItems; //ti anoigei-deixnei sto grid
-            ItemType.DataSource = Enum.GetNames(typeof(ItemType));
-           
-
+            SetControlProperties();
         }
         private async Task SetControlProperties()
         {
@@ -44,17 +45,50 @@ namespace FuelStation.Win
             itemList = await httpClient.GetFromJsonAsync<List<ItemDto>>("item");
             bsItems.DataSource = itemList; 
             GridItems.DataSource = bsItems; 
-            ItemType.DataSource = Enum.GetNames(typeof(ItemType)); //comboBox1.DataSource = Enum.GetValues(typeof MyValues);
+           // ItemType.DataSource = Enum.GetNames(typeof(ItemType)); //comboBox1.DataSource = Enum.GetValues(typeof MyValues);
 
-
-
+            DataGridViewComboBoxColumn ItemItemType = GridItems.Columns["ItemType"] as DataGridViewComboBoxColumn; 
+            ItemType.DataSource = Enum.GetValues(typeof(ItemType));
         }
+    
         private async void btnSave_Click(object sender, EventArgs e)
         {
-            ItemDto item = bsItems.Current as ItemDto;
-            var response = await httpClient.PostAsJsonAsync("item", item);
-            response.EnsureSuccessStatusCode();
-            MessageBox.Show("Item Created!");
+            HttpResponseMessage response = null;
+            ItemDto item = (ItemDto)bsItems.Current;
+            if (item.Id == 0)
+            {
+                ItemCreateDto itemCreate = new ItemCreateDto
+                {
+                    Code = item.Code,
+                    Description = item.Description,
+                    ItemType = item.ItemType,
+                    Price = item.Price,
+                    Cost = item.Cost
+                };
+                response = await httpClient.PostAsJsonAsync("item", itemCreate);
+            }
+            else
+            {
+                ItemDto itemEdit = new ItemDto
+                {
+                    Id = item.Id,
+                    Code = item.Code,
+                    Description = item.Description,
+                    ItemType = item.ItemType,
+                    Price = item.Price,
+                    Cost = item.Cost
+                };
+                response = await httpClient.PutAsJsonAsync("item", itemEdit);
+            }
+            if (response.IsSuccessStatusCode)
+            { MessageBox.Show("Save successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information); }
+            else
+            { MessageBox.Show("Save unsuccessful!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+        }
+
+        private async void btn_Item_Load_Click(object sender, EventArgs e)
+        {
+            bsItems.DataSource = null;
             SetControlProperties();
         }
 
