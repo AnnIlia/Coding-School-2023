@@ -104,6 +104,7 @@
             this.GridItems.Size = new System.Drawing.Size(689, 135);
             this.GridItems.TabIndex = 14;
             this.GridItems.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.GridItems_DataError);
+            this.GridItems.Validating += new System.ComponentModel.CancelEventHandler(this.GridItems_Validating);
             // 
             // ItemCode
             // 

@@ -8,6 +8,7 @@ using System.Drawing;
 using System.Linq;
 using System.Net.Http.Json;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
@@ -43,13 +44,15 @@ namespace FuelStation.Win
 
             itemList = await httpClient.GetFromJsonAsync<List<ItemDto>>("item");
             bsItems.DataSource = itemList; 
-            GridItems.DataSource = bsItems; 
-           // ItemType.DataSource = Enum.GetNames(typeof(ItemType)); //comboBox1.DataSource = Enum.GetValues(typeof MyValues);
-
-            DataGridViewComboBoxColumn ItemItemType = GridItems.Columns["ItemType"] as DataGridViewComboBoxColumn; 
+            GridItems.DataSource = bsItems;
+            // ItemType.DataSource = Enum.GetNames(typeof(ItemType)); //comboBox1.DataSource = Enum.GetValues(typeof MyValues);
+            
+             DataGridViewComboBoxColumn ItemItemType = GridItems.Columns["ItemType"] as DataGridViewComboBoxColumn; 
             ItemType.DataSource = Enum.GetValues(typeof(ItemType));
+            
+            this.GridItems.Columns["ItemCost"].DefaultCellStyle.Format = "0.00##";
         }
-    
+       
         private async void btnSave_Click(object sender, EventArgs e)
         {
             HttpResponseMessage response = null;
@@ -105,6 +108,11 @@ namespace FuelStation.Win
             Login loginForm = new Login();
             loginForm.Show();
             this.Close();
-        }        
+        }
+
+        private async void GridItems_Validating(object sender, CancelEventArgs e)
+        {
+        
+        }
     }
 }
