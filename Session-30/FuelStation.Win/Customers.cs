@@ -19,7 +19,7 @@ namespace FuelStation.Win
     public partial class Customers : Form
     {
 
-        private List<CustomerListDto> customerListDtos = new List<CustomerListDto>();
+        private List<CustomerListDto> customerList = new List<CustomerListDto>();
         private readonly HttpClient _client;
         public Customers()
         {
@@ -41,18 +41,14 @@ namespace FuelStation.Win
 
         private async Task SetControlProperties()
         {
-            customerListDtos = await _client.GetFromJsonAsync<List<CustomerListDto>>("customer");
+            customerList = await _client.GetFromJsonAsync<List<CustomerListDto>>("customer");
             GridCustomers.AutoGenerateColumns = false;
-            if (customerListDtos != null)
+            if (customerList != null)
             {
-                bsCustomers.DataSource = customerListDtos;
+                bsCustomers.DataSource = customerList;
                 GridCustomers.DataSource = bsCustomers;
             }
         }
-
-     
-
-     
 
         private async Task OnSave()
         {
@@ -70,11 +66,11 @@ namespace FuelStation.Win
 
             if (response.IsSuccessStatusCode)
             {
-                MessageBox.Show("Customer saved successfully!");
+                MessageBox.Show("New Customer saved successfully!");
             }
             else
             {
-                MessageBox.Show("Error saving customer.");
+                MessageBox.Show("Error saving Customer.");
             }
 
         }

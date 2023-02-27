@@ -33,7 +33,6 @@ namespace FuelStation.Win
             e.Cancel = true;
         }
 
-
         private async void Items_Load(object sender, EventArgs e)
         {
             GridItems.AutoGenerateColumns = false; //gia ta dipla columns
@@ -81,16 +80,11 @@ namespace FuelStation.Win
                 response = await httpClient.PutAsJsonAsync("item", itemEdit);
             }
             if (response.IsSuccessStatusCode)
-            { MessageBox.Show("Save successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information); }
+            { MessageBox.Show("New Item saved successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information); }
             else
-            { MessageBox.Show("Save unsuccessful!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+            { MessageBox.Show("Error saving Item.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
         }
 
-        private async void btn_Item_Load_Click(object sender, EventArgs e)
-        {
-            bsItems.DataSource = null;
-            SetControlProperties();
-        }
 
         private async void btnDelete_Click(object sender, EventArgs e)
         {
@@ -111,11 +105,6 @@ namespace FuelStation.Win
             Login loginForm = new Login();
             loginForm.Show();
             this.Close();
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
+        }        
     }
 }
