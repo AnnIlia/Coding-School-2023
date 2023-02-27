@@ -44,5 +44,12 @@ namespace FuelStation.Win
             loginForm.Show();
             this.Close();
         }
+
+        private void TransactionLines_Click(object sender, EventArgs e)
+        {
+            var transactionLinesForm = new TransactionLines();
+            transactionLinesForm.ShowDialog();
+            this.Close();
+        }
     }
 }
