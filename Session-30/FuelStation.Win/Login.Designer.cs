@@ -41,6 +41,7 @@
             // 
             // btnLgManager
             // 
+            this.btnLgManager.AutoSize = true;
             this.btnLgManager.Font = new System.Drawing.Font("Yu Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnLgManager.Location = new System.Drawing.Point(101, 428);
             this.btnLgManager.Name = "btnLgManager";
@@ -52,6 +53,7 @@
             // 
             // btnLgCashier
             // 
+            this.btnLgCashier.AutoSize = true;
             this.btnLgCashier.Font = new System.Drawing.Font("Yu Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnLgCashier.Location = new System.Drawing.Point(327, 428);
             this.btnLgCashier.Name = "btnLgCashier";
@@ -63,6 +65,7 @@
             // 
             // btnLgStaff
             // 
+            this.btnLgStaff.AutoSize = true;
             this.btnLgStaff.Font = new System.Drawing.Font("Yu Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnLgStaff.Location = new System.Drawing.Point(546, 428);
             this.btnLgStaff.Name = "btnLgStaff";
@@ -108,9 +111,9 @@
             this.label1.Font = new System.Drawing.Font("Yu Gothic UI Semilight", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
             this.label1.Location = new System.Drawing.Point(346, 371);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(132, 20);
+            this.label1.Size = new System.Drawing.Size(140, 20);
             this.label1.TabIndex = 6;
-            this.label1.Text = "based on your role";
+            this.label1.Text = "(based on your role)";
             // 
             // Login
             // 
