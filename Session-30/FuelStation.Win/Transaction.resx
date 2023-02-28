@@ -75,24 +75,6 @@
   <metadata name="TransactionTotalValue.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="TransactionId.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="TransactionDate.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="TransactionEmployee.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="TransactionCustomer.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="TransactionPayMethod.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="TransactionTotalValue.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1225,7 +1207,7 @@
   <data name="pictureBox2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAeoAAAHqCAIAAABED5ptAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DwAACw8BkvkDpQAAs4RJREFUeF7tnXm8V9P+/7+XayqNp/k0KVI0IRkzZKZkiBJJJBRlHpIiVFQSZUpk
+        DAAACwwBP0AiyAAAs4RJREFUeF7tnXm8V9P+/7+XayqNp/k0KVI0IRkzZKZkiBJJJBRlHpIiVFQSZUpk
         qkRpEEUhRKlERXMaNGsW7r3fe3+/5/m8Pr2/+37O0Dmf8znD/vR+/rEfa++99trvtfZ+v9Z7rb0/+/M/
         /89xHMcJIS7fjuM4ocTl23EcJ5S4fDuO44QSl2/HcZxQ4vLtOI4TSly+HcdxQonLt+M4Tihx+XYcxwkl
         Lt+O4zihxOXbcRwnlLh8O47jhBKXb8dxnFDi8u04jhNKXL4dx3FCicu34zhOKHH5dhzHCSUu347jOKHE
@@ -1994,4 +1976,7 @@
         x3GcEPL//t//B19u5znzdYitAAAAAElFTkSuQmCC
 </value>
   </data>
+  <metadata name="bsTransactions.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
 </root>

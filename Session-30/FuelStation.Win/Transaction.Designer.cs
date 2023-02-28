@@ -28,13 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Transaction));
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.GridTransaction = new System.Windows.Forms.DataGridView();
             this.TransactionId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TransactionDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TransactionEmployee = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TransactionCustomer = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TransactionPayMethod = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TransactionPayMethod = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.TransactionTotalValue = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lbTransaction = new System.Windows.Forms.Label();
             this.btnClose = new System.Windows.Forms.Button();
@@ -49,35 +50,38 @@
             this.button3 = new System.Windows.Forms.Button();
             this.TransactionLines = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.bsTransactions = new System.Windows.Forms.BindingSource(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.GridTransaction)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsTransactions)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // GridTransaction
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Menu;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.GridTransaction.BackgroundColor = System.Drawing.SystemColors.Menu;
+            this.GridTransaction.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.GridTransaction.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.TransactionId,
             this.TransactionDate,
             this.TransactionEmployee,
             this.TransactionCustomer,
             this.TransactionPayMethod,
             this.TransactionTotalValue});
-            this.dataGridView1.Location = new System.Drawing.Point(32, 175);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 29;
-            this.dataGridView1.Size = new System.Drawing.Size(823, 224);
-            this.dataGridView1.TabIndex = 0;
+            this.GridTransaction.Location = new System.Drawing.Point(32, 175);
+            this.GridTransaction.Name = "GridTransaction";
+            this.GridTransaction.RowHeadersWidth = 51;
+            this.GridTransaction.RowTemplate.Height = 29;
+            this.GridTransaction.Size = new System.Drawing.Size(823, 224);
+            this.GridTransaction.TabIndex = 0;
             // 
             // TransactionId
             // 
+            this.TransactionId.DataPropertyName = "Id";
             this.TransactionId.HeaderText = "Id";
             this.TransactionId.MinimumWidth = 6;
             this.TransactionId.Name = "TransactionId";
@@ -85,6 +89,7 @@
             // 
             // TransactionDate
             // 
+            this.TransactionDate.DataPropertyName = "Date";
             this.TransactionDate.HeaderText = "Date";
             this.TransactionDate.MinimumWidth = 6;
             this.TransactionDate.Name = "TransactionDate";
@@ -92,6 +97,7 @@
             // 
             // TransactionEmployee
             // 
+            this.TransactionEmployee.DataPropertyName = "EmployeeId";
             this.TransactionEmployee.HeaderText = "Employee";
             this.TransactionEmployee.MinimumWidth = 6;
             this.TransactionEmployee.Name = "TransactionEmployee";
@@ -99,6 +105,7 @@
             // 
             // TransactionCustomer
             // 
+            this.TransactionCustomer.DataPropertyName = "CustomerId";
             this.TransactionCustomer.HeaderText = "Customer";
             this.TransactionCustomer.MinimumWidth = 6;
             this.TransactionCustomer.Name = "TransactionCustomer";
@@ -106,13 +113,17 @@
             // 
             // TransactionPayMethod
             // 
+            this.TransactionPayMethod.DataPropertyName = "PaymentMethod";
             this.TransactionPayMethod.HeaderText = "Payment Method";
             this.TransactionPayMethod.MinimumWidth = 6;
             this.TransactionPayMethod.Name = "TransactionPayMethod";
+            this.TransactionPayMethod.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.TransactionPayMethod.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.TransactionPayMethod.Width = 125;
             // 
             // TransactionTotalValue
             // 
+            this.TransactionTotalValue.DataPropertyName = "TotalValue";
             this.TransactionTotalValue.HeaderText = "Total Value";
             this.TransactionTotalValue.MinimumWidth = 6;
             this.TransactionTotalValue.Name = "TransactionTotalValue";
@@ -273,17 +284,18 @@
             this.Controls.Add(this.lbTransAndTransactionLines);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.lbTransaction);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.GridTransaction);
             this.Name = "Transaction";
             this.Text = "Transaction";
             this.Load += new System.EventHandler(this.Transaction_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GridTransaction)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsTransactions)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -291,13 +303,7 @@
 
         #endregion
 
-        private DataGridView dataGridView1;
-        private DataGridViewTextBoxColumn TransactionId;
-        private DataGridViewTextBoxColumn TransactionDate;
-        private DataGridViewTextBoxColumn TransactionEmployee;
-        private DataGridViewTextBoxColumn TransactionCustomer;
-        private DataGridViewTextBoxColumn TransactionPayMethod;
-        private DataGridViewTextBoxColumn TransactionTotalValue;
+        private DataGridView GridTransaction;
         private Label lbTransaction;
         private Button btnClose;
         private Label lbTransAndTransactionLines;
@@ -311,5 +317,12 @@
         private Button button3;
         private Button TransactionLines;
         private PictureBox pictureBox2;
+        private BindingSource bsTransactions;
+        private DataGridViewTextBoxColumn TransactionId;
+        private DataGridViewTextBoxColumn TransactionDate;
+        private DataGridViewTextBoxColumn TransactionEmployee;
+        private DataGridViewTextBoxColumn TransactionCustomer;
+        private DataGridViewComboBoxColumn TransactionPayMethod;
+        private DataGridViewTextBoxColumn TransactionTotalValue;
     }
 }

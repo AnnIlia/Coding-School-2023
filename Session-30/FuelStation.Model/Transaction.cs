@@ -16,7 +16,7 @@ namespace FuelStation.Model
         public int EmployeeId { get; set; }
         public Employee Employee { get; set; } = null!;
 
-        public Transaction() { }
+        public Transaction(DateTime date, PaymentMethod paymentMethod, decimal totalValue) { }
 
         public List<TransactionLine> TransactionLines { get; set; }
 
